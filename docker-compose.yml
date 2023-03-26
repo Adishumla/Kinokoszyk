@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: KinokoszykUser
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: Kinokoszyk
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: Kinokoszyk
+      MYSQL_USER: KinokoszykUser
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      # MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./db:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: KinokoszykUser
+      PMA_PASSWORD: password
