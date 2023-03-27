@@ -22,13 +22,5 @@
                     </a>
                 <?php endforeach; ?>
             </div>
-            <div class="col-span-2 flex justify-center items-center py-3">
-                <a href="<?= site_url(); ?>">
-                    [LOGO]
-                </a>
-            </div>
-            <div class="col-span-5 flex justify-end items-center py-5">
-                <span>Get one now 👉</span>
-            </div>
         </div>
     </nav>
