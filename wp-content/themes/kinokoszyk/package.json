@@ -1,0 +1,23 @@
+{
+  "name": "kinokoszyk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/tailwindStyle.css -o ./css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Adishumla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adishumla/Kinokoszyk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adishumla/Kinokoszyk/issues"
+  },
+  "homepage": "https://github.com/Adishumla/Kinokoszyk#readme",
+  "description": ""
+}
