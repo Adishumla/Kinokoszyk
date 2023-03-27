@@ -9,9 +9,9 @@ Template Name: About
   <?php get_header(); ?>
 </header>
 
-<body class="bg-slate-700 w-7 h-7 flex">
+<body class="">
 
-  <section>
+  <section class="text-gray-600 body-font shadow-lg flex flex-col justify-center items-center p-4 m-8 bg-white rounded-lg hover:shadow-2xl transition duration-500 ease-in-out">
     <h1>About us</h1>
     <h2> DETTA FUNKAR </h2>
   </section>
@@ -19,3 +19,6 @@ Template Name: About
     Button
   </button>
 </body>
+<footer>
+	<?php get_footer(); ?>
+</footer>
