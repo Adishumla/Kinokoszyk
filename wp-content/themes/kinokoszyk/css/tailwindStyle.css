@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  @apply inline-block px-4 py-2 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-gray-100 active:text-gray-700 focus:outline-none focus:shadow-outline-gray;
-  @apply bg-gray-800 hover:bg-gray-700;
+@layer components {
+  .btn {
+    @apply py-4 px-10 bg-pink-500 text-white font-semibold rounded hover:bg-pink-600;
+  }
 }
