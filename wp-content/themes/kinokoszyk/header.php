@@ -24,3 +24,7 @@
             </div>
         </div>
     </nav>
+<!--
+    - Nav ska anemeras ut
+        - in när man skrollar ner och up
+-->
