@@ -27,6 +27,13 @@ function register_theme_menus()
 }
 add_action('init', 'register_theme_menus');
 
+# register template parts
+function register_template_parts()
+{
+  get_template_part('about-template.php');
+  get_template_part('photos.php');
+}
+
 # Print array or object in a pre tag
 function print_a($data)
 {

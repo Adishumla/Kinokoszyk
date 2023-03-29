@@ -1,6 +1,10 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
 
 @layer components {
   /*Write components like this with an explanatory comment above if the name isn't explanatory already*/
