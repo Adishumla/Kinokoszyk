@@ -725,7 +725,8 @@ video {
 }
 
 .bg-white-red {
-  background-color: rgba(241, 238, 238, 1);
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 238 238 / var(--tw-bg-opacity));
 }
 
 .object-contain {

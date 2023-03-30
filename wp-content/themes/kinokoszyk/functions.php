@@ -34,6 +34,11 @@ function register_template_parts()
   get_template_part('photos.php');
 }
 
+add_action('init', function () {
+	register_block_type(__DIR__ . '/blocks/hero');
+	register_block_type(__DIR__ . '/blocks/test');
+});
+
 # Print array or object in a pre tag
 function print_a($data)
 {

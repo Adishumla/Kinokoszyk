@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "title": "Test",
+  "description": "A custom test block.",
+  "style": ["file:./hero.css"],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["test", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  },
+  "align": "full"
+}
