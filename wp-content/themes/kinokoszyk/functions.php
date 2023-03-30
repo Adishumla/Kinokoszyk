@@ -14,6 +14,11 @@ add_action('wp_enqueue_scripts', 'load_tailwind');
 add_action('after_setup_theme', function () {
   add_theme_support('title-tag');
   add_theme_support('menus');
+  add_theme_support('custom-logo');
+});
+
+add_action('init', function () {
+    register_block_type(__DIR__ . "/blocks/Contact");
 });
 
 # Register theme menu(s)
