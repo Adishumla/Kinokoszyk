@@ -12,15 +12,23 @@
     <?php wp_body_open(); ?>
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
-    <nav class="font-mono border-b-2 border-brown text-lg px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-12">
-            <div class="col-span-5 py-5 flex gap-10 items-center">
+
+    <header class="fixed top- z-50 bg-white w-full flex justify-between items-center py-5 px-8">
+	    <?= get_custom_logo() ?>
+        <nav class="">
+            <ul class="flex gap-x-7">
                 <?php $currentPageId = get_queried_object_id();
                 if ($menuItems) foreach ($menuItems as $item) : ?>
-                    <a title="<?= $item->title; ?>" class="<?= $currentPageId == $item->object_id ? 'underline' : '' ?>" href="<?= $item->url; ?>">
-                        <?= $item->title; ?>
-                    </a>
+                    <li>
+                        <a title="<?= $item->title; ?>" class="text-2xl <?= $currentPageId == $item->object_id ? 'underline' : '' ?>" href="<?= $item->url; ?>">
+                            <?= $item->title; ?>
+                        </a>
+                    </li>
                 <?php endforeach; ?>
-            </div>
-        </div>
-    </nav>
+            </ul>
+        </nav>
+    </header>
+<!--
+    - Nav ska anemeras ut
+        - in när man skrollar ner och up
+-->
