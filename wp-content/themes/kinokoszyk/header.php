@@ -20,7 +20,7 @@
                 <?php $currentPageId = get_queried_object_id();
                 if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
-                        <a title="<?= $item->title; ?>" class="hover:duration-300 text-2xl hover:text-light-wine <?= $currentPageId == $item->object_id ? 'underline' : '' ?>" href="<?= $item->url; ?>">
+                        <a class="header-link <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
                             <?= $item->title; ?>
                         </a>
                     </li>
