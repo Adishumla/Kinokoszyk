@@ -13,14 +13,14 @@
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
 
-    <header class="fixed top-0 z-50 bg-white w-full flex justify-between items-center py-5 px-8">
+    <header class="fixed top-0 z-50 bg-off-white w-full flex justify-between items-center py-5 px-8">
 	    <?= get_custom_logo() ?>
         <nav class="">
             <ul class="flex gap-x-7">
                 <?php $currentPageId = get_queried_object_id();
                 if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
-                        <a class="header-link <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
+                        <a class="header-link link text-off-black <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
                             <?= $item->title; ?>
                         </a>
                     </li>
@@ -28,7 +28,3 @@
             </ul>
         </nav>
     </header>
-<!--
-    - Nav ska anemeras ut
-        - in när man skrollar ner och up
--->
