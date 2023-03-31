@@ -1,14 +1,13 @@
 <?php
 # Load Tailwind from CDN
 # https://tailwindcss.com/docs/installation/play-cdn
-function load_tailwind()
-{
-  # wp_enqueue_script('tailwind', 'https://cdn.tailwindcss.com', array(), null, false);
-  wp_enqueue_style("tailwind", get_template_directory_uri() . '/css/output.css', array(), true);
-  # Load tailwind.config.js after tailwind has been loaded
-  wp_enqueue_script('tailwind-config', get_template_directory_uri() . '/tailwind.config.js', array('tailwind'), null, false);
+function load_tailwind() {
+	wp_enqueue_style( 'tailwind', get_template_directory_uri() . '/css/output.css', array(), '1.0' );
 }
-add_action('wp_enqueue_scripts', 'load_tailwind');
+add_action( 'wp_enqueue_scripts', 'load_tailwind' );
+add_action( 'enqueue_block_editor_assets', 'load_tailwind' );
+
+
 
 # Register theme support
 add_action('after_setup_theme', function () {
@@ -51,3 +50,22 @@ function print_a($data)
   <pre class="block p-6 m-6 border border-brown rounded-xl text-xs overflow-hidden"><code><?php print_r($data); ?></code></pre>
 <?php
 }
+
+# Add custom block category
+add_action('enqueue_block_editor_assets', 'my_enqueue_block_assets');
+
+function my_enqueue_block_assets() {
+	$js_dir = get_stylesheet_directory_uri() . '/js';
+
+	// If in plugin, use this instead:
+	// $css_dir = plugin_dir_url(__FILE__) . 'css';
+	// $js_dir = plugin_dir_url(__FILE__) . 'js';
+
+	wp_enqueue_script('my-custom-block', $js_dir . '/custom.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
+	wp_enqueue_script('my-hero-block', $js_dir . '/hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
+}
+
+
+
+
+
