@@ -4,8 +4,8 @@
     <p class="text-white font-bold absolute top-28 left-1/4 text-3xl uppercase tracking-[.72em]">kochając nic nie tracisz.</p>
     <img  class=" h-full w-full object-cover" src="<?= get_template_directory_uri() ?>/assets/_Szczyrk2_L.jpg" alt="">
 </div>
-<footer class="flex flex-col bg-gray-800 text-white px-9">
-    <h2 class=" text-8xl" >KINO KOSZYK</h2>
+<footer class="flex flex-col bg-footer text-white px-9">
+    <h2 class=" text-8xl text-off-white" >KINO KOSZYK</h2>
     <div class="grid grid-cols-2 justify-between gap-x-48 gap-y-12 items-center mt-16 mb-28 mx-auto w-11/12">
 
         <p class="max-w-prose">Thanks for stopping by and indulging in our visual shenanigans! We hope our photography and film content gave you a good dose of inspiration and amusement. Stay curious and keep exploring the world through the lens. Catch you on the flip side!</p>
@@ -20,7 +20,7 @@
 
         <hr class="bg-white col-span-full mb-3">
 
-        <p class="text-gray-400">© 2023 Kino Koszyk. All rights reserved.</p>
+        <p class="text-[#858585]">© <?= date('Y') ?>  Kino Koszyk. All rights reserved.</p>
         <a href="http://facebook.se" target="_blank">
             <img src="<?= get_template_directory_uri() ?>/assets/Icon facebook.svg">
         </a>

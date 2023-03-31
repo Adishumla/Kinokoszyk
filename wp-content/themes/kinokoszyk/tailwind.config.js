@@ -11,7 +11,6 @@ module.exports = {
             'off-white': '#FAFAFA',
             'off-black': '#060606',
 
-
         },
         fontFamily: {
             'poppins': ['Poppins', 'sans-serif'],
