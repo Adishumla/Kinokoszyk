@@ -63,6 +63,8 @@ function my_enqueue_block_assets() {
 
 	wp_enqueue_script('my-custom-block', $js_dir . '/custom.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
 	wp_enqueue_script('my-hero-block', $js_dir . '/hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
+    wp_enqueue_script('my-react-block', $js_dir . '/hero-react.jsx', [ 'wp-blocks', 'wp-dom' ] , null, true);
+    wp_enqueue_script('my-own-block', $js_dir . '/react-hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
 }
 
 

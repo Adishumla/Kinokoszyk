@@ -11,12 +11,16 @@
 </head>
 
 <body>
-  <?php get_header(); ?>
+  <?php get_header();
+  ?>
+
   <section id="hero ">
     <!-- nu är heron 100vh men den ska vara 100vh minus headern höjd -->
     <div class=" w-full h-screen bg-pink-200">
       <!-- ska vara en bild i denna div -->
-
+	    <?php if( get_field('home_hero') ): ?>
+            <img src="<?php the_field('home_hero'); ?>" />
+	    <?php endif; ?>
       <div id="heroTitle" class=" bottom-0 absolute">
         <h1>KINO KOSZYK</h1>
       </div>
