@@ -1,14 +1,165 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
 
 @layer components {
   /*Write components like this with an explanatory comment above if the name isn't explanatory already*/
   .btn-blue {
     @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out;
+  }
+
+  .header-link {
+    @apply
+    text-2xl
+  }
+  
+  .link {
+    @apply
+    relative
+     
+    /* Underline style */
+    after:inline
+    after:-bottom-1
+    after:left-0
+    after:content-['']
+    after:bg-light-wine
+    after:w-full
+    after:h-0.5
+
+    /* Hover style */
+    hover:after:absolute
+    
+    /* Focus style */
+    focus:after:absolute
+    focus:text-light-wine
+    focus:outline-none
+    
+    /* Active style */
+    active:text-light-wine
+  }
+
+  .FooterPhotoWrapper {
+    @apply 
+    relative
+    h-[584px] 
+  }
+  .FooterPhotoWrapper a {
+    @apply 
+    absolute 
+    text-sm
+    text-off-white
+    bg-light-wine
+    grid
+    place-items-center
+    -top-8
+    left-1/2
+    -translate-x-1/2
+    w-16
+    h-16
+    drop-shadow-xl
+    rounded-full
+    uppercase
+
+    hover:bg-white-red
+    hover:text-footer
+
+    active:text-off-white
+    active:bg-Dark-wine
+
+    /* min width 1024 */
+    lg:text-base
+    lg:w-24
+    lg:h-24
+    lg:-top-12
+  }
+
+  .FooterPhotoWrapper p {
+    @apply
+    text-lg
+    font-bold 
+    text-white 
+    text-center
+    uppercase 
+    tracking-[.72em]
+    
+    absolute 
+    top-28 
+    mx-9
+    
+    /* min width 1024 */
+    lg:left-1/4
+    lg:text-3xl 
+  }
+
+  footer {
+    @apply
+    flex 
+    flex-col 
+    bg-footer 
+    text-white 
+    px-6
+    
+    /* min width 1024 */
+    lg:px-0
+  }
+
+  footer h2 {
+    @apply 
+    text-6xl
+    text-off-white
+    
+    /* min width 1024 */
+    lg:text-9xl 
+  }
+
+  footer .wrapper {
+    @apply 
+    grid 
+    grid-cols-2
+    gap-y-10  
+    items-end 
+    mt-7 
+    mb-10
+    mx-auto 
+    
+    /* min width 1024 */
+    lg:items-center
+    lg:w-11/12
+    lg:gap-x-48 
+    lg:gap-y-12 
+    lg:mb-28 
+  }
+
+  footer .wrapper p {
+    @apply
+    max-w-prose
+    col-span-full
+
+    /* min width 1024 */
+    lg:col-span-1
+  }
+
+  footer .wrapper .social {
+    @apply
+    row-start-2
+    col-start-2
+    justify-self-end
+
+    /* min width 1024 */
+    lg:justify-self-start
+    lg:row-start-3
+  }
+}
+
+@layer base {
+  .vh-section {
+    height: 1110px;
+  }
+
+  .vh-hero {
+    height: calc(100vh - 89px);
   }
 }

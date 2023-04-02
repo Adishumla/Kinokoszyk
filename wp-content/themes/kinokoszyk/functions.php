@@ -9,6 +9,25 @@ add_action( 'enqueue_block_editor_assets', 'load_tailwind' );
 
 
 
+# Register custom post types
+function kinokoszyk_custom_post_types() {
+	register_post_type('film',
+		array(
+			'labels'      => array(
+				'name'          => __('Films', 'textdomain'),
+				'singular_name' => __('Film', 'textdomain'),
+			),
+				'public'      => true,
+				'has_archive' => true,
+        
+        
+		)
+	);
+}
+add_action('init', 'kinokoszyk_custom_post_types');
+
+
+
 # Register theme support
 add_action('after_setup_theme', function () {
   add_theme_support('title-tag');

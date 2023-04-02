@@ -5,11 +5,12 @@ module.exports = {
     extend: {
         colors: {
           'white-red': '#F1EEEE',
-            'light-wine': '#B16B65',
-            'wine': '#450F0B',
-            'footer': '#25272B',
-            'off-white': '#FAFAFA',
-            'off-black': '#060606',
+          'light-wine': '#B16B65',
+          'Dark-wine': '#280503',
+          'wine': '#450F0B',
+          'footer': '#25272B',
+          'off-white': '#FAFAFA',
+          'off-black': '#060606',
 
         },
         fontFamily: {
