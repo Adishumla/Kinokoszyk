@@ -25,91 +25,100 @@ $images = array();
 <header>
 	<?php get_header(); ?>
 </header>
-<section class="w-full h-2/3 flex flex-col justify-center items-center bg-white-red poppins text-off-black">
+<section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
     <div class="ml-28">
-        <h1 class="text-3xl font-light text-wine">Kino Koszyk p<span class="font-normal">hotography</span></h1>
-        <h2 class="text-9xl font-prata"> Photography </h2>
+        <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
+        <h2 class="text-[148px] font-prata p-0 leading-[148px]">Photography</h2>
         <h2><?php the_field('photo_title'); ?></h2>
-        <div class="w-1/2 mt-4">
-            <p class="text-xl">En text för att lyfta nyfikenheten för besökarna att kika på Kino Kosyzks tidigare event.
-                Även en kort text om att informera besökarna till att kika på Kinos facebook sida för mer information om “mindre event”.</p>
+        <div class="w-3/6 min-w-[800px] mt-4">
+            <p class="text-xl">Joanna Helander is known for her captivating black and white images that explore themes of identity, memory, and the human condition. Helander's work is characterized by a stark simplicity that draws the viewer in and invites contemplation.</p>
         </div>
     </div>
+        <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
 </section>
 <section class="bg-off-white">
-    <div class="grid grid-cols-3 gap-[31px] m-[102px]">
-		<?php
-		$i = 0;
-		if ( $query_images->have_posts() ) {
-			foreach ( $query_images->posts as $image ) {
-				$i ++;
-				if ( $i % 3 == 1 ) {
-					$images1[] = $image->ID;
-				}
-				if ( $i % 3 == 2 ) {
-					$images2[] = $image->ID;
-				}
-				if ( $i % 3 == 0 ) {
-					$images3[] = $image->ID;
-				}
-			}
-		}
-		while ( $query_images->have_posts() ) {
-			$query_images->the_post();
-		}
-		?>
+    <div class="grid grid-cols-3 gap-[31px] p-[102px] bg-off-white">
         <div class="col-span-1">
-			<?php
-			foreach ( $images1 as $image ) {
-				?>
-                <div class="w-full mb-[26px] overflow-hidden">
-                    <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image ); ?>" alt="">
-                </div>
-				<?php
-			}
-			?>
-        </div>
-        <div class="col-span-1">
-			<?php
-			foreach ( $images2 as $image ) {
-			?>
-            <div class="w-full mb-[26] overflow-hidden">
-                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image ); ?>" alt="">
-            </div>
             <?php
+            $i = 0;
+            if ( $query_images->have_posts() ) {
+                foreach ( $query_images->posts as $image ) {
+                    $i ++;
+                    if ( $i % 3 == 1 ) {
+                        ?>
+                        <div class="w-full mb-[26px] overflow-hidden">
+                            <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image->ID ); ?>" alt="">
+                        </div>
+                        <?php
+                    }
                 }
+            }
             ?>
         </div>
         <div class="col-span-1">
             <?php
-            foreach ( $images3 as $image ) {
-            ?>
-            <div class="w-full mb-[26] overflow-hidden">
-                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image ); ?>" alt="">
-            </div>
-            <?php
+            $i = 0;
+            if ( $query_images->have_posts() ) {
+                foreach ( $query_images->posts as $image ) {
+                    $i ++;
+                    if ( $i % 3 == 2 ) {
+                        ?>
+                        <div class="w-full mb-[26px] overflow-hidden">
+                            <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image->ID ); ?>" alt="">
+                        </div>
+                        <?php
+                    }
                 }
+            }
+            ?>
+        </div>
+        <div class="col-span-1">
+            <?php
+            $i = 0;
+            if ( $query_images->have_posts() ) {
+                foreach ( $query_images->posts as $image ) {
+                    $i ++;
+                    if ( $i % 3 == 0 ) {
+                        ?>
+                        <div class="w-full mb-[26px] overflow-hidden">
+                            <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url( $image->ID ); ?>" alt="">
+                        </div>
+                        <?php
+                    }
+                }
+            }
             ?>
         </div>
     </div>
+	<?php
+	wp_reset_postdata();
+	// Pagination
+	$big = 999999999; // need an unlikely integer
+	echo '<div class="flex justify-center pb-10 align-center">';
+	$arrow = get_template_directory_uri() . '/assets/Arrow.svg';
+	$current_page = max( 1, get_query_var( 'paged' ) );
+	$total_pages = $query_images->max_num_pages;
+	if ( $total_pages > 1 ) {
+		echo '<div class="flex justify-center mb-10">';
+		echo '<span class="screen-reader-text">' . __( 'Page', 'textdomain' ) . ' ' . $current_page . ' ' . __( 'of', 'textdomain' ) . ' ' . $total_pages . '</span>';
+		echo '<a class="prev page-numbers" href="' . get_pagenum_link( $current_page - 1 ) . '"><img src="' . $arrow . '" alt="arrow" class="transform inline-block"></a>';
+		echo '<span class="self-center text-xl mx-5">' . __( 'Page ', 'textdomain' ) . $current_page . __( ' of ', 'textdomain' ) . $total_pages . '</span>';
+		if ( $current_page == $total_pages ) {
+			echo '<a class="next page-numbers" href="' . get_pagenum_link( $current_page ) . '"><img src="' . $arrow . '" alt="arrow" class="inline-block rotate-180"></a>';
+		} else {
+			echo '<a class="next page-numbers" href="' . get_pagenum_link( $current_page + 1 ) . '"><img src="' . $arrow . '" alt="arrow" class="inline-block rotate-180"></a>';
+		}
+		echo '</div>';
+		paginate_links( array(
+			'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format'  => '?paged=%#%',
+			'current' => max( 1, get_query_var( 'paged' ) ),
+			'total'   => $query_images->max_num_pages,
+		) );
+	}
+	echo '</div>';
+	?>
 </section>
-
-<?php
-// Pagination
-$big = 999999999; // need an unlikely integer
-echo '<div class="flex justify-center mb-10">';
-$arrow = get_template_directory_uri() . '/assets/Arrow.svg';
-echo paginate_links( array(
-    'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-    'format'  => '?paged=%#%',
-    'current' => max( 1, get_query_var( 'paged' ) ),
-    'total'   => $query_images->max_num_pages,
-    //prev_text img Arrow.svg from assets
-    'prev_text' => __( '<img src="' . $arrow . '" alt="arrow" class="transform inline-block">', 'textdomain' ),
-    'next_text' => __( '<img src="' . $arrow . '" alt="arrow" class="inline-block rotate-180">', 'textdomain' ),
-) );
-echo '</div>';
-?>
-
+<footer>
 <?php get_footer(); ?>
-
+</footer>
