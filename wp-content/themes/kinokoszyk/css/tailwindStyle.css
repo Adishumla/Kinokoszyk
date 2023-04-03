@@ -7,12 +7,12 @@
 
 @layer components {
   /*Write components like this with an explanatory comment above if the name isn't explanatory already*/
-  .btn-blue {
-    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out;
+  .btn-white {
+    @apply bg-white text-black mt-[50px] text-left h-[50px] w-[280px] border-solid border-[1px] border-black;
   }
 
   .btn-wine {
-    @apply h-[50px] w-[280px] bg-wine text-white;
+    @apply h-[50px] w-[280px] bg-wine text-white mt-[50px] text-left;
   }
 
   .header-link {
