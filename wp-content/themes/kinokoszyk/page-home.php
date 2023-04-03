@@ -23,12 +23,12 @@
       <div id=aboutTextbox class="w-[673px] h-[268px] ">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px]">Kino Koszyk</h2>
         <p class="poppins text-[20px] leading-[28px]">A text to raise the curiosity of visitors to look at Kino Kosyzk's previous events. Also a short text to inform visitors to look at Kino's Facebook page for more information about "smaller events".</p>
-        <button class="btn-wine">
+        <a class="btn-wine flex items-center" href="<?php echo get_permalink(get_page_by_path("about")) ?>">
           <div class="arrow ml-[178.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt="arrow right"></div>
           <div class="ml-[69.5px]">
             Read more
           </div>
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -39,12 +39,12 @@
         <h3 class="poppins text-[26px] text-wine">Photographer</h3>
         <h2 class="font-prata text-[80px] leading-[86px] mb-[22px]">Joanna Helander</h2>
         <p class="poppins text-[20px] leading-[28px]">Discover the beauty captured through the lens of our talented artist Joanna. Explore her stunning photography and allow yourself to be transported to new worlds of wonder and awe.</p>
-        <button class="btn-wine">
+        <a class="btn-wine flex items-center" href="<?php echo get_permalink(get_page_by_path("photos")) ?>">
           <div class="arrow ml-[179px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt="arrow right"></div>
           <div class="ml-[69px]">
             See photos
           </div>
-        </button>
+        </a>
       </div>
       <!-- tror de ville att picture grid skulle vara responsivt -->
       <div id="pictureGrid" class=" grid grid-cols-2 grid-rows-2 h-[744.67px] w-[530px] gap-[30px]">
@@ -69,12 +69,12 @@
       <div id=filmTextbox class="w-[673px] h-[268px] absolute right-0 mr-[180px] gap-[32px] text-off-white">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Film</h2>
         <p class="poppins text-[20px] leading-[28px]">Discover the beauty captured through the lens of our talented artist Joanna. Explore her stunning photography and allow yourself to be transported to new worlds of wonder and awe.</p>
-        <button class="btn-white">
+        <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("films")) ?>">
           <div class="arrow ml-[170px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
           <div class="ml-[78px]">
             See films
           </div>
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -87,20 +87,20 @@
       <div id=eventTextbox class="w-[673px] h-[268px] mr-[180px] gap-[32px]">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Event</h2>
         <p class="poppins text-[20px] leading-[28px]">A text to raise the curiosity of visitors to look at Kino Kosyzk's previous events. Also a short text to inform visitors to look at Kino's Facebook page for more information about "smaller events".</p>
-        <div id="btnContainer" class="flex flex-row space-x-20">
-          <button class="btn-white text-black">
+        <div id="btnContainer" class="flex flex-row space-x-20 ">
+          <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("events")) ?>">
             <div class="arrow ml-[177.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
             <div class="ml-[70.5px]">
 
               See events
             </div>
-          </button>
-          <button class="btn-wine">
+          </a>
+          <a class="btn-wine flex items-center" href="https://www.facebook.com/joanna.helander.169">
             <div class="arrow ml-[213.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt="arrow right"></div>
             <div class="ml-[34.5px]">
               Events on Facebook
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>
