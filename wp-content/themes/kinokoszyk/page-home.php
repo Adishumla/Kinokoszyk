@@ -84,10 +84,10 @@
       <div id="eventPicture" class="h-[643.21px] w-[450px] shadowHome">
         <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="event image" class="object-fill h-full w-full min-w-[450px]">
       </div>
-      <div id=eventTextbox class="w-[673px] h-[268px] mr-[180px] gap-[32px]">
+      <div id=eventTextbox class="w-[673px] h-[268px]">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Event</h2>
         <p class="poppins text-[20px] leading-[28px]">A text to raise the curiosity of visitors to look at Kino Kosyzk's previous events. Also a short text to inform visitors to look at Kino's Facebook page for more information about "smaller events".</p>
-        <div id="btnContainer" class="flex flex-row space-x-20 ">
+        <div id="btnContainer" class="flex flex-row flex-wrap gap-[24px]">
           <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("events")) ?>">
             <div class="arrow ml-[177.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
             <div class="ml-[70.5px]">
