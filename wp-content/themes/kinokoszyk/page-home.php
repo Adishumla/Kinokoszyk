@@ -81,7 +81,7 @@
 
   <section id="event">
     <div class=" w-full vh-section bg-white-red flex flex-row items-center justify-center gap-[165px]">
-      <div id="eventPicture" class="h-[643.21px] w-[450px] shadowHome">
+      <div id="eventPicture" class="h-[643.21px] w-[450px] shadowHome min-w-[450px]">
         <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="event image" class="object-fill h-full w-full min-w-[450px]">
       </div>
       <div id=eventTextbox class="w-[673px] h-[268px]">
