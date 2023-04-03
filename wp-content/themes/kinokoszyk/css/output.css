@@ -1309,6 +1309,14 @@ footer .wrapper .social {
   min-width: 672px;
 }
 
+.min-w-\[600px\] {
+  min-width: 600px;
+}
+
+.min-w-\[580px\] {
+  min-width: 580px;
+}
+
 .max-w-\[100vh\] {
   max-width: 100vh;
 }
@@ -2594,6 +2602,26 @@ footer .wrapper .social {
   line-height: 1rem;
 }
 
+.text-\[86px\] {
+  font-size: 86px;
+}
+
+.text-\[90px\] {
+  font-size: 90px;
+}
+
+.text-\[87px\] {
+  font-size: 87px;
+}
+
+.text-\[88px\] {
+  font-size: 88px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3125,6 +3153,11 @@ footer .wrapper .social {
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
