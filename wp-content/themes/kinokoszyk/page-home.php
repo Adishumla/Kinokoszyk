@@ -18,7 +18,7 @@
   <section id="about">
     <div class=" w-full vh-section bg-off-white flex flex-row justify-center items-center gap-[165px]">
       <div id="aboutPicture" class="h-[643.21px] w-[450px] shadowHome">
-        <img src="<?= get_template_directory_uri() ?>/assets/about.jpg" alt="about image" class="object-fill h-full w-full shadowHome">
+        <img src="<?= get_template_directory_uri() ?>/assets/about.jpg" alt="about image" class="object-fill h-full w-full min-w-[450px]">
       </div>
       <div id=aboutTextbox class="w-[673px] h-[268px] ">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px]">Kino Koszyk</h2>
@@ -47,24 +47,24 @@
         </a>
       </div>
       <!-- tror de ville att picture grid skulle vara responsivt -->
-      <div id="pictureGrid" class=" grid grid-cols-2 grid-rows-2 h-[744.67px] w-[530px] gap-[30px]">
-        <div class=" h-[357.3px] w-[250px] shadowHome ">
+      <div id="pictureGrid" class=" grid grid-cols-2 grid-rows-2 h-[744.67px] w-[530px] gap-[30px] min-w-[530px]">
+        <div class=" h-[357.3px] w-[250px] shadowHome">
           <img src="<?= get_template_directory_uri() ?>/assets/_Szczyrk2_L.jpg" alt="ladies sitting together on the ground" class="object-cover h-full w-full">
         </div>
-        <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
+        <div class="h-[357.3px] w-[250px] shadowHome ">
           <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="lady working" class="object-fill h-full w-full">
         </div>
-        <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
+        <div class="h-[357.3px] w-[250px] shadowHome ">
           <img src="<?= get_template_directory_uri() ?>/assets/ladySmoking.jpg" alt="picure of lady smoking" class="object-cover h-full w-full">
         </div>
-        <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
+        <div class="h-[357.3px] w-[250px] shadowHome">
           <img src="<?= get_template_directory_uri() ?>/assets/power.jpg" alt="picture of the womensday in ruda 1976" class="object-fill h-full w-full">
         </div>
       </div>
   </section>
 
   <section id="film">
-    <div class=" w-full vh-section bg-pink-300 flex justify-center items-center flex-col ">
+    <div class=" w-full vh-section  flex justify-center items-center flex-col ">
       <img src="<?= get_template_directory_uri() ?>/assets/film.jpg" alt="" class="object-cover w-full vh-section">
       <div id=filmTextbox class="w-[673px] h-[268px] absolute right-0 mr-[180px] gap-[32px] text-off-white">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Film</h2>
@@ -80,9 +80,9 @@
   </section>
 
   <section id="event">
-    <div class=" w-full vh-section bg-white-red flex flex-row justify-center items-center gap-[165px]">
-      <div id="eventPicture" class="h-[643.21px] w-[450px] bg-purple-300 shadowHome ">
-        <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="event image" class="object-fill h-full w-full">
+    <div class=" w-full vh-section bg-white-red flex flex-row items-center justify-center gap-[165px]">
+      <div id="eventPicture" class="h-[643.21px] w-[450px] shadowHome">
+        <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="event image" class="object-fill h-full w-full min-w-[450px]">
       </div>
       <div id=eventTextbox class="w-[673px] h-[268px] mr-[180px] gap-[32px]">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Event</h2>
