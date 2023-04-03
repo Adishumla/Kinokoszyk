@@ -11,14 +11,16 @@
     @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 hover:shadow-2xl transform hover:-translate-y-1 hover:scale-110 transition duration-500 ease-in-out;
   }
 
-  .header-link {
-    @apply
-    text-2xl
+  .btn-wine {
+    @apply h-[50px] w-[280px] bg-wine text-white;
   }
-  
+
+  .header-link {
+    @apply text-2xl;
+  }
+
   .link {
-    @apply
-    relative
+    @apply relative
      
     /* Underline style */
     after:inline
@@ -38,17 +40,15 @@
     focus:outline-none
     
     /* Active style */
-    active:text-light-wine
+    active:text-light-wine;
   }
 
   .FooterPhotoWrapper {
-    @apply 
-    relative
-    h-[584px] 
+    @apply relative
+    h-[584px];
   }
   .FooterPhotoWrapper a {
-    @apply 
-    absolute 
+    @apply absolute 
     text-sm
     text-off-white
     bg-light-wine
@@ -73,12 +73,11 @@
     lg:text-base
     lg:w-24
     lg:h-24
-    lg:-top-12
+    lg:-top-12;
   }
 
   .FooterPhotoWrapper p {
-    @apply
-    text-lg
+    @apply text-lg
     font-bold 
     text-white 
     text-center
@@ -91,33 +90,30 @@
     
     /* min width 1024 */
     lg:left-1/4
-    lg:text-3xl 
+    lg:text-3xl;
   }
 
   footer {
-    @apply
-    flex 
+    @apply flex 
     flex-col 
     bg-footer 
     text-white 
     px-6
     
     /* min width 1024 */
-    lg:px-0
+    lg:px-0;
   }
 
   footer h2 {
-    @apply 
-    text-6xl
+    @apply text-6xl
     text-off-white
     
     /* min width 1024 */
-    lg:text-9xl 
+    lg:text-9xl;
   }
 
   footer .wrapper {
-    @apply 
-    grid 
+    @apply grid 
     grid-cols-2
     gap-y-10  
     items-end 
@@ -130,27 +126,25 @@
     lg:w-11/12
     lg:gap-x-48 
     lg:gap-y-12 
-    lg:mb-28 
+    lg:mb-28;
   }
 
   footer .wrapper p {
-    @apply
-    max-w-prose
+    @apply max-w-prose
     col-span-full
 
     /* min width 1024 */
-    lg:col-span-1
+    lg:col-span-1;
   }
 
   footer .wrapper .social {
-    @apply
-    row-start-2
+    @apply row-start-2
     col-start-2
     justify-self-end
 
     /* min width 1024 */
     lg:justify-self-start
-    lg:row-start-3
+    lg:row-start-3;
   }
 }
 
@@ -160,6 +154,20 @@
   }
 
   .vh-hero {
-    height: calc(100vh - 89px);
+    height: calc(100vh - 72px);
+    margin-top: 72px;
+    /* height: 100vh; */
+  }
+
+  .arrow {
+    position: absolute;
+    width: 32px;
+    height: 16px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .shadowHome {
+    box-shadow: 10px 14px 14px rgba(0, 0, 0, 0.25);
   }
 }
