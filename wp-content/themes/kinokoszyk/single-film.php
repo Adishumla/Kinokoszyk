@@ -1,6 +1,6 @@
 <?php 
 $year = get_field("year");
-$director = get_field("director");
+$directorAndScreenwriters = get_field("director_and_screenwriters");
 $directorOfPhotography = get_field("director_of_photography");
 $producedBy = get_field("produced_by");
 $sound = get_field("sound");
@@ -24,9 +24,9 @@ get_header(); ?>
                 echo wp_get_attachment_image( $image, $size );
                 
             }?>
-            
+           
             <p> Year: <?= $year ?> </p>
-            <p> Director: <?= $director ?> </p>
+            <p> Director & Screenwriters: <?= $directorAndScreenwriters ?> </p>   <!-- Check for plural? -->
             <p> Director of Photography: <?= $directorOfPhotography ?> </p>
             <p> Produced by: <?=$producedBy ?> </p>
             <p> Sound: <?= $sound?> </p>
