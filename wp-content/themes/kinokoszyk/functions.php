@@ -11,8 +11,7 @@ add_action( 'enqueue_block_editor_assets', 'load_tailwind' );
 
 # Register custom post types
 function kinokoszyk_custom_post_types() {
-	register_post_type('film',
-		array(
+	register_post_type('film', array(
 			'labels'      => array(
 				'name'          => __('Films', 'textdomain'),
 				'singular_name' => __('Film', 'textdomain'),
@@ -23,6 +22,28 @@ function kinokoszyk_custom_post_types() {
         
 		)
 	);
+  register_post_type('book', array(
+    'labels'      => array(
+      'name'          => __('Books', 'textdomain'),
+      'singular_name' => __('Book', 'textdomain'),
+    ),
+      'public'      => true,
+      'has_archive' => true,
+      
+      
+  )
+  );
+  register_post_type('event', array(
+      'labels'      => array(
+      'name'          => __('Events', 'textdomain'),
+      'singular_name' => __('Event', 'textdomain'),
+    ),
+      'public'      => true,
+      'has_archive' => true,
+      
+      
+  )
+  );
 }
 add_action('init', 'kinokoszyk_custom_post_types');
 
