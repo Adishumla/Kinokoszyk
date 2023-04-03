@@ -2,7 +2,7 @@
 <div class="FooterPhotoWrapper">
     <a href="#top">Top</a>
     <p>kochając nic nie tracisz.</p>
-    <img  class=" h-full w-full object-cover" src="<?= get_template_directory_uri() ?>/assets/_Szczyrk2_L.jpg" alt="">
+    <img class=" h-full w-full object-cover" src="<?= get_template_directory_uri() ?>/assets/compressedPictures/ladiesGroupBig.jpg" alt="">
 </div>
 <footer>
     <h2>KINO KOSZYK</h2>
