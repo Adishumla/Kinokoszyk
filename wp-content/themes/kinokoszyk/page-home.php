@@ -49,23 +49,23 @@
       <!-- tror de ville att picture grid skulle vara responsivt -->
       <div id="pictureGrid" class=" grid grid-cols-2 grid-rows-2 h-[744.67px] w-[530px] gap-[30px]">
         <div class=" h-[357.3px] w-[250px] shadowHome ">
-          <img src="<?= get_template_directory_uri() ?>/assets/hero.jpg" alt="hero image" class="object-fill h-full w-full">
+          <img src="<?= get_template_directory_uri() ?>/assets/_Szczyrk2_L.jpg" alt="ladies sitting together on the ground" class="object-cover h-full w-full">
         </div>
         <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
-          <img src="<?= get_template_directory_uri() ?>/assets/hero.jpg" alt="hero image" class="object-fill h-full w-full">
+          <img src="<?= get_template_directory_uri() ?>/assets/event-home.jpg" alt="lady working" class="object-fill h-full w-full">
         </div>
         <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
-          <img src="<?= get_template_directory_uri() ?>/assets/hero.jpg" alt="hero image" class="object-fill h-full w-full">
+          <img src="<?= get_template_directory_uri() ?>/assets/ladySmoking.jpg" alt="picure of lady smoking" class="object-cover h-full w-full">
         </div>
         <div class="h-[357.3px] w-[250px] shadowHome bg-gray-50">
-          <img src="<?= get_template_directory_uri() ?>/assets/hero.jpg" alt="hero image" class="object-fill h-full w-full">
+          <img src="<?= get_template_directory_uri() ?>/assets/power.jpg" alt="picture of the womensday in ruda 1976" class="object-fill h-full w-full">
         </div>
       </div>
   </section>
 
   <section id="film">
     <div class=" w-full vh-section bg-pink-300 flex justify-center items-center flex-col ">
-      <img src="<?= get_template_directory_uri() ?>/assets/film.jpg" alt="hero image" class="object-cover w-full vh-section">
+      <img src="<?= get_template_directory_uri() ?>/assets/film.jpg" alt="" class="object-cover w-full vh-section">
       <div id=filmTextbox class="w-[673px] h-[268px] absolute right-0 mr-[180px] gap-[32px] text-off-white">
         <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Film</h2>
         <p class="poppins text-[20px] leading-[28px]">Discover the beauty captured through the lens of our talented artist Joanna. Explore her stunning photography and allow yourself to be transported to new worlds of wonder and awe.</p>
