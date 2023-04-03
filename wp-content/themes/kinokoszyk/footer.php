@@ -2,7 +2,7 @@
 <div class="FooterPhotoWrapper">
     <a href="#top">Top</a>
     <p>kochając nic nie tracisz.</p>
-    <img class=" h-full w-full object-cover" src="<?= get_template_directory_uri() ?>/assets/compressedPictures/ladiesGroupBig.jpg" alt="">
+    <img class=" h-full w-full object-cover" src="<?= get_template_directory_uri() ?>/assets/compressedPictures/womanGroupBig.webp" alt="">
 </div>
 <footer>
     <h2>KINO KOSZYK</h2>
@@ -23,7 +23,7 @@
 
         <p class="text-[#858585]">© <?= date('Y') ?> Kino Koszyk. All rights reserved.</p>
         <a class="social" href="https://www.facebook.com/joanna.helander.169" target="_blank">
-            <img src="<?= get_template_directory_uri() ?>/assets/Icon facebook.svg">
+            <img src="<?= get_template_directory_uri() ?>/assets/Icon facebook.svg" alt="Facebook icon">
         </a>
     </div>
 </footer>

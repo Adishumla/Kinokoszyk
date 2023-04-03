@@ -162,7 +162,7 @@
   .arrow {
     position: absolute;
     width: 32px;
-    height: 16px;
+    height: 19px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
