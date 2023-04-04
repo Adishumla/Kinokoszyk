@@ -15,7 +15,7 @@
 		</div>
         <div class="flex gap-6 mt-20 h-fit">
             <a href=# class="btn-white py-2.5 px-5 text-center flex items-center justify-center m-0">Read her biography</a>
-            <a href=# class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
+            <a href="#interview-section" id="interview-button" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
         </div>
 	</div>
 	<img class="h-full object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
@@ -191,6 +191,65 @@ $images = array();
         </p>
     </div>
 </section>
+<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-full hidden z-50 mt-[202px]">
+    <div class="bg-off-white py-[102px] px-[180px] font-poppins">
+        <div class="top-0 right-0 p-10 cursor-pointer absolute" id="close-interview">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+        </div>
+    <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
+        REALITY MIS EN SCENE
+    </h1>
+    <h2 class="text-[20px] leading-[20px] font-bold text-start pt-20">
+        Interview with Joanna Helander by Jerzy Illg for Polish journal Naglos
+    </h2>
+    <div>
+    <p class="text-[20px] flex flex-col gap-4">
+        <span>
+            <b>Jerzy Illg:</b> Tell me what it felt like to return to Poland after emigratingto Sweden.
+        </span>
+        <span>
+        <b>Joanna Helander:</b> The first time I came back to Poland after living over five years in Sweden was in March 1976. I had trained as a photographer in Gothenburg, and now I wanted to take pictures of Ruda, my home town in southern Poland, where my parents, my brother, my aunt and my grandmother was still living.
+        </span>
+        <span>
+        I was 28 and had begun to feel curious about the place I had once left with such enormous relief, well, fled from. I only had to get out at its railway station to be hit by a strange and surprising emotion. These cobblestones, these rusty hinges, the Karlik beerstand – all of it was all so familiar, yet utterly new, as if I was seeing it for the first time. The first old woman in traditional long skirts I met with recognised me instantly, the ironminer’s brass band the town was so proud of was marching down the main street in a funeral procession –suddenly everything gripped me, felt so close.
+        </span>
+        <span>
+        Evidently it was this kind of aestehtic that, unbeknown to me, had shaped my nature! I felt a tremendous need to grab hold of what I was experiencing, fix it all in some way. And then, this immediate sense of belonging… The Silesian dialect, the humour, the jokes, the local place names; Godula, Bobrek, Orzegow…Yet all this – these allotments with their gooseberry bushes, blackcurrants and cherry trees – was so irremediably poisoned. These freshly painted doorways, the well-kept houses. And – right on their doorsteps – a coke refinery belching smoke that stifled you, stung your eyes. But I was surprised, too, by the resilience, the vitality, the irrepressible humour of individuals I ran into, realising to my amazement that somewhere deep down inside them their sense of personal dignity was fully intact, unbroken.
+        </span>
+        <span>
+        <b>Jerzy Illg:</b> Let´s go back to your photos…Joanna Helander:I find it hard to describe or analyze my own photos, what I can´t express in words I express in pictures. But one thing I do think I see, clearly: the touch of darkness and melancholy in my Polish pictures is not to be found in my Swedish ones, not in the same way. They are lighter, in both senses. When I exhibited in Poland in 1979 a Katowice journalist said the Poland I had depicted didn´t exist in reality, it could only be a put up job, ordered by the CIA. I burst out laughing. It seems to me in spite of everything my pictures don´t lack humour… 
+        </span>
+        <span>
+        <b>Jerzy Illg:</b> A lot of people have written that your books, exhibitions and films approach your subjects with tenderness.
+        </span>
+        <span>
+        <b>Joanna Helander:</b> I take it as a compliment…
+        </span>
+        <span>
+        <b>Jerzy Illg:</b> There is so much warmth in your pictures. It makes your photos into something more than documentaries.
+        </span>
+        <span>
+        <b>Joanna Helander:</b> Because I am not just documenting, am I? Not limiting myself to mere facts. Purely documentary photos are not very exciting. Anyone who wants to mirror reality must first stage it. 
+        </span>
+        <span>
+        <b>Jerzy Illg:</b> That is what turns photos into works of art. The people in your pictures, your Ruda, if you like, are raised to mythological status. Tell me, do you think your way of seeing the world is in some way connected with the blend of Polish, German and Jewish? With your being born in a border country, has that meant something?  Joanna Helander: There is something in that, certainly. Yet I must say the fact of my having emigrated and suddenly finding myself on another planet has been most important of all. It´s given me an extra dimension in life, the kind of detachment one needs if one is to see clearly.
+        </span>
+        <span>
+        From a conversation published in the Polish journal Naglos, October 1994
+        </span>
+    </p>
+    </div>
+</div>
+</section>
 <footer>
     <?php get_footer() ?>
 </footer>
+<script>
+    //get button with id interview-button and section with id interview-section. When button is clicked remove class hidden from section tailwind css
+    const interviewButton = document.getElementById('interview-button');
+    const interviewSection = document.getElementById('interview-section');
+
+    interviewButton.addEventListener('click', () => {
+        interviewSection.classList.remove('hidden');
+    })
+</script>
