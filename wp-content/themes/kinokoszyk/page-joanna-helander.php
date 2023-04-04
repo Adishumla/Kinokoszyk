@@ -191,15 +191,15 @@ $images = array();
         </p>
     </div>
 </section>
-<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-full hidden z-50 mt-[202px]">
+<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-full hidden z-50 mt-[72px]">
     <div class="bg-off-white py-[102px] px-[180px] font-poppins">
-        <div class="top-0 right-0 p-10 cursor-pointer absolute" id="close-interview">
+        <div class="top-0 right-60 p-10 cursor-pointer absolute" id="close-interview">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
         </div>
     <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
         REALITY MIS EN SCENE
     </h1>
-    <h2 class="text-[20px] leading-[20px] font-bold text-start pt-20">
+    <h2 class="text-[20px] leading-[20px] text-start pt-20">
         Interview with Joanna Helander by Jerzy Illg for Polish journal Naglos
     </h2>
     <div>
@@ -248,8 +248,13 @@ $images = array();
     //get button with id interview-button and section with id interview-section. When button is clicked remove class hidden from section tailwind css
     const interviewButton = document.getElementById('interview-button');
     const interviewSection = document.getElementById('interview-section');
+    const closeInterview = document.getElementById('close-interview');
 
     interviewButton.addEventListener('click', () => {
         interviewSection.classList.remove('hidden');
+    })
+
+    closeInterview.addEventListener('click', () => {
+        interviewSection.classList.add('hidden');
     })
 </script>
