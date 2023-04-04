@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="description" content="Website of Kino Koszyk, a still photography and motionpicture organizaton created by Joanna Helander and Bo Svensson.">
+    <meta name="keywords" content="Home, Kino Koszyk, Kino, Koszyk, Uncategorized, Helander, Joanna, Joanna Helander, Kino, Kino Koszyk, Koszyk, kinokoszyk,documentaries,dokumentärer,film,bio,cinema,photography">
+    <meta name="author" content="Kino Koszyk">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://http://www.kinokoszyk.com/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <!-- Load Google Fonts -->
@@ -14,7 +19,7 @@
 
 
     <header class="fixed top-0 z-50 bg-off-white w-full flex justify-between items-center py-5 px-8">
-	    <?= get_custom_logo() ?>
+        <?= get_custom_logo() ?>
         <nav class="">
             <ul class="flex gap-x-7">
                 <?php $currentPageId = get_queried_object_id();

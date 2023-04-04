@@ -8,11 +8,11 @@
 @layer components {
   /*Write components like this with an explanatory comment above if the name isn't explanatory already*/
   .btn-white {
-    @apply bg-white text-black mt-[50px] text-left h-[50px] w-[280px] border-solid border-[1px] border-black;
+    @apply bg-white text-black text-left h-[50px] w-[280px] border-solid border-[1px] border-black;
   }
 
   .btn-wine {
-    @apply h-[50px] w-[280px] bg-wine text-white mt-[50px] text-left;
+    @apply h-[50px] w-[280px] bg-wine text-white text-left;
   }
 
   .header-link {
@@ -162,7 +162,7 @@
   .arrow {
     position: absolute;
     width: 32px;
-    height: 16px;
+    height: 19px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
