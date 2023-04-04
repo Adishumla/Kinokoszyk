@@ -191,7 +191,7 @@ $images = array();
         </p>
     </div>
 </section>
-<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-full hidden z-50 mt-[72px]">
+<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-fit hidden z-50 mt-[72px]">
     <div class="bg-off-white py-[102px] px-[180px] font-poppins">
         <div class="top-0 right-60 p-10 cursor-pointer absolute" id="close-interview">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
@@ -245,16 +245,18 @@ $images = array();
     <?php get_footer() ?>
 </footer>
 <script>
-    //get button with id interview-button and section with id interview-section. When button is clicked remove class hidden from section tailwind css
     const interviewButton = document.getElementById('interview-button');
     const interviewSection = document.getElementById('interview-section');
     const closeInterview = document.getElementById('close-interview');
+    const body = document.querySelector('body');
 
     interviewButton.addEventListener('click', () => {
         interviewSection.classList.remove('hidden');
-    })
+
+    });
 
     closeInterview.addEventListener('click', () => {
         interviewSection.classList.add('hidden');
-    })
+    });
+
 </script>
