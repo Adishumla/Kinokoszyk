@@ -111,6 +111,8 @@
       <h3>
         Här ska partners sektionen visas
       </h3>
+      <?php get_template_part( 'content', 'partners')?>
+      
 
     </div>
 
