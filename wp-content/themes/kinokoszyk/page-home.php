@@ -107,14 +107,9 @@
   </section>
 
   <section id="partners">
-    <div class="w-full h-[383.7px] bg-pink-200">
-      <h3>
-        Här ska partners sektionen visas
-      </h3>
-      <?php get_template_part( 'content', 'partners')?>
-      
+    <!-- h-[383.7px] -->
+    <?php get_template_part( 'content', 'partners')?>
 
-    </div>
 
     <!-- <?php if (get_field('home_hero')) : ?>
             <img src="<?php the_field('home_hero'); ?>" />
