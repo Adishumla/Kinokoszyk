@@ -22,20 +22,25 @@
       
         $image = get_field('image');
         $size = '443px'; // (thumbnail, medium, large, full or custom size)
+        # var_dump($image["alt"]);
         ?>
-        <div class="shadow-2xl">
+        <div class="shadow-2xl min-h-[760px]">
             <?php
             if( $image ): ?>
-                <img class="w-96 h-96 object-cover" src="<?= wp_get_attachment_image_src( $image)[0] ?>" alt="">
+                <div class="hover:bg-off-white hover:opacity-30">
+                    <img class="w-96 h-1/2 object-cover" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+                </div>
             <?php endif ?>
 
 
-            <div class="p-10">
-                <h2 class="font-bold text-4xl mb-1"> <?php the_title(); ?> </h2>
-    <!--            <p> --><?php //the_content(); ?><!-- <p>-->
-                <p class="text-2xl mb-24"> Year: <?= $year ?> </p>
+            <div class="p-10 h-1/2 flex flex-col justify-between">
+                <div>
+                    <h2 class="font-bold text-4xl max-w-fit mb-1 hover:underline"> <?php the_title(); ?> </h2>
+        <!--            <p> --><?php //the_content(); ?><!-- <p>-->
+                    <p class="text-2xl"> Year: <?= $year ?> </p>
+                </div>
                 <button class="btn-wine text-center">
-                    <a class="" href="<?= the_permalink();?>">Read more</a>
+                    <a class="flex justify-center gap-5" href="<?= the_permalink();?>">Read more<img class="rotate-180" src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt=""></a>
                 </button>
             </div>
         </div>
