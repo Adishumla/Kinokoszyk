@@ -191,7 +191,7 @@ $images = array();
         </p>
     </div>
 </section>
-<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-fit hidden z-50 mt-[72px]">
+<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-fit hidden z-50 mt-[72px] ">
     <div class="bg-off-white py-[102px] px-[180px] font-poppins">
         <div class="top-0 right-60 p-10 cursor-pointer absolute" id="close-interview">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
