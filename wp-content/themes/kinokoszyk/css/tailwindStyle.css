@@ -149,6 +149,12 @@
 }
 
 @layer base {
+  ul {
+    @apply list-disc px-4;
+  }
+  blockquote p {
+    @apply text-4xl font-prata leading-tight before:content-['“'] after:content-['”'];
+  }
   .vh-section {
     height: 1110px;
   }

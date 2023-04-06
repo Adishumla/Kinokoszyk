@@ -13,7 +13,7 @@
 
         <div class="flex flex-col gap-4">
             <p class="text-2xl">Contact</p>
-            <ul class="flex flex-col gap-2 text-xl">
+            <ul class="flex flex-col gap-2 text-xl list-none">
                 <li class="link w-fit">Tel: <a href="tel:+46 31-25 95 78">+46 31-25 95 78</a></li>
                 <li class="link w-fit">Mail: <a href="mailto:kino.koszyk@gmail.com">kino.koszyk@gmail.com</a></li>
             </ul>

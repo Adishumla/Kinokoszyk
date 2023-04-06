@@ -21,7 +21,7 @@
     <header class="fixed top-0 z-50 bg-off-white w-full flex justify-between items-center py-5 px-8">
         <?= get_custom_logo() ?>
         <nav class="">
-            <ul class="flex gap-x-7">
+            <ul class="flex gap-x-7 list-none">
                 <?php $currentPageId = get_queried_object_id();
                 if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
