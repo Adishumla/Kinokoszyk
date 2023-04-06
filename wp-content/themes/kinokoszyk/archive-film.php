@@ -27,16 +27,17 @@
         <div class="shadow-2xl min-h-[760px]">
             <?php
             if( $image ): ?>
-                <div class="hover:bg-off-white hover:opacity-30">
+                <a class="hover:bg-off-white hover:opacity-30" href="<?= the_permalink();?>">
                     <img class="w-96 h-1/2 object-cover" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
-                </div>
+                </a>
             <?php endif ?>
 
 
             <div class="p-10 h-1/2 flex flex-col justify-between">
                 <div>
-                    <h2 class="font-bold text-4xl max-w-fit mb-1 hover:underline"> <?php the_title(); ?> </h2>
-        <!--            <p> --><?php //the_content(); ?><!-- <p>-->
+                    <a href="<?= the_permalink();?>">
+                        <h2 class="font-bold text-4xl max-w-fit mb-1 hover:underline"> <?php the_title(); ?> </h2>
+                    </a>
                     <p class="text-2xl"> Year: <?= $year ?> </p>
                 </div>
                 <button class="btn-wine">
