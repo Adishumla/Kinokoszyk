@@ -107,6 +107,10 @@ function my_enqueue_block_assets() {
     wp_enqueue_script('my-own-block', $js_dir . '/react-hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
 }
 
+function remove_content_filter() {
+	remove_filter('the_content', 'wpautop');
+}
+add_action('init', 'remove_content_filter');
 
 
 
