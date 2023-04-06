@@ -10,31 +10,35 @@ $music = get_field("music");
 get_header(); ?>
 
 
-
-    <div class="col-span-6 flex flex-col gap-6 justify-center text-center px-6">
-        <h1 class="font-oi text-4xl lg:text-7xl"><?php the_title(); ?></h1>
-        <div class="font-sans"><?php the_content(); ?></div>
-        <div> <?php the_field('trailer') ?></div>
-        <div> 
-
-            <?php 
-            $image = get_field('image');
-            $size = 'full'; // (thumbnail, medium, large, full or custom size)
-            if( $image ) {
-                echo wp_get_attachment_image( $image, $size );
-                
-            }?>
-           
-            <p> Year: <?= $year ?> </p>
-            <p> Director & Screenwriters: <?= $directorAndScreenwriters ?> </p>   <!-- Check for plural? -->
-            <p> Director of Photography: <?= $directorOfPhotography ?> </p>
-            <p> Produced by: <?=$producedBy ?> </p>
-            <p> Sound: <?= $sound?> </p>
-            <p> Editor: <?= $editor ?> </p>
-            <p> Music: <?= $music ?> </p>
+<section>
+    <?php the_field('trailer') ?>
+</section>
 
 
-        </div>
-    </div>
+<!--    <div class="col-span-6 flex flex-col gap-6 justify-center text-center px-6">-->
+<!--        <h1 class="font-oi text-4xl lg:text-7xl">--><?php //the_title(); ?><!--</h1>-->
+<!--        <div class="font-sans">--><?php //the_content(); ?><!--</div>-->
+<!--        <div> --><?php //the_field('trailer') ?><!--</div>-->
+<!--        <div> -->
+<!---->
+<!--            --><?php //
+//            $image = get_field('image');
+//            $size = 'full'; // (thumbnail, medium, large, full or custom size)
+//            if( $image ) {
+//                echo wp_get_attachment_image( $image, $size );
+//
+//            }?>
+<!--           -->
+<!--            <p> Year: --><?php //= $year ?><!-- </p>-->
+<!--            <p> Director & Screenwriters: --><?php //= $directorAndScreenwriters ?><!-- </p>   <!-- Check for plural? -->-->
+<!--            <p> Director of Photography: --><?php //= $directorOfPhotography ?><!-- </p>-->
+<!--            <p> Produced by: --><?php //=$producedBy ?><!-- </p>-->
+<!--            <p> Sound: --><?php //= $sound?><!-- </p>-->
+<!--            <p> Editor: --><?php //= $editor ?><!-- </p>-->
+<!--            <p> Music: --><?php //= $music ?><!-- </p>-->
+<!---->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
 
 <?php get_footer(); ?>

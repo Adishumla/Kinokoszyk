@@ -39,7 +39,7 @@
         <!--            <p> --><?php //the_content(); ?><!-- <p>-->
                     <p class="text-2xl"> Year: <?= $year ?> </p>
                 </div>
-                <button class="btn-wine text-center">
+                <button class="btn-wine">
                     <a class="flex justify-center gap-5" href="<?= the_permalink();?>">Read more<img class="rotate-180" src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt=""></a>
                 </button>
             </div>
