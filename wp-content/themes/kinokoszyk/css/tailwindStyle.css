@@ -160,8 +160,9 @@
   }
 
   .vh-hero {
-    height: calc(100vh - 72px);
-    margin-top: 72px;
+    --margin: 72px;
+    height: calc(100vh - var(--margin));
+    margin-top: var(--margin);
     /* height: 100vh; */
   }
 

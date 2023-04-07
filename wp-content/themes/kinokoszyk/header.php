@@ -1,3 +1,8 @@
+<?php
+    $menuItems = wp_get_nav_menu_items('primary-menu');
+    $currentPageId = get_queried_object_id();
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -15,17 +20,24 @@
 
 <body id="Top" class="bg-white-red" <?php body_class("bg-pink-light text-brown"); ?>>
     <?php wp_body_open(); ?>
-    <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
+
+    <?php  ?>
 
 
-    <header class="fixed top-0 z-50 bg-off-white w-full flex justify-between items-center py-5 px-8">
-        <?= get_custom_logo() ?>
-        <nav class="">
-            <ul class="flex gap-x-7 list-none">
-                <?php $currentPageId = get_queried_object_id();
+    <header class="fixed flex flex-col justify-center items-center top-0 z-50 bg-off-white w-full py-5">
+        <div class="flex ">
+            <div class="w-8">
+            <?= get_custom_logo() ?>
+
+            </div>
+            <button class="uppercase text-2xl">Menu</button>
+        </div>
+        <nav class="fixed top-0 w-full vh-hero bg-white-red">
+            <ul class="flex flex-col items-center gap-y-10 list-none lg:gap-x-7">
+                <?php
                 if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
-                        <a class="header-link link text-off-black <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
+                        <a class="header-link text-2xl link text-off-black <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
                             <?= $item->title; ?>
                         </a>
                     </li>

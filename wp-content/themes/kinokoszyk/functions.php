@@ -78,11 +78,6 @@ function register_template_parts()
   get_template_part('photos.php');
 }
 
-add_action('init', function () {
-	register_block_type(__DIR__ . '/blocks/hero');
-	register_block_type(__DIR__ . '/blocks/test');
-});
-
 # Print array or object in a pre tag
 function print_a($data)
 {
@@ -100,11 +95,6 @@ function my_enqueue_block_assets() {
 	// If in plugin, use this instead:
 	// $css_dir = plugin_dir_url(__FILE__) . 'css';
 	// $js_dir = plugin_dir_url(__FILE__) . 'js';
-
-	wp_enqueue_script('my-custom-block', $js_dir . '/custom.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
-	wp_enqueue_script('my-hero-block', $js_dir . '/hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
-    wp_enqueue_script('my-react-block', $js_dir . '/hero-react.jsx', [ 'wp-blocks', 'wp-dom' ] , null, true);
-    wp_enqueue_script('my-own-block', $js_dir . '/react-hero.js', [ 'wp-blocks', 'wp-dom' ] , null, true);
 }
 
 function remove_content_filter() {
