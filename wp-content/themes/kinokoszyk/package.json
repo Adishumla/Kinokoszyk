@@ -19,10 +19,5 @@
     "url": "https://github.com/Adishumla/Kinokoszyk/issues"
   },
   "homepage": "https://github.com/Adishumla/Kinokoszyk#readme",
-  "description": "",
-  "dependencies": {
-    "@wordpress/block-editor": "^11.7.0",
-    "@wordpress/blocks": "^12.7.0",
-    "react": "^18.2.0"
-  }
+  "description": ""
 }
