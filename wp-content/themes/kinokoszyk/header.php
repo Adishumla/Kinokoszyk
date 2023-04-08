@@ -25,7 +25,7 @@
 
 
     <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between lg:pr-8">
-        <div class="flex justify-between w-full px-6 pt-12 pb-4 z-50 lg:w-auto lg:pt-0 lg:pb-0">
+        <div class="flex justify-between w-full px-6 pt-12 pb-4 z-50 lg:w-auto">
             <div class="w-16">
                 <?= get_custom_logo() ?>
             </div>
