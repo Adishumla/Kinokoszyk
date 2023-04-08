@@ -24,16 +24,15 @@
     <?php  ?>
 
 
-    <header class="fixed flex flex-col justify-center items-center top-0 z-50 bg-off-white w-full py-5">
-        <div class="flex ">
-            <div class="w-8">
-            <?= get_custom_logo() ?>
-
+    <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between lg:pr-8">
+        <div class="flex justify-between w-full px-6 pt-12 pb-4 z-50 lg:w-auto lg:pt-0 lg:pb-0">
+            <div class="w-16">
+                <?= get_custom_logo() ?>
             </div>
-            <button class="uppercase text-2xl">Menu</button>
+            <button class="uppercase text-2xl lg:hidden">Menu</button>
         </div>
-        <nav class="fixed top-0 w-full vh-hero bg-white-red">
-            <ul class="flex flex-col items-center gap-y-10 list-none lg:gap-x-7">
+        <nav class="fixed top-0 left-full w-full vh-hero bg-white-red duration-500 lg:left-0 lg:mt-0 lg:min-h-0 lg:w-auto lg:static lg:bg-transparent">
+            <ul class="flex flex-col items-center gap-y-10 px-0 list-none lg:gap-x-7 lg:flex-row">
                 <?php
                 if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>

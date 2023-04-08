@@ -4,14 +4,14 @@
 
 <body>
 <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
-    <div class="ml-28">
-        <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
-        <h2 class="text-[148px] font-prata p-0 leading-[148px]">About us</h2>
-        <div class="w-3/6 min-w-[800px] mt-4">
-            <p class="text-xl font-poppins">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
-        </div>
-    </div>
-    <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
+   <div class="ml-28">
+       <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
+       <h2 class="text-[148px] font-prata p-0 leading-[148px]">About us</h2>
+       <div class="w-3/6 min-w-[800px] mt-4">
+           <p class="text-xl font-poppins">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
+       </div>
+   </div>
+   <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
 </section>
 
 <section class="flex flex-col-reverse px-6 pb-10 pt-16 bg-off-white lg:grid lg:grid-cols-2 lg:gap-x-44 lg:px-28 ">

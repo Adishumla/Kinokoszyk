@@ -87,14 +87,16 @@ function print_a($data)
 }
 
 # Add custom block category
-add_action('enqueue_block_editor_assets', 'my_enqueue_block_assets');
+add_action('init', 'my_enqueue_block_assets');
 
 function my_enqueue_block_assets() {
-	$js_dir = get_stylesheet_directory_uri() . '/js';
+	$js_dir = get_theme_file_uri() . '/js';
 
 	// If in plugin, use this instead:
 	// $css_dir = plugin_dir_url(__FILE__) . 'css';
 	// $js_dir = plugin_dir_url(__FILE__) . 'js';
+
+	wp_enqueue_script('Header', $js_dir . "/header.js", [], false, true);
 }
 
 function remove_content_filter() {
