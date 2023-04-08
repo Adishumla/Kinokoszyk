@@ -8,9 +8,12 @@ $editor = get_field("editor");
 $music = get_field("music");
 $image = get_field('image');
 
-echo "<pre>";
-# var_dump();
-echo "</pre>";
+$awards = [];
+if(get_field("award1")) $awards[] = get_field("award1");
+if(get_field("award2")) $awards[] = get_field("award2");
+if(get_field("award3")) $awards[] = get_field("award3");
+if(get_field("award4")) $awards[] = get_field("award4");
+
 get_header(); ?>
 
 
@@ -32,6 +35,24 @@ get_header(); ?>
 
         </ul>
     </section>
+    <?php
+        if(array_key_exists(0, $awards)): ?>  
+          
+        <section id="Awards">
+            <h2 class="font-poppins text-[28px] leading-[37px]">Awards</h2>
+            <div class="flex justify-center gap-x-[2%]">
+            <?php foreach($awards as $award):?>
+                <div class="w-[18.6vw] h-[18.6vw] flex object-contain " >
+            
+                <img class="object-contain w-full" src=<?=$award["url"]?> alt="<?=$award["alt"]?>"  srcset="<?= wp_get_attachment_image_srcset($award["id"])?>" sizes="15vw">
+        </div>
+            
+            <?php endforeach; ?>
+            </div>
+        </section>
+        <?php endif; ?>
+   
+
 </main>
 
 
