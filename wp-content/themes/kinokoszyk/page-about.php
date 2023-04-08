@@ -69,6 +69,10 @@
         <button class="btn-wine self-center text-center" type="submit">Send message</button>
     </form>
 </section>
+<section id="partners">
+    <?php get_template_part( 'content', 'partners')?>
+</section>
+
 </body>
 <footer>
 	<?php get_footer(); ?>
