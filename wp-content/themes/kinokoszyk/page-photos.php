@@ -23,9 +23,9 @@ $query_images = new WP_Query($query_images_args);
 $images = array();
 ?>
 
-<header>
-    <?php get_header(); ?>
-</header>
+
+<?php get_header(); ?>
+
 <section class=" w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
     <div class="ml-28">
         <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
