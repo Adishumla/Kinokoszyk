@@ -4,7 +4,7 @@ Tags: acf, fields, custom fields, meta, repeater
 Requires at least: 4.7
 Tested up to: 6.2
 Requires PHP: 5.6
-Stable tag: 6.1.1
+Stable tag: 6.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,20 @@ From your WordPress dashboard
 
 
 == Changelog ==
+
+= 6.1.3 =
+*Release Date 5th April 2023*
+
+* Fix - 'Create Terms' button for taxonomy fields now displays correctly
+* Fix - ACF JSON field group files which have unsupported keys (not beginning with `group_`) will now load as field groups
+* Fix - Renaming capabilities for post types will now set `map_meta_cap` to `true` solving an issue with assigning permissions to roles for that post type
+
+= 6.1.2 =
+*Release Date 4th April 2023*
+
+* [View Release Post](https://www.advancedcustomfields.com/blog/acf-6-1-0-released/)
+* Fix - Calls to `acf_add_options_page` after `acf_add_local_field_group` before `acf/init` will now behave correctly
+* i18n - All new ACF 6.1 strings are now correctly English (United States) by default
 
 = 6.1.1 =
 *Release Date 3rd April 2023*
