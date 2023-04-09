@@ -1,6 +1,5 @@
 <?php
-    $menuItems = wp_get_nav_menu_items('primary-menu');
-    $currentPageId = get_queried_object_id();
+$menuItems = wp_get_nav_menu_items('primary-menu');
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +32,9 @@
         </div>
         <nav class="fixed top-0 left-full w-full vh-hero bg-white-red duration-500 lg:left-0 lg:mt-0 lg:min-h-0 lg:w-auto lg:static lg:bg-transparent">
             <ul class="flex flex-col items-center gap-y-10 px-0 list-none lg:gap-x-7 lg:flex-row">
-                <?php
-                if ($menuItems) foreach ($menuItems as $item) : ?>
+                <?php if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
-                        <a class="header-link text-2xl link text-off-black <?= $currentPageId == $item->object_id ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
+                        <a class="header-link text-2xl link text-off-black <?= getCurrentHeader($item->title) ? 'after:absolute text-light-wine' : '' ?>" href="<?= $item->url; ?>">
                             <?= $item->title; ?>
                         </a>
                     </li>

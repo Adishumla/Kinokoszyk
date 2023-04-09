@@ -86,6 +86,32 @@ function print_a($data)
 <?php
 }
 
+function getCurrentHeader(string $title): bool
+{
+    $header = strtolower($title);
+    $URI = $_SERVER["REQUEST_URI"];
+    
+    $slug = strtolower(basename($URI));
+    $slug = implode(" ", explode("-", $slug)); # Remove "-" if exist from slug
+
+    # Fixes URI home or index so that it becomes home instead of "/" 
+    if ($URI == "/") {
+        $slug = "home";
+    }
+
+    # Remove "s" on the end of header
+    if (strpos($header, "s", -1)) {
+        $header = substr_replace($header, "", -1);
+    }
+
+    # Remove "s" on the end of slug
+    if (strpos($slug, "s", -1)) {
+        $slug = substr_replace($slug, "", -1);
+    }
+
+    return $slug == $header;
+}
+
 # Add custom block category
 add_action('init', 'my_enqueue_block_assets');
 
