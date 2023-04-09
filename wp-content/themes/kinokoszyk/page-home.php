@@ -67,7 +67,7 @@
     <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/filmCompressed.webp" alt="Big photograph of a woman sitting on stairs of a ruined building" class="object-cover w-full vh-section">
     <div id=filmTextbox class="w-[673px] h-[268px] absolute right-0 mr-[180px] gap-[32px] text-off-white">
       <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Film</h2>
-      <p class="poppins text-[20px] leading-[28px]">Discover the beauty captured through the lens of our talented artist Joanna. Explore her stunning photography and allow yourself to be transported to new worlds of wonder and awe.</p>
+      <p class="poppins text-[20px] leading-[28px]">Experience the magic of cinema with Kino Kozsyks. Our films take you on a journey beyond the screen, with captivating stories and stunning visuals that will leave you inspired. Don't miss out on the opportunity to immerse yourself in the world of Kino Kozsyks. </p>
       <a class="btn-white flex items-center mt-[50px]" href="<?php echo get_permalink(get_page_by_path("films")) ?>">
         <div class="arrow ml-[170px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
         <div class="ml-[78px] ">
@@ -85,7 +85,7 @@
     </div>
     <div id=eventTextbox class="textboxHome">
       <h2 class="font-prata text-[80px] leading-[58px] mb-[26px] ">Event</h2>
-      <p class="poppins text-[20px] leading-[28px]">A text to raise the curiosity of visitors to look at Kino Kosyzk's previous events. Also a short text to inform visitors to look at Kino's Facebook page for more information about "smaller events".</p>
+      <p class="poppins text-[20px] leading-[28px]">Discover the latest movie screenings and events at Kino Koszyk's event page! Immerse yourself in a world of cinema and entertainment with our diverse range of films, from classics to new releases. Join us for a unique cinematic experience in the heart of the city. Book your tickets now and be a part of the excitement!</p>
       <div id="btnContainer" class="flex flex-row flex-wrap gap-[24px] mt-[50px]">
         <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("events")) ?>">
           <div class="arrow ml-[177.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
