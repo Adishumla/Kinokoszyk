@@ -130,5 +130,10 @@ function remove_content_filter() {
 }
 add_action('init', 'remove_content_filter');
 
-
-
+//this makes it so that the archive pages can use pagination (without this, pagination will not work)
+function custom_archive_query( $query ) {
+	if ( $query->is_archive() && $query->is_main_query() ) {
+		$query->set( 'posts_per_page', 1);
+	}
+}
+add_action( 'pre_get_posts', 'custom_archive_query' );
