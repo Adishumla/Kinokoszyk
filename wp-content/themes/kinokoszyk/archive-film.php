@@ -26,7 +26,7 @@ get_header();
 
 <?php if (have_posts()) : ?>
     <section class="flex flex-wrap gap-24 px-44 py-40 bg-off-white ">
-    <?php while (have_posts()) : the_post();
+    <?php while ( $films->have_posts() ) : $films->the_post();
 
 
 
@@ -83,7 +83,7 @@ get_header();
                 <?php else: ?>
                     <a class="next page-numbers" href="<?= get_pagenum_link( $current_page + 1 ) ?>">
                         <img src="<?= $arrow ?>" alt="arrow" class="inline-block rotate-180">
-                    </a>';
+                    </a>
         <?php endif ?>
             </div>
         <?php
