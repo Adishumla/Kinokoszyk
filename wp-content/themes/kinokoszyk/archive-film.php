@@ -1,5 +1,17 @@
 
 <?php get_header() ?>
+<?php
+$Films_per_page = 12;
+$paged          = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args           = array(
+    'post_type' => 'film',
+    'posts_per_page' => $Films_per_page,
+    'paged' => $paged,
+);
+$films = new WP_Query( $args );
+
+get_header();
+?>
 
 <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
     <div class="ml-28">
@@ -41,7 +53,7 @@
                     <p class="text-2xl"> Year: <?= $year ?> </p>
                 </div>
                 <button class="btn-wine">
-                    <a class="flex justify-center gap-5" href="<?= the_permalink();?>">Read more<img class="rotate-180" src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt=""></a>
+                    <a class="flex justify-center gap-5" href="<?= the_permalink();?>">More information<img class="rotate-180" src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt=""></a>
                 </button>
             </div>
         </div>
@@ -50,8 +62,45 @@
         <?php
     endwhile; ?>
     </section>
+<?php
+    wp_reset_query();
+    // Pagination
+    $big = 999999999; // need an unlikely integer
+    $arrow = get_template_directory_uri() . '/assets/Arrow.svg';
+    $current_page = max( 1, get_query_var( 'paged' ) );
+    $total_pages = $films->max_num_pages; ?>
 
+    <?php if( $total_pages > 1 ): ?>
+    <div class="flex justify-center align-center pt-10 pb-40 bg-off-white">
+        <?php if ( $total_pages > 1 ): ?>
+            <div class="flex justify-center mb-10">
+            <span class="screen-reader-text"><?= __( 'Page', 'textdomain' ) . ' ' . $current_page . ' ' . __( 'of', 'textdomain' ) . ' ' . $total_pages ?></span>'
+            <a class="prev page-numbers" href="<?= get_pagenum_link( $current_page - 1 ) ?>"><img src="<?=  $arrow ?>" alt="arrow" class="transform inline-block"></a>
+            <span class="self-center text-xl mx-5"><?= __( 'Page ', 'textdomain' ) . $current_page . __( ' of ', 'textdomain' ) . $total_pages ?></span>
+
+                <?php if ( $current_page == $total_pages ): ?>
+                    <a class="next page-numbers" href="<?= get_pagenum_link( $current_page ) ?>"><img src="<?= $arrow ?>" alt="arrow" class="inline-block rotate-180"></a>;
+                <?php else: ?>
+                    <a class="next page-numbers" href="<?= get_pagenum_link( $current_page + 1 ) ?>">
+                        <img src="<?= $arrow ?>" alt="arrow" class="inline-block rotate-180">
+                    </a>';
+        <?php endif ?>
+            </div>
+        <?php
+            paginate_links( array(
+                'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                'format'  => '?paged=%#%',
+                'current' => max( 1, get_query_var( 'paged' ) ),
+                'total'   => $films->max_num_pages,
+            ) );
+            endif; ?>
+    </div>
+
+<?php endif; ?>
 <?php endif; ?>
 
 <?php get_footer() ?>
 
+<?php
+    print_a($paged);
+?>

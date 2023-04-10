@@ -118,9 +118,9 @@ add_action('init', 'my_enqueue_block_assets');
 function my_enqueue_block_assets() {
 	$js_dir = get_theme_file_uri() . '/js';
 
-	// If in plugin, use this instead:
-	// $css_dir = plugin_dir_url(__FILE__) . 'css';
-	// $js_dir = plugin_dir_url(__FILE__) . 'js';
+	# If in plugin, use this instead:
+	# $css_dir = plugin_dir_url(__FILE__) . 'css';
+	# $js_dir = plugin_dir_url(__FILE__) . 'js';
 
 	wp_enqueue_script('Header', $js_dir . "/header.js", [], false, true);
 }
@@ -130,10 +130,10 @@ function remove_content_filter() {
 }
 add_action('init', 'remove_content_filter');
 
-//this makes it so that the archive pages can use pagination (without this, pagination will not work)
+# this makes it so that the archive pages can use pagination (without this, pagination will not work)
 function custom_archive_query( $query ) {
 	if ( $query->is_archive() && $query->is_main_query() ) {
-		$query->set( 'posts_per_page', 1);
+		$query->set( 'posts_per_page', 12);
 	}
 }
 add_action( 'pre_get_posts', 'custom_archive_query' );
