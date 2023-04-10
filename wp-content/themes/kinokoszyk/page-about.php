@@ -5,7 +5,7 @@
 <body>
     <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px] overflow-hidden">
         <div class="ml-28">
-            <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
+            <h1 class="text-3xl font-light text-wine">Kino Kosyk history</h1>
             <h2 class="text-[148px] font-prata p-0 leading-[148px]">About us</h2>
             <div class="w-3/6 min-w-[800px] mt-4">
                 <p class="text-xl font-poppins">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
@@ -14,10 +14,13 @@
         <img class="h-72 pr-4 object-fill justify-self-end translate-x-32" src="<?php echo get_template_directory_uri(); ?>/assets/about.png" alt="">
     </section>
 
-    <section class="flex flex-col-reverse px-6 pb-10 pt-16 bg-off-white lg:grid lg:grid-cols-2 lg:justify-between lg:px-44 ">
+    <section class="grid grid-cols-1 gap-y-6 bg-off-white px-6 pt-16 pb-6 md:gap-y-12 md:px-20 md:py-12 xl:px-48 xl:py-36 lg:grid-cols-2">
+
+        <!-- Image on Bo Persson and Joanna Helander -->
+        <img class="max-w-sm -m-7 justify-self-center 2xl:max-w-none lg:col-start-2 lg:justify-self-end" src="<?= get_template_directory_uri() ?>/assets/about profile.png" alt="">
 
         <!-- Text content -->
-        <div class="flex flex-col gap-4 lg:text-xl font-poppins">
+        <div class="flex flex-col gap-4 lg:text-xl font-poppins lg:row-start-1">
             <p>
                 Several of Kino Koszyk’s films have had theatrical releases in Sweden and other countries. These include the three creative documentaries “Eighth Day Theatre”, ”Returning” and “The Twins from Cracow”.They have been screened in theatres and at festivals in a number of countries. “Eighth Day Theatre” and “Returning” were shown on the German television channel ARD, ARTE in France & Germany, Czech Television, Polish Television, and more.Most film projects of Kino Koszyk have been co-financed by The Swedish Film Institute, Swedish Television, ARTE, Film i Väst, and others.
             </p>
@@ -37,16 +40,6 @@
             <p>
                 “Watching the Moon at Night” premiered at the Swedish Film institute in 2016. It was screened as well in the European Parliament and the Swedish Parliament and in more than 15 different countries in theatres and festivals.
             </p>
-        </div>
-
-        <!-- Image on Bo Persson and Joanna Helander -->
-        <div class="w-80 justify-self-end">
-            <div class=" w-fit h-fit">
-                <img class="shadow-2xl shadow-off-black/.8 w-44 lg:w-64" src="<?= get_template_directory_uri() ?>/assets/Bo Persson.png" alt="">
-            </div>
-            <div class=" w-fit h-fit">
-                <img class="translate-x-3/4 -translate-y-1/3 shadow-xl w-44 lg:w-64" src="<?= get_template_directory_uri() ?>/assets/Joanna Helander.png" alt="">
-            </div>
         </div>
 
     </section>
