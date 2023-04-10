@@ -1,4 +1,6 @@
 <?php 
+
+$maxQuotes = 6;
 $year = get_field("year");
 $directorAndScreenwriters = get_field("director_and_screenwriters");
 $directorOfPhotography = get_field("director_of_photography");
@@ -11,6 +13,25 @@ $language = get_field('language');
 
 $trailer = get_field('trailer');
 
+$quotes = [];
+for($i = 1; $i <= $maxQuotes; $i++)
+{
+    $quote = get_field("quote" . $i);
+    $quoted = get_field("quoted" . $i);
+    if($quote && $quoted)
+    {
+        $quotes[$i]["quote"] = $quote;
+        $quotes[$i]["quoted"] = $quoted;
+    }
+}
+
+$quote1 = [];
+$quote1["quote"] = get_field("quote1");
+$quote1["author"] = get_field("quoted1");
+$quote2 = [];
+$quote2["quote"] = get_field("quote2");
+$quote2["author"] = get_field("quoted2");
+
 $awards = [];
 if(get_field("award1")) $awards[] = get_field("award1");
 if(get_field("award2")) $awards[] = get_field("award2");
@@ -22,10 +43,18 @@ get_header(); ?>
 
 
 <main class="px-[10.4%] bg-off-white">
-    
-    <div class="mt-[8%] mb-[20%] w-full aspect-video [&>*]:w-full [&>*]:h-full "> 
-    <div class="bg-red-50 w-[100%] h-[500px] left-0 absolute "></div>
-        <?php  the_field('trailer') ?>  
+    <!-- Should probably be scaled down as 100% vw without fullscreen leaves a bit of the screen outside -->
+    <div class="mb-[20%] w-full aspect-video [&>iframe]:top-[5vw]  [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:z-1 [&>iframe]:relative "> 
+        <div class="bg-white-red w-[100%] h-[32vw] left-0 absolute "></div>
+        <?php  if(get_field('trailer')){
+            the_field('trailer');
+        }
+        else{ ?>
+         <img class="w-full object-fit row-span-2 drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)]"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+
+        
+        <?php } ?>
+
     </div>
 
     <section class="flex gap-x-[5.8%]">
@@ -39,8 +68,8 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="flex justify-between px-[2.3%] bg-white-red mt-[80px] pt-[40px] pb-[60px]">
-        <div class="list-none">
+    <section class="flex justify-between px-[2.3%] bg-white-red mt-[80px] mb-[160px] pt-[40px] pb-[60px]">
+        <div>
             <p><b>Language:</b> <?= $language ?></li>
             <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
             <p><b>Produced by:</b> <?= $producedBy ?></li>
@@ -54,10 +83,9 @@ get_header(); ?>
                 </button>
         </div>
     </section>
-    <?php
-        if(array_key_exists(0, $awards)): ?>  
+    <?php if(array_key_exists(0, $awards)): ?>  
           
-        <section id="Awards">
+        <section id="Awards" class="mt-[-80px] mb-[160px]">
             <h2 class="font-poppins text-[28px] leading-[37px]">Awards</h2>
             <div class="flex justify-center gap-x-[2%]">
             <?php foreach($awards as $award):?>
@@ -69,36 +97,24 @@ get_header(); ?>
             <?php endforeach; ?>
             </div>
         </section>
-        <?php endif; ?>
+
+    <?php endif; ?>
+
+    <?php if(array_key_exists(1, $quotes)):?>
+        <section id="Quotes">
+            <?php foreach($quotes as $quote): ?>
+                <div class="pb-[160px]">
+                <p class=" font-prata text-[38px] leading-[46px]"><?=$quote["quote"]?></p>
+                <p class=" font-poppins text-[18px] leading-[18px] mt-[10px] text-right text-wine"><?=$quote["quoted"]?></p>
+                </div>
+
+
+            <?php endforeach ?>
+        </section>
+    <?php endif; ?>
    
 
 </main>
 
-
-<!--    <div class="col-span-6 flex flex-col gap-6 justify-center text-center px-6">-->
-<!--        <h1 class="font-oi text-4xl lg:text-7xl">--><?php //the_title(); ?><!--</h1>-->
-<!--        <div class="font-sans">--><?php //the_content(); ?><!--</div>-->
-<!--        <div> --><?php //the_field('trailer') ?><!--</div>-->
-<!--        <div>-->
-<!---->
-<!--            --><?php
-//            $image = get_field('image');
-//            $size = 'full'; // (thumbnail, medium, large, full or custom size)
-//            if( $image ) {
-//                echo wp_get_attachment_image( $image, $size );
-//
-//            }?>
-<!---->
-<!--            <p> Year: --><?php //= $year ?><!-- </p>-->
-<!--            <p> Director & Screenwriters: --><?php //= $directorAndScreenwriters ?><!-- </p>   <!-- Check for plural? -->-->
-<!--            <p> Director of Photography: --><?php //= $directorOfPhotography ?><!-- </p>-->
-<!--            <p> Produced by: --><?php //=$producedBy ?><!-- </p>-->
-<!--            <p> Sound: --><?php //= $sound?><!-- </p>-->
-<!--            <p> Editor: --><?php //= $editor ?><!-- </p>-->
-<!--            <p> Music: --><?php //= $music ?><!-- </p>-->
-<!---->
-<!---->
-<!--        </div>-->
-<!--    </div>-->
 
 <?php get_footer(); ?>
