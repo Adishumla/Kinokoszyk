@@ -1,6 +1,6 @@
 <?php 
 
-$maxQuotes = 6;
+
 $year = get_field("year");
 $directorAndScreenwriters = get_field("director_and_screenwriters");
 $directorOfPhotography = get_field("director_of_photography");
@@ -9,10 +9,18 @@ $sound = get_field("sound");
 $editor = get_field("editor");
 $music = get_field("music");
 $image = get_field('image');
+$heroImage = get_field('heroImage');
 $language = get_field('language');
 
 $trailer = get_field('trailer');
+$trailerSrc = get_post_meta(get_the_ID(), "trailer")[0];
 
+// $trailerSrc = substr($trailer, strpos($trailer, "src=") + 4);
+// $trailerSrc = substr($trailerSrc, 0, strpos($trailerSrc, "?feature=oembed"));
+
+$showMore = false;
+
+$maxQuotes = 6;
 $quotes = [];
 for($i = 1; $i <= $maxQuotes; $i++)
 {
@@ -43,14 +51,18 @@ get_header(); ?>
 
 
 <main class="px-[10.4%] bg-off-white">
-    <!-- Should probably be scaled down as 100% vw without fullscreen leaves a bit of the screen outside -->
     <div class="mb-[20%] w-full aspect-video [&>iframe]:top-[5vw]  [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:z-1 [&>iframe]:relative "> 
         <div class="bg-white-red w-[100%] h-[32vw] left-0 absolute "></div>
-        <?php  if(get_field('trailer')){
-            the_field('trailer');
+        <?php  if($trailer){
+            echo $trailer;
         }
-        else{ ?>
-         <img class="w-full object-fit row-span-2 drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)]"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+        else if($heroImage){ ?>
+            <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $heroImage['url'] ?>" alt="<?= $heroImage["alt"] ?>">
+   
+           
+        <?php }
+        else { ?>
+         <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
 
         
         <?php } ?>
@@ -68,19 +80,37 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="pb-[60px]">
-        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px] mb-[160px] pt-[40px]">
+    <section class="pb-[160px]">
+        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px]  pt-[40px] pb-[60px]">
             <div>
                 <p><b>Language:</b> <?= $language ?></li>
                 <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
                 <p><b>Produced by:</b> <?= $producedBy ?></li>
+                
+                 
+                <p><b>Director of Photography:</b> <?= $directorOfPhotography?></p> 
+                <p><b>Editor:</b> <?= $editor?></p>
+                <p><b>Sound:</b> <?= $sound?></p>
+                <p><b>Music:</b> <?= $music?></p>    
+                
+                
+
+
+
+
+                
             </div>
             <div class="flex flex-col justify-between h-[132px]">
-                    <button class="btn-wine text-center">
-                        <a class="" href="<?= the_permalink();?>">Read more</a>
+                    <button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center" ">
+                        <a class="w-full h-full" href="<?= $trailerSrc;?>">Watch trailer</a>
+                       
                     </button>
-                    <button class="btn-wine text-center">
-                        <a class="" href="<?= the_permalink();?>">Read more</a>
+                   
+                   
+
+
+                    <button onClick="" class="btn-white text-center">
+                        <a class="" href="<?= the_permalink();?>">More information</a>
                     </button>
             </div>
         </div> 
