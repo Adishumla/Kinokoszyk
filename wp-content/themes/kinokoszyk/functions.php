@@ -141,3 +141,11 @@ function custom_archive_query( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'custom_archive_query' );
+
+//this shows all posts in the admin panel
+function set_posts_per_page( $query ) {
+    if ( is_admin() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', -1 );
+    }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page' );
