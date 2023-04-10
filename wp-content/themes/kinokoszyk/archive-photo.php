@@ -10,19 +10,19 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $offset = ($paged - 1) * $images_per_page;
 
 $query_images_args = array(
-    'post_type'      => 'attachment',
-    'post_mime_type' => 'image',
-    'post_status'    => 'inherit',
+    'post_type' => 'photo',
     'posts_per_page' => $images_per_page,
-    'orderby'        => 'post_date',
-    'order'          => 'DESC',
-    'paged'          => $paged,
-    'offset'         => $offset,
+    'paged' => $paged,
+    'offset' => $offset,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'post_status' => 'publish',
+    'size' => 'full',
 );
-$query_images = new WP_Query($query_images_args);
-$images = array();
-?>
 
+$query_images = new WP_Query($query_images_args);
+
+?>
 
 <?php get_header(); ?>
 
@@ -37,19 +37,35 @@ $images = array();
     </div>
     <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
 </section>
+<?php
+
+?>
 <section class="bg-off-white">
     <div class="grid grid-cols-3 gap-[31px] p-[102px] bg-off-white pb-[48px]">
         <div class="col-span-1">
             <?php
             $i = 0;
             if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
+	            $image_urls = array(); // Initialize the array
+	            while ($query_images->have_posts()) {
+		            $query_images->the_post();
+		            $post_content = get_the_content();
+		            preg_match_all('/<img[^>]+>/', $post_content, $matches);
+		            $images = $matches[0];
+		            foreach ($images as $image) {
+			            preg_match('/src="([^"]+)"/i', $image, $image_src);
+			            $image_url = $image_src[1];
+			            $image_urls[] = $image_url;
+		            }
+	            }
+            foreach ($image_urls as $image_url) {
                     $i++;
                     if ($i % 3 == 1) {
             ?>
                         <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
+                            <a href="<?php echo $image_url; ?>" target="_blank">
+
+                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo $image_url; ?>" alt="">
                             </a>
                         </div>
             <?php
@@ -62,13 +78,14 @@ $images = array();
             <?php
             $i = 0;
             if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
+                foreach ($image_urls as $image_url) {
                     $i++;
                     if ($i % 3 == 2) {
             ?>
                         <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
+                            <a href="<?php echo $image_url; ?>" target="_blank">
+
+                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo $image_url; ?>" alt="">
                             </a>
                         </div>
             <?php
@@ -81,13 +98,14 @@ $images = array();
             <?php
             $i = 0;
             if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
+                foreach ($image_urls as $image_url) {
                     $i++;
                     if ($i % 3 == 0) {
             ?>
                         <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
+                            <a href="<?php echo $image_url; ?>" target="_blank">
+
+                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo $image_url; ?>" alt="">
                             </a>
                         </div>
             <?php
