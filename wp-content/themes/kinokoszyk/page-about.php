@@ -3,7 +3,7 @@
 </head>
 
 <body>
-    <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
+    <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px] overflow-hidden">
         <div class="ml-28">
             <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
             <h2 class="text-[148px] font-prata p-0 leading-[148px]">About us</h2>
@@ -11,10 +11,12 @@
                 <p class="text-xl font-poppins">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
             </div>
         </div>
-        <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
+        <img class="h-72 pr-4 object-fill justify-self-end translate-x-32" src="<?php echo get_template_directory_uri(); ?>/assets/about.png" alt="">
     </section>
 
-    <section class="flex flex-col-reverse px-6 pb-10 pt-16 bg-off-white lg:grid lg:grid-cols-2 lg:gap-x-44 lg:px-28 ">
+    <section class="flex flex-col-reverse px-6 pb-10 pt-16 bg-off-white lg:grid lg:grid-cols-2 lg:justify-between lg:px-44 ">
+
+        <!-- Text content -->
         <div class="flex flex-col gap-4 lg:text-xl font-poppins">
             <p>
                 Several of Kino Koszyk’s films have had theatrical releases in Sweden and other countries. These include the three creative documentaries “Eighth Day Theatre”, ”Returning” and “The Twins from Cracow”.They have been screened in theatres and at festivals in a number of countries. “Eighth Day Theatre” and “Returning” were shown on the German television channel ARD, ARTE in France & Germany, Czech Television, Polish Television, and more.Most film projects of Kino Koszyk have been co-financed by The Swedish Film Institute, Swedish Television, ARTE, Film i Väst, and others.
@@ -37,7 +39,8 @@
             </p>
         </div>
 
-        <div class="">
+        <!-- Image on Bo Persson and Joanna Helander -->
+        <div class="w-80 justify-self-end">
             <div class=" w-fit h-fit">
                 <img class="shadow-2xl shadow-off-black/.8 w-44 lg:w-64" src="<?= get_template_directory_uri() ?>/assets/Bo Persson.png" alt="">
             </div>
