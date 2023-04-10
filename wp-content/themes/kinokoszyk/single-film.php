@@ -68,20 +68,22 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="flex justify-between px-[2.3%] bg-white-red mt-[80px] mb-[160px] pt-[40px] pb-[60px]">
-        <div>
-            <p><b>Language:</b> <?= $language ?></li>
-            <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
-            <p><b>Produced by:</b> <?= $producedBy ?></li>
-        </div>
-        <div class="flex flex-col justify-between h-[132px]">
-                <button class="btn-wine text-center">
-                    <a class="" href="<?= the_permalink();?>">Read more</a>
-                </button>
-                <button class="btn-wine text-center">
-                    <a class="" href="<?= the_permalink();?>">Read more</a>
-                </button>
-        </div>
+    <section class="pb-[60px]">
+        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px] mb-[160px] pt-[40px]">
+            <div>
+                <p><b>Language:</b> <?= $language ?></li>
+                <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
+                <p><b>Produced by:</b> <?= $producedBy ?></li>
+            </div>
+            <div class="flex flex-col justify-between h-[132px]">
+                    <button class="btn-wine text-center">
+                        <a class="" href="<?= the_permalink();?>">Read more</a>
+                    </button>
+                    <button class="btn-wine text-center">
+                        <a class="" href="<?= the_permalink();?>">Read more</a>
+                    </button>
+            </div>
+        </div> 
     </section>
     <?php if(array_key_exists(0, $awards)): ?>  
           
