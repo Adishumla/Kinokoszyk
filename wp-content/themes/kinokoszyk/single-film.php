@@ -1,6 +1,6 @@
 <?php 
 
-
+remove_filter( 'the_content', 'wpautop' );
 $year = get_field("year");
 $directorAndScreenwriters = get_field("director_and_screenwriters");
 $directorOfPhotography = get_field("director_of_photography");
@@ -64,34 +64,39 @@ get_header(); ?>
         else { ?>
          <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
 
+
+
         
         <?php } ?>
 
     </div>
 
     <section class="flex gap-x-[5.8%]">
-        <div class="flex flex-col w-[32%]">
-            <span class="font-poppins text-[24px] leading-[28px] col-span-full"> Year: <?= $year ?> </span>
+        <div class="flex flex-col min-w-[32%] w-[32%]">
+            <span class="font-poppins text-[20px] leading-[28px]  mb-[12px]" ><?= $year ?> </span>
             <img class="w-full object-cover row-span-2 drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)]"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
         </div>
         <div class="flex flex-col gap-y-[21px]">
-            <h2 class="font-prata text-[80px] leading-[86px]"><?php the_title(); ?></h2>
+            <h2 class="font-prata text-[80px] leading-[86px] mt-[26px] font-normal"><?php the_title(); ?></h2>
+            <?php remove_filter( 'the_content', 'wpautop' );?>
+            <?php add_filter( 'the_content', 'nl2br' );?>
+            
             <div class="font-poppins text-[20px] leading[28px]"><?php the_content(); ?></div>
         </div>
     </section>
 
     <section class="pb-[160px]">
-        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px]  pt-[40px] pb-[60px]">
+        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px]  pt-[40px] pb-[60px] font-poppins text-[20px] leading-[28px] gap-x-[6%]">
             <div>
-                <p><b>Language:</b> <?= $language ?></li>
+                <?php if($language):?>  <p class="text-[20px] leading-[28px]"><b>Language:</b> <?= $language ?></li><?php endif ?>
                 <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
                 <p><b>Produced by:</b> <?= $producedBy ?></li>
                 
-                 
-                <p><b>Director of Photography:</b> <?= $directorOfPhotography?></p> 
-                <p><b>Editor:</b> <?= $editor?></p>
-                <p><b>Sound:</b> <?= $sound?></p>
-                <p><b>Music:</b> <?= $music?></p>    
+                
+                <?php if($directorOfPhotography):?><p class=" more-info hidden"><b>Director of Photography:</b> <?= $directorOfPhotography?></p class=" more-info hidden"><?php endif?>
+                <?php if($editor):?><p class=" more-info hidden"><b>Editor:</b> <?= $editor?></p> <?php endif ?>
+                <?php if($sound):?><p class=" more-info hidden"><b>Sound:</b> <?= $sound?></p> <?php endif ?>
+                <?php if($music):?><p class=" more-info hidden"><b>Music:</b> <?= $music?></p> <?php endif ?>    
                 
                 
 
@@ -100,18 +105,19 @@ get_header(); ?>
 
                 
             </div>
-            <div class="flex flex-col justify-between h-[132px]">
-                    <button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center" ">
-                        <a class="w-full h-full" href="<?= $trailerSrc;?>">Watch trailer</a>
-                       
-                    </button>
+            <div class="flex flex-col justify-between h-[132px] text-[16px] leading-[18px]">
+                    <?php if($trailer):?><button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center" ">
+                        <p>Watch trailer</p>
+                    </button><?php endif?>
                    
                    
 
 
-                    <button onClick="" class="btn-white text-center">
-                        <a class="" href="<?= the_permalink();?>">More information</a>
-                    </button>
+                    <?php if( $directorOfPhotography || $editor || $sound || $music):?> <button onclick="toggleMoreInfo()" class="btn-white text-center">
+                        <p class="  ">More information</p>
+                    </button> <?php endif ?>
+
+                    
             </div>
         </div> 
     </section>
@@ -123,8 +129,8 @@ get_header(); ?>
             <?php foreach($awards as $award):?>
                 <div class="w-[18.6vw] h-[18.6vw] flex object-contain " >
             
-                <img class="object-contain w-full" src=<?=$award["url"]?> alt="<?=$award["alt"]?>"  srcset="<?= wp_get_attachment_image_srcset($award["id"])?>" sizes="15vw">
-        </div>
+                    <img class="object-contain w-full" src=<?=$award["url"]?> alt="<?=$award["alt"]?>"  srcset="<?= wp_get_attachment_image_srcset($award["id"])?>" sizes="15vw">
+                </div>
             
             <?php endforeach; ?>
             </div>
@@ -147,6 +153,21 @@ get_header(); ?>
    
 
 </main>
+
+<script>
+
+    const moreInfos = document.querySelectorAll(".more-info")
+
+
+    const toggleMoreInfo = () => {
+
+          moreInfos.forEach(infoP => {
+            infoP.classList.toggle("hidden");
+          });
+    } 
+
+</script>
+
 
 
 <?php get_footer(); ?>
