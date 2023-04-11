@@ -76,7 +76,7 @@ $third = [];
 				}
 			}
 			foreach ($image_urls as $image_url) { ?>
-                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[38%] md:w-[25%] lg:w-[26.5%] mb-4">
+                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39%] md:w-[26.5%] lg:w-[26.8%] mb-4">
                     <a href="<?php echo $image_url; ?>" target="_blank">
                         <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
                     </a>
