@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<section class="w-full h-4/4 flex flex-row justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20">
-    <div class=" flex flex-col w-2/4">
-        <h1 class="text-[88px] font-prata p-0 leading-[86px] align-center">Joanna Helander</h1>
+<section class="w-full h-4/4 flex flex-col-reverse md:flex-row justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20 imgas">
+    <div class="flex flex-col w-3/4 md:w-2/4">
+        <h1 class="text-5xl md:text-[88px] font-prata p-0 md:leading-[86px] align-center">Joanna Helander</h1>
         <div class="w-2/6 max-w-[600px] mt-4 w-full mr-4">
             <p class="text-xl flex flex-col gap-4 w-full">
                 <span class="w-full">Learn about Joanna Helander, a photographer, writer, and filmmaker born in Ruda Slaska in 1948. Arrested for protesting the invasion of Czechoslovakia, she emigrated to Sweden in 1971 and became an accomplished photographer, receiving the Swedish "Photographer of the Year" award in 1983.
@@ -12,136 +12,99 @@
                 </span>
             </p>
         </div>
-        <div class="flex gap-6 mt-20 h-fit">
-            <a href=# class="btn-white py-2.5 px-5 text-center flex items-center justify-center m-0">Read her biography</a>
-            <a href="#interview-section" id="interview-button" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
+        <div class="flex flex-col md:flex-row gap-6 mt-20 h-fit">
+            <a href="#biography" id="biography-button" class="btn-white py-2.5 px-5 text-center flex items-center justify-center m-0">Read her biography</a>
+            <a href="#interview" id="interview-button" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
         </div>
     </div>
-    <div>
-        <img class="h-full object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
+    <div class="flex justify-center">
+        <img class="h-full w-2/3 object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
     </div>
 </section>
 <?php
 $images_per_page = 15;
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $offset = ($paged - 1) * $images_per_page;
-
-$query_images_args = array(
-    'post_type'      => 'attachment',
-    'post_mime_type' => 'image',
-    'post_status'    => 'inherit',
-    'posts_per_page' => $images_per_page,
-    'orderby'        => 'post_date',
-    'order'          => 'DESC',
-    'paged'          => $paged,
-    'offset'         => $offset,
-);
-$query_images = new WP_Query($query_images_args);
-$images = array();
 ?>
 <section class="bg-off-white">
-    <div class="grid grid-cols-3 gap-[31px] p-[102px] bg-off-white pb-[48px]">
-        <h2 class="col-span-3 text-[56px] font-prata text-start">Photography by Joanna Helander</h2>
-        <div class="col-span-1">
+    <div class="w-auto flex flex-col justify-center items-center">
+        <div class="masonry text-center bg-off-white w-screen p-[8%]">
             <?php
-            $i = 0;
-            if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
-                    $i++;
-                    if ($i % 3 == 1) {
-            ?>
-                        <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
-                            </a>
-                        </div>
-            <?php
-                    }
-                }
-            }
-            ?>
-        </div>
-        <div class="col-span-1">
-            <?php
-            $i = 0;
-            if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
-                    $i++;
-                    if ($i % 3 == 2) {
-            ?>
-                        <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
-                            </a>
-                        </div>
-            <?php
-                    }
-                }
-            }
-            ?>
-        </div>
-        <div class="col-span-1">
-            <?php
-            $i = 0;
-            if ($query_images->have_posts()) {
-                foreach ($query_images->posts as $image) {
-                    $i++;
-                    if ($i % 3 == 0) {
-            ?>
-                        <div class="w-full mb-[26px] overflow-hidden">
-                            <a href="<?php echo wp_get_attachment_url($image->ID); ?>" target="_blank">
-                                <img class="w-full hover:scale-110 transition duration-500 ease-in-out" src="<?php echo wp_get_attachment_url($image->ID); ?>" alt="">
-                            </a>
+			$images_per_page = 15;
+			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+			$offset = ($paged - 1) * $images_per_page;
 
-                        </div>
-            <?php
-                    }
-                }
-            }
-            ?>
-            <div class="flex justify-end">
-                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-between justify-center">See more of her work <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
-            </div>
+			$query_images_args = array(
+				'post_type' => 'photo',
+				'posts_per_page' => $images_per_page,
+				'paged' => $paged,
+				'offset' => $offset,
+				'orderby' => 'post_date',
+				'order' => 'DESC',
+				'post_status' => 'publish',
+				'size' => 'full',
+			);
+
+			$query_images = new WP_Query($query_images_args);
+
+			$image_urls = array(); // Initialize the array
+
+			while ($query_images->have_posts()) {
+				$query_images->the_post();
+				$post_content = get_the_content();
+				preg_match_all('/<img[^>]+>/', $post_content, $matches);
+				$images = $matches[0];
+				foreach ($images as $image) {
+					preg_match('/src="([^"]+)"/i', $image, $image_src);
+					$image_url = $image_src[1];
+					$image_urls[] = $image_url;
+				}
+			}
+			foreach ($image_urls as $image_url) { ?>
+                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39.9%] md:w-[26.3%] lg:w-[26.7%] mb-4">
+                    <a href="<?php echo $image_url; ?>" target="_blank">
+                        <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
+                    </a>
+                </div>
+			<?php } ?>
         </div>
     </div>
 </section>
-<section class="flex flex-col items-center bg-off-white py-[102px]">
-    <div class="w-4/5 flex flex-row justify-center h-fit shadow-2xl">
-        <div class="w-1/3 flex justify-center">
+<section class="flex flex-col items-center bg-off-white py-[102px] imgas gap-12">
+    <div class="w-11/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
             <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
         </div>
-        <div class="w-2/3 flex flex-col justify-between p-[40px]">
+        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
             <div>
-                <h3 class="text-[38px] leading-[38px] font-bold">Film made by Joanna</h3>
-                <p class="text-[26px] flex align-self-start pt-1">Year 2008</p>
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold">Film made by Joanna</h3>
             </div>
-            <div>
-                <p class="text-[20px]">På Emigranternas Hus i Göteborg invigdes den 22 november en utställning"Mars 68 – att skiljas och åter förenas" arrangerad av AdamMickiewiczinstitutet. Polska Institutet och Stiftelsen Emigranternas Hus.</p>
+            <div class="my-8 text-[20px]">
+                <p class="text-[20px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
             </div>
-            <div class="flex justify-end">
-                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More work <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
+            <div class="flex justify-start md:justify-end lg:justify-end mb-4">
+                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her films <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="w-4/5 flex flex-row justify-center h-fit shadow-2xl mt-[48px]">
-        <div class="w-1/3 flex justify-center">
-            <img class="w-full " src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
+    <div class="w-11/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
+            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
         </div>
-        <div class="w-2/3 flex flex-col justify-between p-[40px]">
+        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
             <div>
-                <h3 class="text-[38px] leading-[38px] font-bold">Film made by Joanna</h3>
-                <p class="text-[26px] flex align-self-start pt-1">Year 2008</p>
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold">Book made by Joanna</h3>
             </div>
-            <div>
-                <p class="text-[20px]">På Emigranternas Hus i Göteborg invigdes den 22 november en utställning"Mars 68 – att skiljas och åter förenas" arrangerad av AdamMickiewiczinstitutet. Polska Institutet och Stiftelsen Emigranternas Hus.</p>
+            <div class="my-8 text-[20px]">
+                <p class="text-[20px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
             </div>
-            <div class="flex justify-end">
-                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More work <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
+            <div class="flex justify-start md:justify-end lg:justify-end mb-4">
+                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her books <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
             </div>
         </div>
     </div>
 </section>
-<section class="grid grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-[102px] px-[180px] bg-white-red">
+<section class="grid grid-cols-1 md:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-[102px] px-6 md:px-[180px] bg-white-red imgas">
     <div>
         <h3 class="text-[38px] leading-[38px] font-bold mb-4">Scholarship</h3>
         <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
@@ -169,7 +132,7 @@ $images = array();
         </p>
     </div>
     <div>
-        <h3 class="text-[38px] leading-[38px] font-bold">Awards</h3>
+        <h3 class="text-[38px] leading-[38px] font-bold imgas">Awards</h3>
         <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
             <span>
                 John Cassavetes Prize from the publishing house Korpen (together with Tommy Berggren) 1995.
@@ -192,9 +155,9 @@ $images = array();
         </p>
     </div>
 </section>
-<section id="interview-section" class="bg-black px-[180px] absolute top-0 left-0 w-full h-fit hidden z-50 mt-[72px] ">
-    <div class="bg-off-white py-[102px] px-[180px] font-poppins">
-        <div class="top-0 right-60 p-10 cursor-pointer absolute" id="close-interview">
+<section id="interview" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
+    <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
+        <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-interview">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
         </div>
         <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
@@ -239,23 +202,111 @@ $images = array();
                     From a conversation published in the Polish journal Naglos, October 1994
                 </span>
             </p>
+            <div class="bottom-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-interview">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+            </div>
         </div>
+
     </div>
 </section>
 
+
+    <section id="biography" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
+        <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
+            <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+            </div>
+            <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
+                BIOGRAPHY
+            </h1>
+            <h2 class="text-[20px] leading-[20px] text-start pt-20">
+                Joanna Helander
+            </h2>
+            <div>
+                <p class="text-[20px] flex flex-col gap-4">
+                <span>
+                    Joanna Helander, nee Koszyk, was born in Ruda Slaska in 1948. While studying Roman languages and literature at Jagiellonian University in Cracow in 1968, she was arrested for protesting against the invasion of Czechoslovakia by the countries of the Warsaw Pact.
+                </span>
+                    <span>
+After emigrating to Sweden in 1971, Joanna Helander finished her schooling in Gothenburg with a degree in photography. Her talents in the medium were soon recognized and when, in Sweden in 1978, she published her first book of photographs, Kobieta (Woman), inspired by her return visits to Poland, she also revealed her gifts as a writer. In 1983, she received the Swedish "Photographer of the Year" award.                </span>
+                    <span>
+Joanna Helander's early contacts with artists and intellectuals of Poland's democratic opposition were instrumental in bringing about the great festival of independent Polish culture which she directed in Sweden in 1981. At that time, she edited "The Gag and the Word", which included her translations into Swedish of poems by Stanislaw Baranczak and Ryszard Krynicki.                </span>
+                    <span>
+Together with Bo Persson, she translated a larger selection of Krynicki's poems, and these, accompanied by her photographs, appeared under the title "The Planet Phantasmagoria" in 1996.
+"Gerard K-Letters from Poland", the story of her Silesian family, was a great popular success in Sweden when it was published in 1986 and it was subsequently broadcasted as a radio play.                </span>
+                    <span>
+Photography also took Joanna Helander into filmmaking. On the basis of her own photographs she made the short films "Babcia, Who is a Good Father?", "Tales of Gerard K" and "Long Live Poland!". In collaboration with Bo Persson, she directed and co-produced the full-length film, "Eighth Day Theatre" , which won several awards, as well as the films "Returning", devoted to the fate of her Silesian-Jewish family, and The Twins from Cracow.                </span>
+                    <span>
+Joanna Helander is also well known in Poland where her work has appeared in a number of newspapers, journals, on bookcovers, etc. Her photographs were featured in the books Powroty-Returning, published by A5, and in Anna Bikont and Joanna Szczesny's Memory's Rubbish, Friends and Dreams, dedicated to Wislawa Szymborska and published by Proszynski i S-ka. A fragment in Polish from her book Gerard K - Letters from Poland, as well as an interview with the author appeared in the cultural journal 'Na Glos', 15/16.                </span>
+                    <span>
+A feature about Joanna Helander, titled "The Silesian Woman from Göteborg" was made for Polish Television by Joanna Illg. The Polish film director Kazimierz Kutz dedicated a program to her in in his television series Happy, if Sad.                </span>
+                    <span>
+In addition to her artistic work in Sweden and Poland, Joanna Helander writes for and publishes her photographs in newspapers and journals in several other countries, including Germany and the U.S.A.                </span>
+
+                </p>
+                <div class="bottom-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
 <script>
     const interviewButton = document.getElementById('interview-button');
-    const interviewSection = document.getElementById('interview-section');
-    const closeInterview = document.getElementById('close-interview');
+    const biographyButton = document.getElementById('biography-button');
+    const interviewSection = document.getElementById('interview');
+    const closeInterview = document.querySelectorAll('.close-interview');
+    const biographySection = document.getElementById('biography');
+    const closeBiography = document.querySelectorAll('.close-biography');
     const body = document.querySelector('body');
+    const imgas = document.querySelectorAll('.imgas');
 
     interviewButton.addEventListener('click', () => {
         interviewSection.classList.remove('hidden');
-
+        imgas.forEach((imga) => {
+            imga.classList.add('hidden');
+        });
     });
 
-    closeInterview.addEventListener('click', () => {
-        interviewSection.classList.add('hidden');
+    closeInterview.forEach((close) => {
+        close.addEventListener('click', () => {
+            interviewSection.classList.add('hidden');
+            window.scrollTo(0, 0)
+            imgas.forEach((imga) => {
+                imga.classList.remove('hidden');
+            });
+        });
     });
+
+    biographyButton.addEventListener('click', () => {
+        biographySection.classList.remove('hidden');
+        imgas.forEach((imga) => {
+            imga.classList.add('hidden');
+        });
+    });
+
+closeBiography.forEach((close) => {
+        close.addEventListener('click', () => {
+            biographySection.classList.add('hidden');
+            window.scrollTo(0, 0)
+            imgas.forEach((imga) => {
+                imga.classList.remove('hidden');
+            });
+        }
+    );
+});
+
+
+        var masonry = new Masonry('.masonry', {
+            itemSelector: '.masonry-item',
+            columnWidth: '.masonry-item',
+            percentPosition: true,
+            gutter: 20,
+            horizontalOrder: true,
+        });
+
 </script>
+
 <?php get_footer() ?>
