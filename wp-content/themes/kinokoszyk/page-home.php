@@ -64,7 +64,7 @@
 
 <section id="film">
   <div class=" w-full h-[1106px] sm:h-[649px] lg:h-[1100px] flex justify-center items-center flex-col ">
-    <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/filmCompressed.webp" alt="Big photograph of a woman sitting on stairs of a ruined building" class="object-cover w-full h-[1106px] sm:h-[649px] lg:h-[1100px]">
+    <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/filmCompressed.webp" alt="Big photograph of a woman sitting on stairs of a ruined building" class="object-cover w-full h-[1106px] sm:h-[649px] lg:h-[1100px] object-left-top">
     <div id=filmTextbox class="w-[380px] h-[370px] lg:w-[673px] sm:w-[319px] lg:h-[268px] absolute mt-[636px] sm:mt-0 sm:right-0 lg:mr-[180px] sm:mr-[88px] gap-[32px] text-off-white">
       <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Film</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">Experience the magic of cinema with Kino Kozsyks. Our films take you on a journey beyond the screen, with captivating stories and stunning visuals that will leave you inspired. Don't miss out on the opportunity to immerse yourself in the world of Kino Kozsyks. </p>
@@ -84,7 +84,7 @@
       <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/womanWorkingBig.webp" alt="Event image of a woman working" class="object-cover shadowHome mt-[48px] w-[380px] h-[542px] lg:w-[450px] lg:h-[643.21px] sm:mt-0 sm:w-[243px] sm:h-[341px]">
     </div>
     <div id=eventTextbox class="flex flex-col justify-center w-[380px] sm:w-[319px] lg:w-[673px]">
-      <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Event</h2>
+      <h2 class="font-prata text-[52px] leading-[60px] ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Event</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">Discover the latest movie screenings and events at Kino Koszyk's event page! Immerse yourself in a world of cinema and entertainment with our diverse range of films, from classics to new releases. Join us for a unique cinematic experience in the heart of the city. Book your tickets now and be a part of the excitement!</p>
       <div id="btnContainer" class="flex flex-row flex-wrap gap-[24px] mt-[50px]">
         <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("events")) ?>">
