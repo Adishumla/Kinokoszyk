@@ -3,15 +3,13 @@
 </head>
 
 <body>
-    <section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px] overflow-hidden">
-        <div class="ml-28">
-            <h1 class="text-3xl font-light text-wine">Kino Kosyk history</h1>
-            <h2 class="text-[148px] font-prata p-0 leading-[148px]">About us</h2>
-            <div class="w-3/6 min-w-[800px] mt-4">
-                <p class="text-xl font-poppins">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
-            </div>
+    <section class="mt-24">
+        <div class="grid grid-cols-3 gap-y-2 gap-x-4 p-6 overflow-x-hidden md:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+            <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk about us</h1>
+            <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 md:text-6xl lg:text-[148px]  lg:leading-[148px]">About us</h2>
+            <img class="row-start-1 col-start-3 row-span-2 object-fill lg:row-span-2" src="<?php echo get_template_directory_uri(); ?>/assets/about.png" alt="">
+            <p class="col-span-3 col-start-1 text-lg font-poppins md:col-span-2 md:text-xl">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
         </div>
-        <img class="h-72 pr-4 object-fill justify-self-end translate-x-32" src="<?php echo get_template_directory_uri(); ?>/assets/about.png" alt="">
     </section>
 
     <section class="grid grid-cols-1 gap-y-6 bg-off-white px-6 pt-16 pb-6 md:gap-y-12 md:px-20 md:py-12 xl:px-48 xl:py-36 lg:grid-cols-2">
