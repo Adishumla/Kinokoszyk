@@ -26,10 +26,10 @@ $query_images = new WP_Query($query_images_args);
 <?php get_header(); ?>
 
 <section class="mt-24">
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 p-6 overflow-x-hidden md:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden md:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk photography</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 md:text-6xl lg:text-[148px]  lg:leading-[148px]">Photography</h2>
-        <img class="row-start-1 col-start-3 row-span-2 object-fill lg:row-span-2" src="<?php echo get_template_directory_uri(); ?>/assets/Camera.png" alt="">
+        <img class="row-start-1 col-start-3 row-span-2 object-fill lg:row-span-2 md:ml-40" src="<?php echo get_template_directory_uri(); ?>/assets/Camera.png" alt="">
         <p class="col-span-3 col-start-1 text-lg font-poppins md:col-span-2 md:text-xl">Joanna Helander is known for her captivating black and white images that explore themes of identity, memory, and the human condition. Helander's work is characterized by a stark simplicity that draws the viewer in and invites contemplation.</p>
     </div>
 </section>
