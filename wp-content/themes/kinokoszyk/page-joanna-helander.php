@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<section class="w-full h-4/4 flex flex-col-reverse md:flex-row justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20 imgas">
-    <div class="flex flex-col w-3/4 md:w-2/4">
-        <h1 class="text-5xl md:text-[88px] font-prata p-0 md:leading-[86px] align-center mt-12">Joanna Helander</h1>
-        <div class="w-2/6 max-w-[600px] mt-4 w-full mr-4">
+<section class="w-full h-4/4 flex flex-col-reverse lg:flex-row  justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20 imgas lg:align-center lg:px-40">
+    <div class="flex flex-col w-3/4 md:w-4/4">
+        <h1 class="text-5xl md:text-[60px] lg:text-[88px] font-prata p-0 md:leading-[86px] align-center mt-12">Joanna Helander</h1>
+        <div class="w-2/6 mt-4 w-full mr-4 lg:w-auto lg:mr-[5%] max-w-[700px]">
             <p class="text-xl flex flex-col gap-4 w-full">
                 <span class="w-full">Learn about Joanna Helander, a photographer, writer, and filmmaker born in Ruda Slaska in 1948. Arrested for protesting the invasion of Czechoslovakia, she emigrated to Sweden in 1971 and became an accomplished photographer, receiving the Swedish "Photographer of the Year" award in 1983.
                 </span>
@@ -17,8 +17,8 @@
             <a href="#interview" id="interview-button" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
         </div>
     </div>
-    <div class="flex justify-center">
-        <img class="h-full w-2/3 md:w-full object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
+    <div class="flex justify-center md:justify-start justify-center md:w-3/4 lg:w-2/4 lg:mt-16 lg:min-w-[400px] lg:max-w-[600px]">
+        <img class="h-full w-3/4 md:w-3/4 lg:w-full object-fill shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
     </div>
 </section>
 <?php
@@ -26,9 +26,15 @@ $images_per_page = 15;
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $offset = ($paged - 1) * $images_per_page;
 ?>
-<section class="bg-off-white">
+<section class="bg-white imgas">
+    <div class="py-12 px-[8%] pr-8 justify-start md:pl-[8%] md:pb-2">
+        <h2 class="font-prata text-4xl lg:text-6xl">
+            Photography by Joanna Helander
+        </h2>
+    </div>
     <div class="w-auto flex flex-col justify-center items-center">
-        <div class="masonry text-center bg-off-white w-screen p-[8%]">
+
+        <div class="masonry text-center bg-white w-screen px-[8%]">
             <?php
 			$images_per_page = 15;
 			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -69,44 +75,52 @@ $offset = ($paged - 1) * $images_per_page;
 			<?php } ?>
         </div>
     </div>
+    <div class="flex justify-start md:justify-end px-[8%] pt-4">
+        <a href=<?php echo get_site_url(); ?>/photo class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her photographs <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
+    </div>
 </section>
-<section class="flex flex-col items-center bg-off-white py-[102px] imgas gap-12">
-    <div class="w-11/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
+<section class="flex flex-col items-center bg-white pt-12 md:pt-20 lg:pt-12 imgas gap-12">
+    <div class="w-10/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30">
             <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
         </div>
         <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
             <div>
-                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold">Film made by Joanna</h3>
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer">
+                    <a href=<?php echo get_site_url(); ?>/film>Film made by Joanna</a>
+                </h3>
             </div>
             <div class="my-8 text-[20px]">
                 <p class="text-[20px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
             </div>
             <div class="flex justify-start md:justify-end lg:justify-end mb-4">
-                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her films <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
+                <a href=<?php echo get_site_url(); ?>/film class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her films <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="w-11/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center">
+    <div class="w-10/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30">
             <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
         </div>
         <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
             <div>
-                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold">Book made by Joanna</h3>
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer">
+                    <a href=<?php echo get_site_url(); ?>/book>Book made by Joanna</a>
+                </h3>
             </div>
             <div class="my-8 text-[20px]">
                 <p class="text-[20px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
             </div>
             <div class="flex justify-start md:justify-end lg:justify-end mb-4">
-                <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her books <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
+                <a href=<?php echo get_site_url(); ?>/book class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her books <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
             </div>
         </div>
     </div>
 </section>
-<section class="grid grid-cols-1 md:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-[102px] px-6 md:px-[180px] bg-white-red imgas">
-    <div>
-        <h3 class="text-[38px] leading-[38px] font-bold mb-4">Scholarship</h3>
+<section class="py-12 lg:py-40 md:py-20 imgas bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-8 px-6 md:px-28 lg:px-44 bg-white-red">
+    <div class="">
+        <h3 class="text-[38px] leading-[38px] font-bold mb-4 text-wine">Scholarship</h3>
         <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
             <span>
                 Sveriges Författarfond: Multiple times.
@@ -132,7 +146,7 @@ $offset = ($paged - 1) * $images_per_page;
         </p>
     </div>
     <div>
-        <h3 class="text-[38px] leading-[38px] font-bold imgas">Awards</h3>
+        <h3 class="text-[38px] leading-[38px] font-bold imgas text-wine mb-4">Awards</h3>
         <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
             <span>
                 John Cassavetes Prize from the publishing house Korpen (together with Tommy Berggren) 1995.
@@ -153,6 +167,7 @@ $offset = ($paged - 1) * $images_per_page;
                 Czech Senate Award for Defense of Human Rights, 2018.
             </span>
         </p>
+    </div>
     </div>
 </section>
 <section id="interview" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
@@ -210,8 +225,7 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 
-
-    <section id="biography" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
+    <section id="biography" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50 ">
         <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
             <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
