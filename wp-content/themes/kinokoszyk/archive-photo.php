@@ -48,7 +48,7 @@ $third = [];
 			$images_per_page = 15;
 			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			$offset = ($paged - 1) * $images_per_page;
-
+            
 			$query_images_args = array(
 				'post_type' => 'photo',
 				'posts_per_page' => $images_per_page,
@@ -76,7 +76,7 @@ $third = [];
 				}
 			}
 			foreach ($image_urls as $image_url) { ?>
-                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39%] md:w-[26.5%] lg:w-[26.8%] mb-4">
+                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39%] md:w-[26.3%] lg:w-[26.7%] mb-4">
                     <a href="<?php echo $image_url; ?>" target="_blank">
                         <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
                     </a>
