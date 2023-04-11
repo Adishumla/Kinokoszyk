@@ -80,8 +80,8 @@
 
 <section id="event" class="px-8 bg-white-red">
   <div class=" w-full h-[1210px] sm:h-[649px] lg:h-[1100px] flex flex-col sm:flex-row items-center sm:justify-evenly gap-[48px] sm:gap-[5%]">
-    <div id="eventPicture" class="object-cover shadowHome mt-[48px] w-[380px] h-[542px] lg:w-[450px] lg:h-[643.21px] sm:mt-0 sm:w-[243px] sm:h-[341px]">
-      <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/womanWorkingBig.webp" alt="Event image of a woman working" class="object-cover">
+    <div id="eventPicture" class="">
+      <img src="<?= get_template_directory_uri() ?>/assets/compressedPictures/womanWorkingBig.webp" alt="Event image of a woman working" class="object-cover shadowHome mt-[48px] w-[380px] h-[542px] lg:w-[450px] lg:h-[643.21px] sm:mt-0 sm:w-[243px] sm:h-[341px]">
     </div>
     <div id=eventTextbox class="flex flex-col justify-center w-[380px] sm:w-[319px] lg:w-[673px]">
       <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Event</h2>
