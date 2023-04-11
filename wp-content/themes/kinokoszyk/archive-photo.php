@@ -25,16 +25,13 @@ $query_images = new WP_Query($query_images_args);
 ?>
 <?php get_header(); ?>
 
-<section class=" w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
-    <div class="ml-28">
-        <h1 class="text-3xl font-light text-wine">Kino Koszyk photography</h1>
-        <h2 class="text-[148px] font-prata p-0 leading-[148px] md:text-5xl">Photography</h2>
-        <h2><?php the_field('photo_title'); ?></h2>
-        <div class="w-3/6 min-w-[800px] mt-4 md:min-w-[500px]">
-            <p class="text-xl">Joanna Helander is known for her captivating black and white images that explore themes of identity, memory, and the human condition. Helander's work is characterized by a stark simplicity that draws the viewer in and invites contemplation.</p>
-        </div>
+<section class="mt-24">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 p-6 overflow-x-hidden md:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+        <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk photography</h1>
+        <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 md:text-6xl lg:text-[148px]  lg:leading-[148px]">Photography</h2>
+        <img class="row-start-1 col-start-3 row-span-2 object-fill lg:row-span-2" src="<?php echo get_template_directory_uri(); ?>/assets/Camera.png" alt="">
+        <p class="col-span-3 col-start-1 text-lg font-poppins md:col-span-2 md:text-xl">Joanna Helander is known for her captivating black and white images that explore themes of identity, memory, and the human condition. Helander's work is characterized by a stark simplicity that draws the viewer in and invites contemplation.</p>
     </div>
-    <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/Camera.png" alt="">
 </section>
 <?php
 $first = [];
@@ -76,7 +73,7 @@ $third = [];
 				}
 			}
 			foreach ($image_urls as $image_url) { ?>
-                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39%] md:w-[26.3%] lg:w-[26.7%] mb-4">
+                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[38.8%] md:w-[26.3%] lg:w-[26.7%] mb-4">
                     <a href="<?php echo $image_url; ?>" target="_blank">
                         <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
                     </a>

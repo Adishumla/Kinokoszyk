@@ -2,7 +2,7 @@
 
 <section class="w-full h-4/4 flex flex-col-reverse md:flex-row justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20 imgas">
     <div class="flex flex-col w-3/4 md:w-2/4">
-        <h1 class="text-5xl md:text-[88px] font-prata p-0 md:leading-[86px] align-center">Joanna Helander</h1>
+        <h1 class="text-5xl md:text-[88px] font-prata p-0 md:leading-[86px] align-center mt-12">Joanna Helander</h1>
         <div class="w-2/6 max-w-[600px] mt-4 w-full mr-4">
             <p class="text-xl flex flex-col gap-4 w-full">
                 <span class="w-full">Learn about Joanna Helander, a photographer, writer, and filmmaker born in Ruda Slaska in 1948. Arrested for protesting the invasion of Czechoslovakia, she emigrated to Sweden in 1971 and became an accomplished photographer, receiving the Swedish "Photographer of the Year" award in 1983.
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="flex justify-center">
-        <img class="h-full w-2/3 object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
+        <img class="h-full w-2/3 md:w-full object-fill justify-self-end shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
     </div>
 </section>
 <?php
@@ -61,7 +61,7 @@ $offset = ($paged - 1) * $images_per_page;
 				}
 			}
 			foreach ($image_urls as $image_url) { ?>
-                <div class="inline-block align-top overflow-hidden masonry-item w-full w-[39.9%] md:w-[26.3%] lg:w-[26.7%] mb-4">
+                <div class="inline-block align-top overflow-hidden masonry-item w-[39%] md:w-[26.3%] lg:w-[26.7%] mb-4">
                     <a href="<?php echo $image_url; ?>" target="_blank">
                         <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
                     </a>
