@@ -21,12 +21,12 @@ get_header();
     </div>
 </section>
 
-<section class="bg-off-white flex lg:flex-row lg:justify-between flex-col justify-center lg:items-center py-12 lg:px-44 w-full">
-    <div class="sm:ml-[88px] lg:ml-0 ">
-        <h4 class="sm:text-[34px] sm:leading-[] lg:text-[38px] sm:mb-[20px] font-bold lg:pb-2">
+<section class="bg-off-white flex flex-col px-[20px] lg:flex-row lg:justify-between lg:items-center py-12 lg:px-44 w-full pb-[48px]">
+    <div class="ml-[] sm:ml-[88px] lg:ml-0">
+        <h4 class="text-[28px] sm:text-[34px] sm:leading-[] lg:text-[38px] sm:mb-[20px] font-bold lg:pb-2">
             Looking for our latest events and exhibitions?
         </h4>
-        <p class="text-size[28px] sm:text-xl font-poppins max-w-[600px] sm:mb-[48px]">
+        <p class="text-size[18px] sm:text-xl font-poppins max-w-[600px] sm:mb-[48px] mb-[32px]">
             Look no further than our Facebook page! We post all the latest information and updates so you'll never miss a thing.
         </p>
     </div>
@@ -34,7 +34,9 @@ get_header();
         <a href="<?php echo get_permalink(get_page_by_path('photos')); ?>" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">Events on Facebook <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
     </div>
 </section>
-<section class="flex flex-col justify-center items-center bg-off-white py-40">
+
+
+<section class="pt-[48px] sm:pt-0 lg:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:py-40">
     <?php if ($events->have_posts()) : ?>
         <?php while ($events->have_posts()) : $events->the_post(); ?>
             <?php
@@ -47,9 +49,9 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex flex-row gap-10 text-[20px] mb-20 shadow-2xl w-3/4 mx-auto">
-                <img class="w-96 h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
-                <div class="flex flex-col justify-center items-start p-10">
+            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none">
+                <img class="w-[380px] h-[380px] lg:w-96 lg:h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
+                <div class="flex flex-col justify-center items-start p-10 ">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
                     <p class="text-xl font-poppins pt-8"><?= the_content() ?></p>
