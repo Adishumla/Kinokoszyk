@@ -13,15 +13,13 @@ $films = new WP_Query( $args );
 get_header();
 ?>
 
-<section class="w-full h-2/3 flex flex-row justify-center items-center bg-white-red poppins text-off-black mt-[72px]">
-    <div class="ml-28">
-        <h1 class="text-3xl font-light text-wine">Kino Koszyk film</h1>
-        <h2 class="text-[148px] font-prata p-0 leading-[148px]">Film</h2>
-        <div class="w-3/6 min-w-[800px] mt-4">
-            <p class="text-xl font-poppins">Escape into a world of captivating storytelling and stunning visuals. Our films offer an immersive experience that will leave you on the edge of your seat. From heartwarming dramas to pulse-pounding action, our collection has something for everyone. Come discover the magic of cinema with us.</p>
-        </div>
+<section class="mt-24">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+        <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Koszyk film</h1>
+        <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Film</h2>
+        <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
+        <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Escape into a world of captivating storytelling and stunning visuals. Our films offer an immersive experience that will leave you on the edge of your seat. From heartwarming dramas to pulse-pounding action, our collection has something for everyone. Come discover the magic of cinema with us.</p>
     </div>
-    <img class="h-full pr-4 object-fill justify-self-end" src="<?php echo get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
 </section>
 
 <?php if (have_posts()) : ?>
@@ -34,9 +32,8 @@ get_header();
       
         $image = get_field('image');
         $size = '443px'; // (thumbnail, medium, large, full or custom size)
-        # var_dump($image["alt"]);
         ?>
-        <div class="shadow-2xl min-h-[760px]">
+        <div class="shadow-2xl max-w-min min-h-[760px]">
             <?php
             if( $image ): ?>
                 <a class="hover:bg-off-white hover:opacity-30" href="<?= the_permalink();?>">
@@ -48,7 +45,7 @@ get_header();
             <div class="p-10 h-1/2 flex flex-col justify-between">
                 <div>
                     <a href="<?= the_permalink();?>">
-                        <h2 class="font-bold text-4xl max-w-fit mb-1 hover:underline"> <?php the_title(); ?> </h2>
+                        <h2 class="font-bold text-4xl  mb-1 hover:underline"> <?php the_title(); ?> </h2>
                     </a>
                     <p class="text-2xl"> Year: <?= $year ?> </p>
                 </div>
