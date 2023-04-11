@@ -17,7 +17,6 @@ get_header();
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Events</h2>
         <img class=" row-start-2 sm:row-start-1 col-start-3 row-span-2 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
         <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Here you'll find information on upcoming shows and exhibitions featuring the innovative work of this Kino Koszyk and Joanna Helander. They are visionary filmmakers and authors whose work has been widely recognized and celebrated for its creativity and originality. Stay tuned for updates on upcoming events and be sure to join us for an unforgettable experience.</p>
-
     </div>
 </section>
 
