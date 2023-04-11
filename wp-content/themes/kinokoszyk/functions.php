@@ -11,6 +11,15 @@ add_action( 'enqueue_block_editor_assets', 'load_tailwind' );
 
 # Register custom post types
 function kinokoszyk_custom_post_types() {
+  register_post_type('photo', array(
+    'labels'      => array(
+    'name'          => __('Photos', 'textdomain'),
+    'singular_name' => __('Photo', 'textdomain'),
+  ),
+    'public'      => true,
+    'has_archive' => true,
+)
+);
 	register_post_type('film', array(
 			'labels'      => array(
 				'name'          => __('Films', 'textdomain'),
@@ -18,8 +27,6 @@ function kinokoszyk_custom_post_types() {
 			),
 				'public'      => true,
 				'has_archive' => true,
-        
-        
 		)
 	);
   register_post_type('book', array(
@@ -29,8 +36,6 @@ function kinokoszyk_custom_post_types() {
     ),
       'public'      => true,
       'has_archive' => true,
-      
-      
   )
   );
   register_post_type('event', array(
@@ -40,8 +45,6 @@ function kinokoszyk_custom_post_types() {
     ),
       'public'      => true,
       'has_archive' => true,
-      
-      
   )
   );
 }
@@ -71,7 +74,7 @@ function register_theme_menus()
 }
 add_action('init', 'register_theme_menus');
 
-# register template parts
+# Register template parts
 function register_template_parts()
 {
   get_template_part('about-template.php');
@@ -138,3 +141,11 @@ function custom_archive_query( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'custom_archive_query' );
+
+//this shows all posts in the admin panel
+function set_posts_per_page( $query ) {
+    if ( is_admin() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', -1 );
+    }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page' );
