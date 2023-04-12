@@ -80,7 +80,7 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 <section class="flex flex-col items-center bg-white pt-12 md:pt-20 lg:pt-12 imgas gap-12">
-    <div class="w-10/12 md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+    <div class="w-10/12 md:w-11/12  md:max-h-[400px] lg:max-h-[443px] md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
         <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
             <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/film-joanna.jpg" alt="">
         </div>
@@ -98,7 +98,7 @@ $offset = ($paged - 1) * $images_per_page;
             </div>
         </div>
     </div>
-    <div class="w-10/12 md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+    <div class="w-10/12 md:w-11/12  md:max-h-[400px] lg:max-h-[443px] md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
         <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center group-hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
             <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/book-joanna.jpg" alt="">
         </div>
