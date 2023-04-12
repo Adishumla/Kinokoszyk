@@ -25,10 +25,10 @@ get_header();
 
 <section class="bg-off-white flex flex-col lg:flex-row lg:justify-between lg:items-center py-12 lg:px-44 w-full lg:gap-[3%]">
     <div class="px-[24px] sm:px-[80px] lg:px-0">
-        <h4 class="text-[28px] sm:text-[34px] lg:text-[38px] sm:mb-[20px] font-bold lg:pb-2">
+        <h4 class="text-[28px] leading-[34px] lg:text-[38px] lg:leading-[40px] sm:mb-[20px] font-bold lg:pb-2">
             Looking for our latest events and exhibitions?
         </h4>
-        <p class="text-size[18px] sm:text-xl font-poppins max-w-[600px] sm:mb-[48px] mb-[32px] lg:mb-0">
+        <p class="text-size[18px] sm:text-xl font-poppins max-w-[600px] mt-[16px] sm:mb-[48px] mb-[32px] lg:mb-0">
             Look no further than our Facebook page! We post all the latest information and updates so you'll never miss a thing.
         </p>
     </div>
