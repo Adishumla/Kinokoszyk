@@ -1,5 +1,7 @@
 <?php
 $menuItems = wp_get_nav_menu_items('primary-menu');
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
 
 <!DOCTYPE html>
@@ -7,12 +9,27 @@ $menuItems = wp_get_nav_menu_items('primary-menu');
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website of Kino Koszyk, a still photography and motionpicture organizaton created by Joanna Helander and Bo Svensson.">
-    <meta name="keywords" content="Home, Kino Koszyk, Kino, Koszyk, Uncategorized, Helander, Joanna, Joanna Helander, Kino, Kino Koszyk, Koszyk, kinokoszyk,documentaries,dokumentärer,film,bio,cinema,photography">
     <meta name="author" content="Kino Koszyk">
     <meta name="robots" content="index, follow">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="<?php bloginfo('url'); ?>">
+    <meta property="og:title" content="Kino Koszyk">
+    <meta property="og:locale" content="<?php language_attributes(); ?>">
+    <meta property="og:description" content="Website of Kino Koszyk, a still photography and motionpicture organizaton created by Joanna Helander and Bo Svensson.">
+    <meta property="og:image" content="<?= $image[0] ?>">
+    
+    <!-- Twitter cards -->
+    <meta property="twitter:site" content="<?php bloginfo('url'); ?>">
+    <meta property="twitter:title" content="Kino Koszyk">
+    <meta property="twitter:description" content="Website of Kino Koszyk, a still photography and motionpicture organizaton created by Joanna Helander and Bo Svensson.">
+    <meta property="twitter:image" content="<?= $image[0] ?>">
+    
+    <!-- <meta name="keywords" content="Home, Kino Koszyk, Kino, Koszyk, Uncategorized, Helander, Joanna, Joanna Helander, Kino, Kino Koszyk, Koszyk, kinokoszyk,documentaries,dokumentärer,film,bio,cinema,photography"> -->
+    
     <link rel="canonical" href="https://http://www.kinokoszyk.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <!-- Load Google Fonts -->
 </head>
@@ -42,3 +59,7 @@ $menuItems = wp_get_nav_menu_items('primary-menu');
             </ul>
         </nav>
     </header>
+
+    <?php
+        
+    ?>
