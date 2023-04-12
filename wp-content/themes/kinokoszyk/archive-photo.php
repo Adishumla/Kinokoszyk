@@ -73,12 +73,19 @@ $third = [];
 				}
 			}
 			foreach ($image_urls as $image_url) { ?>
-				<div class="inline-block align-top overflow-hidden masonry-item w-full w-[38.7%] md:w-[26.3%] lg:w-[26.7%] mb-4">
-					<a href="<?php echo $image_url; ?>" target="_blank">
-						<img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
-					</a>
-				</div>
-			<?php } ?>
+    <div class="inline-block align-top overflow-hidden masonry-item w-full w-[38.7%] md:w-[26.3%] lg:w-[26.7%] mb-4">
+        <?php if (!empty($image_url) && filter_var($image_url, FILTER_VALIDATE_URL)) { ?>
+            <a href="<?php echo $image_url; ?>" target="_blank">
+                <img class="w-full hover:scale-110 transition duration-500 ease-in-out h-auto object-cover object-center" src="<?php echo $image_url; ?>" alt="">
+            </a>
+        <?php } else { ?>
+            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                <span class="text-gray-400">Image not available</span>
+            </div>
+        <?php } ?>
+    </div>
+<?php } ?>
+
 		</div>
 	</div>
 	<?php
