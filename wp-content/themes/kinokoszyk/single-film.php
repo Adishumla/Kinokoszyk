@@ -50,43 +50,45 @@ get_header(); ?>
 
 
 
-<main class="px-[10.4%] bg-off-white">
-    <div class="mb-[20%] w-full aspect-video [&>iframe]:top-[5vw]  [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:z-1 [&>iframe]:relative "> 
-        <div class="bg-white-red w-[100%] h-[32vw] left-0 absolute "></div>
-        <?php  if($trailer){
-            echo $trailer;
-        }
-        else if($heroImage){ ?>
-            <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $heroImage['url'] ?>" alt="<?= $heroImage["alt"] ?>">
-   
-           
-        <?php }
-        else { ?>
-         <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+<main class=" bg-off-white">
+    <section class=" mt-[10%] lg:px-[10.4%] mb-[10%]">
+        <div class="  w-full aspect-video  [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:z-1 [&>iframe]:relative "> 
+            <div class="bg-white-red w-[100%] h-[60vw] lg:h-[28vw] left-0 absolute "></div>
+            <?php  if($trailer){
+                echo $trailer;
+            }
+            else if($heroImage){ ?>
+                <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $heroImage['url'] ?>" alt="<?= $heroImage["alt"] ?>">
+    
+            
+            <?php }
+            else { ?>
+            <img class=" object-cover object-top drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)] w-full h-full"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
 
 
 
-        
-        <?php } ?>
+            
+            <?php } ?>
 
-    </div>
+        </div>
+    </section>
 
-    <section class="flex gap-x-[5.8%]">
+    <section class="flex gap-x-[5.8%] px-[10.4%]">
         <div class="flex flex-col min-w-[32%] w-[32%]">
             <span class="font-poppins text-[20px] leading-[28px]  mb-[12px]" ><?= $year ?> </span>
             <img class="w-full object-cover row-span-2 drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)]"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
         </div>
         <div class="flex flex-col gap-y-[21px]">
-            <h2 class="font-prata text-[80px] leading-[86px] mt-[26px] font-normal"><?php the_title(); ?></h2>
+            <h2 class="font-prata  text-[36px] leading-[40px] sm:text-[60px] sm:leading-[68px] lg:text-[80px] lg:leading-[86px] mt-[26px] font-normal"><?php the_title(); ?></h2>
             <?php remove_filter( 'the_content', 'wpautop' );?>
             <?php add_filter( 'the_content', 'nl2br' );?>
             
-            <div class="font-poppins text-[20px] leading[28px]"><?php the_content(); ?></div>
+            <div class="font-poppins text-[18px] lg:text-[20px] leading[28px]"><?php the_content(); ?></div>
         </div>
     </section>
 
-    <section class="pb-[160px]">
-        <div class="flex justify-between px-[2.3%] bg-white-red mt-[80px]  pt-[40px] pb-[60px] font-poppins text-[20px] leading-[28px] gap-x-[6%]">
+    <section class="pb-[48px] lg:pb-[160px] px-[10.4%]">
+        <div class="flex flex-col-reverse lg:flex-row justify-between px-[6.2%] lg:px-[2.3%] bg-white-red mt-[42px] lg:mt-[80px]  pt-[40px] pb-[60px] font-poppins text-[20px] leading-[28px] gap-x-[6%] gap-y-[24px]">
             <div>
                 <?php if($language):?>  <p class="text-[20px] leading-[28px]"><b>Language:</b> <?= $language ?></li><?php endif ?>
                 <p><b>Director & Screenwriters:</b> <?= $directorAndScreenwriters ?></li>
@@ -105,15 +107,15 @@ get_header(); ?>
 
                 
             </div>
-            <div class="flex flex-col justify-between h-[132px] text-[16px] leading-[18px]">
-                    <?php if($trailer):?><button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center" ">
+            <div class="flex  flex-col justify-between h-[132px] text-[16px] leading-[18px]">
+                    <?php if($trailer):?><button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center w-full lg:w-[280px] max-w-[280px]">
                         <p>Watch trailer</p>
                     </button><?php endif?>
                    
                    
 
 
-                    <?php if( $directorOfPhotography || $editor || $sound || $music):?> <button onclick="toggleMoreInfo()" class="btn-white text-center">
+                    <?php if( $directorOfPhotography || $editor || $sound || $music):?> <button onclick="toggleMoreInfo()" class="btn-white  text-center w-full lg:w-[280px] max-w-[280px]">
                         <p class="  ">More information</p>
                     </button> <?php endif ?>
 
@@ -123,7 +125,7 @@ get_header(); ?>
     </section>
     <?php if(array_key_exists(0, $awards)): ?>  
           
-        <section id="Awards" class="mt-[-80px] mb-[160px]">
+        <section id="Awards" class="mt-[-80px] mb-[160px] px-[10.4%]">
             <h2 class="font-poppins text-[28px] leading-[37px]">Awards</h2>
             <div class="flex justify-center gap-x-[2%]">
             <?php foreach($awards as $award):?>
@@ -139,11 +141,11 @@ get_header(); ?>
     <?php endif; ?>
 
     <?php if(array_key_exists(1, $quotes)):?>
-        <section id="Quotes">
+        <section id="Quotes" class="px-[10.4%]">
             <?php foreach($quotes as $quote): ?>
-                <div class="pb-[160px]">
-                <p class=" font-prata text-[38px] leading-[46px]"><?=$quote["quote"]?></p>
-                <p class=" font-poppins text-[18px] leading-[18px] mt-[10px] text-right text-wine"><?=$quote["quoted"]?></p>
+                <div class="pb-[48px] lg:pb-[160px]">
+                    <p class=" font-prata text-[18px] leading-[28px] sm:text-[24px] sm:leading-[32px] lg:text-[38px] lg:leading-[46px]"><?=$quote["quote"]?></p>
+                    <p class=" font-poppins text-[18px] leading-[18px] mt-[10px] text-right text-wine"><?=$quote["quoted"]?></p>
                 </div>
 
 
