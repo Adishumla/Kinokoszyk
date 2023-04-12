@@ -80,31 +80,31 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 <section class="flex flex-col items-center bg-white pt-12 md:pt-20 lg:pt-12 imgas gap-12">
-    <div class="w-10/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30">
-            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
+    <div class="w-10/12 md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
+            <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/film-joanna.jpg" alt="">
         </div>
-        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
+        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10 md:px-6">
             <div>
-                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer">
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline transition duration-200 ease-in-out">
                     <a href=<?php echo get_site_url(); ?>/film>Film made by Joanna</a>
                 </h3>
             </div>
             <div class="my-8 text-[20px]">
-                <p class="text-[20px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
+                <p class="text-[18px]">Experience the beauty and tragedy of wartime Poland through the eyes of filmmakers who bring these powerful stories to life on the big screen. Witness the struggles and triumphs of ordinary people caught up in the midst of one of the greatest conflicts in history. Don't miss the opportunity to be moved and inspired.</p>
             </div>
             <div class="flex justify-start md:justify-end lg:justify-end mb-4">
                 <a href=<?php echo get_site_url(); ?>/film class="btn-wine py-2.5 px-5 text-center flex items-center justify-center">More of her films <img class="ml-2 rotate-180" src="<?php echo get_template_directory_uri(); ?>/assets/arrow-white.svg" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="w-10/12 md:w-4/5 lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30">
-            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/square.jpg" alt="">
+    <div class="w-10/12 md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center group-hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
+            <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/book-joanna.jpg" alt="">
         </div>
-        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10">
+        <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 md:px-6 lg:p-10">
             <div>
-                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer">
+                <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer transition duration-200 ease-in-out">
                     <a href=<?php echo get_site_url(); ?>/book>Book made by Joanna</a>
                 </h3>
             </div>
@@ -118,7 +118,7 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 <section class="py-12 lg:py-40 md:py-20 imgas bg-white">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-8 px-6 md:px-28 lg:px-44 bg-white-red">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-8 px-[8%] md:px-28 lg:px-44 bg-white-red">
     <div class="">
         <h3 class="text-[38px] leading-[38px] font-bold mb-4 text-wine">Scholarship</h3>
         <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
@@ -175,10 +175,10 @@ $offset = ($paged - 1) * $images_per_page;
         <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-interview">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
         </div>
-        <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
+        <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
             REALITY MIS EN SCENE
         </h1>
-        <h2 class="text-[20px] leading-[20px] text-start pt-20">
+        <h2 class="text-[20px] leading-[20px] text-start pt-4 pb-9">
             Interview with Joanna Helander by Jerzy Illg for Polish journal Naglos
         </h2>
         <div>
@@ -230,10 +230,10 @@ $offset = ($paged - 1) * $images_per_page;
             <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
             </div>
-            <h1 class="text-[80px] font-bold text-start pt-20 font-prata">
+            <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
                 BIOGRAPHY
             </h1>
-            <h2 class="text-[20px] leading-[20px] text-start pt-20">
+            <h2 class="text-[20px] leading-[20px] text-start pt-4 pb-9">
                 Joanna Helander
             </h2>
             <div>
@@ -268,6 +268,9 @@ In addition to her artistic work in Sweden and Poland, Joanna Helander writes fo
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
 <script>
+    window.addEventListener('load', function() {
+        masonry.layout();
+    });
     const interviewButton = document.getElementById('interview-button');
     const biographyButton = document.getElementById('biography-button');
     const interviewSection = document.getElementById('interview');

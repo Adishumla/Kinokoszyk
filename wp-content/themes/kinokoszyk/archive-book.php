@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section class="mx-44 mt-[48px]">
+<section class="lg:w-4/4 lg:mt-[48px] flex justify-center">
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $query = new WP_Query(array(
@@ -32,16 +32,14 @@
             $image = get_field("image");
             $size = 'full'; // (thumbnail, medium, large, full or custom size)
     ?>
-            <div class="flex flex-row gap-10 text-[20px] mb-20">
+            <div class="flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl lg:shadow-none p-10">
                 <?php
                 if ($image) {
                 ?>
-                    <img class="w-96 h-auto object-cover" src=<?= $image['url'] ?> alt="">
-                <?php
-                    echo "<br>";
-                } ?>
+                    <img class="md:w-1/3 lg:w-96 h-auto object-cover" src=<?= $image['url'] ?> alt="">
+                <?php } ?>
                 <div class="flex flex-col gap-4 self-center">
-                    <h2 class="font-bold text-[38px]"> <?php the_title(); ?> </h2>
+                    <h2 class="font-bold text-2xl lg:text-4xl"> <?php the_title(); ?> </h2>
 
                     <p> <b>Writers:</b> <?= $writers ?> </p> <!-- Check for plural? -->
                     <span>

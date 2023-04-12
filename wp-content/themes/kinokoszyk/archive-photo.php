@@ -122,4 +122,7 @@ $third = [];
 		gutter: 20,
 		horizontalOrder: true,
 	});
+    window.addEventListener('load', function() {
+        masonry.layout();
+    });
 </script>
