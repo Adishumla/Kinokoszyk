@@ -14,8 +14,7 @@ $size = "full";
     <div class="box-border ml-[10%] mr-[10%] flex-wrap flex justify-center gap-x-[4vw] gap-y-[3vw]"> 
  
         
-        <?
-    
+<?php
     foreach($partners as $partner)
     {
         if(empty($partner)) continue; 
