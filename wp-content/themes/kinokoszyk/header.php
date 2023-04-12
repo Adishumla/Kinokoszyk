@@ -24,8 +24,8 @@ $menuItems = wp_get_nav_menu_items('primary-menu');
 
 
     <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between lg:pr-8">
-        <div class="flex justify-between w-full px-6 pt-12 pb-4 z-50 lg:w-auto">
-            <div class="w-16">
+        <div class="flex justify-between w-full px-6 pt-6 pb-4 z-50 md:pt-8 lg:w-auto lg:pl-8">
+            <div class="w-12">
                 <?= get_custom_logo() ?>
             </div>
             <button class="uppercase text-2xl lg:hidden">Menu</button>

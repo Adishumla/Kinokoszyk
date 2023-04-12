@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <section class="mt-24">
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Exhibitions by Joanna Helander and Kino Koszyk</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Events</h2>
         <img class=" row-start-2 sm:row-start-1 col-start-3 row-span-2 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
@@ -48,12 +48,13 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none">
+            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none ">
                 <img class="w-[380px] h-[380px] lg:w-96 lg:h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
                 <div class="flex flex-col justify-center items-start p-10 ">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
-                    <p class="text-xl font-poppins pt-8"><?= the_content() ?></p>
+                    <!-- fixa detta med break-words -->
+                    <p class="text-xl font-poppins pt-8 max-w-[260px] break-words "><?= the_content() ?></p>
                 </div>
             </div>
     <?php endwhile;
