@@ -32,13 +32,13 @@
             $image = get_field("image");
             $size = 'full'; // (thumbnail, medium, large, full or custom size)
     ?>
-            <div class="flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl lg:shadow-none p-10">
+            <div class="max-w-[380px] md:max-w-none flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl md:shadow-none lg:shadow-none p-5 md:p-14">
                 <?php
                 if ($image) {
                 ?>
-                    <img class="md:w-1/3 lg:w-96 h-auto object-cover" src=<?= $image['url'] ?> alt="">
+                    <img class="w-full md:w-2/4 lg:w-96 h-auto object-cover" src=<?= $image['url'] ?> alt="">
                 <?php } ?>
-                <div class="flex flex-col gap-4 self-center">
+                <div class="flex flex-col gap-4 self-center md:self-start lg:self-center">
                     <h2 class="font-bold text-2xl lg:text-4xl"> <?php the_title(); ?> </h2>
 
                     <p> <b>Writers:</b> <?= $writers ?> </p> <!-- Check for plural? -->
