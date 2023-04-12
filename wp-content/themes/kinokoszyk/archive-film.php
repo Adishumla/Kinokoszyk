@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <section class="mt-24">
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Koszyk film</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Film</h2>
         <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/photo-roll.svg" alt="">
@@ -23,7 +23,7 @@ get_header();
 </section>
 
 <?php if (have_posts()) : ?>
-    <section class="flex flex-wrap gap-24 px-44 py-40 bg-off-white ">
+    <section class="flex flex-wrap gap-y-12 px-6 py-12 md:gap-x-2 md:px-8 lg:gap-24 lg:px-44 lg:py-40 bg-off-white ">
     <?php while ( $films->have_posts() ) : $films->the_post();
 
 
@@ -36,7 +36,7 @@ get_header();
         <div class="shadow-2xl max-w-min min-h-[760px]">
             <?php
             if( $image ): ?>
-                <a class="hover:bg-off-white hover:opacity-30" href="<?= the_permalink();?>">
+                <a class="hover:bg-off-white hover:opacity-30 transition-opacity duration-200" href="<?= the_permalink();?>">
                     <img class="w-96 h-1/2 object-cover" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
                 </a>
             <?php endif ?>
@@ -45,7 +45,7 @@ get_header();
             <div class="p-10 h-1/2 flex flex-col justify-between">
                 <div>
                     <a href="<?= the_permalink();?>">
-                        <h2 class="font-bold text-4xl  mb-1 hover:underline"> <?php the_title(); ?> </h2>
+                        <h2 class="font-bold text-4xl  mb-1 hover:underline duration-200"> <?php the_title(); ?> </h2>
                     </a>
                     <p class="text-2xl"> Year: <?= $year ?> </p>
                 </div>
@@ -97,7 +97,3 @@ get_header();
 <?php endif; ?>
 
 <?php get_footer() ?>
-
-<?php
-    print_a($paged);
-?>
