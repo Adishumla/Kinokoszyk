@@ -48,12 +48,13 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none">
+            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none ">
                 <img class="w-[380px] h-[380px] lg:w-96 lg:h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
                 <div class="flex flex-col justify-center items-start p-10 ">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
-                    <p class="text-xl font-poppins pt-8"><?= the_content() ?></p>
+                    <!-- fixa detta med break-words -->
+                    <p class="text-xl font-poppins pt-8 max-w-[260px] break-words "><?= the_content() ?></p>
                 </div>
             </div>
     <?php endwhile;
