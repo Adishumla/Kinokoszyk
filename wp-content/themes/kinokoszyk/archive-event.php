@@ -38,7 +38,7 @@ get_header();
 </section>
 
 
-<section class="pt-[48px] sm:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:py-40 lg:gap-0 sm:pb-[80px] py-[48px]">
+<section class=" sm:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:pt-40 lg:gap-0 pt-[48px] sm:pb-[48px] w-full">
     <?php if ($events->have_posts()) : ?>
         <?php while ($events->have_posts()) : $events->the_post(); ?>
             <?php
@@ -51,13 +51,15 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:w-3/4 lg:mx-auto lg:max-w-none ">
+            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:w-3/4">
                 <img class="w-[380px] h-[380px] lg:w-96 lg:h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
                 <div class="flex flex-col justify-center items-start p-10 ">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
                     <!-- just nu kan det bli en bugg när man skriver ett väldigt lång ord men detta går att fixa med  break-words men man behöver en satt width då vilket blev jobbigt -->
-                    <p class="text-xl font-poppins pt-8 "><?= the_content() ?></p>
+                    <div class="w-full h-auto">
+                        <p class="text-xl font-poppins pt-8 break-words h-full"><?= the_content() ?></p>
+                    </div>
                 </div>
             </div>
     <?php endwhile;
@@ -65,7 +67,9 @@ get_header();
     wp_reset_query();
     // Pagination
     $big = 999999999; // need an unlikely integer
-    echo '<div class="flex justify-center align-center lg:pt-10">';
+    echo '</section>';
+    echo '<section class="bg-off-white">';
+    echo '<div class=" pb-[64px] sm:pb-[80px]  lg:pb-[165px] flex justify-center align-center lg:pt-10">';
     $arrow = get_template_directory_uri() . '/assets/Arrow.svg';
     $current_page = max(1, get_query_var('paged'));
     $total_pages = $events->max_num_pages;
