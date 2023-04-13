@@ -38,7 +38,7 @@ get_header();
 </section>
 
 
-<section class=" sm:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:pt-20 lg:gap-0 pt-[48px] sm:pb-[48px] w-full">
+<section class=" sm:pt-0 grid grid-cols-1 sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:pt-20 lg:gap-0 pt-[48px] sm:pb-[48px] w-full">
     <?php if ($events->have_posts()) : ?>
         <?php while ($events->have_posts()) : $events->the_post(); ?>
             <?php
@@ -51,13 +51,13 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex flex-col mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:w-[1000px] mx-6">
-                <div class="w-full lg:h-full lg:w-1/2 mb-10 lg:mb-0">
-                    <div class="relative h-[380px] lg:h-auto overflow-hidden">
+            <div class="flex flex-col mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:h-[443px] lg:w-11/12 mx-4">
+                <div class="w-full lg:h-full lg:w-fit lg:aspect-square mb-10 lg:mb-0">
+                    <div class="relative h-[380px] lg:h-auto lg:aspect-square overflow-hidden">
                         <img class="absolute top-0 left-0 h-full w-full object-cover transform transition-transform hover:scale-110 lg:static lg:w-full lg:h-full" src=<?= $image['url'] ?> alt="">
                     </div>
                 </div>
-                <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-10">
+                <div class="w-full lg:w-2/3 flex flex-col justify-center items-start p-10">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
                     <div class="w-full h-auto">
