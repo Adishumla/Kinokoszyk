@@ -23,33 +23,32 @@ get_header();
 </section>
 
 <?php if (have_posts()) : ?>
-    <section class="flex flex-wrap gap-y-12 px-6 py-12 md:gap-x-2 md:px-8 lg:gap-24 lg:px-44 lg:py-40 bg-off-white ">
+    <section class="flex flex-wrap justify-center gap-y-[48px] lg:gap-y-[80px] px-[1%] gap-x-[2%] lg:px-[4%] lg:gap-x-[5%] py-12 lg:py-40 bg-off-white w-full">
     <?php while ( $films->have_posts() ) : $films->the_post();
 
 
 
         $year = get_field("year");
-      
         $image = get_field('image');
         $size = '443px'; // (thumbnail, medium, large, full or custom size)
         ?>
-        <div class="shadow-2xl max-w-min min-h-[760px]">
+        <div class="shadow-2xl w-[380px] lg:w-[443px]">
             <?php
             if( $image ): ?>
-                <div class="h-1/2 overflow-hidden  transition-opacity duration-400">
+                <div class="w-full  aspect-square overflow-hidden  transition-opacity duration-400">
                     <a href="<?= the_permalink(); ?>">
-                        <img class="w-96 h-full object-cover transform transition-transform hover:scale-125 duration-300" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+                        <img class="w-full h-full object-cover object-top transform transition-transform hover:scale-125 duration-300" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
                     </a>
                 </div>
             <?php endif ?>
 
 
-            <div class="p-10 h-1/2 flex flex-col justify-between">
+            <div class="p-10 w-full min-h-[320px] flex flex-col justify-between">
                 <div>
                     <a href="<?= the_permalink();?>">
-                        <h2 class="font-bold text-4xl  mb-1 hover:underline duration-200"> <?php the_title(); ?> </h2>
+                        <h2 class=" font-poppins font-bold text-[38px] leading-[40px]  mb-[16px] hover:underline duration-200"> <?php the_title(); ?> </h2>
                     </a>
-                    <p class="text-2xl"> Year: <?= $year ?> </p>
+                    <p class=" font-poppins text-[26px] leading-[37px] "> Year: <?= $year ?> </p>
                 </div>
                 <button class="btn-wine">
                     <a class="flex justify-center gap-5" href="<?= the_permalink();?>">More information<img class="rotate-180" src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt=""></a>
