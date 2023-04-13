@@ -57,7 +57,7 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for="message">Message:</label>
-                <textarea class="placeholder-footer p-4 h-48 ring ring-1 ring-black resize-none" required id="message" placeholder="Type your message here."></textarea>
+                <textarea class="placeholder-footer p-4 h-48 ring ring-1 ring-wine resize-none focus-visible:ring-wine focus-within:outline-light-wine" required id="message" placeholder="Type your message here."></textarea>
             </div>
 
             <button class="btn-wine self-center text-center" type="submit">Send message</button>

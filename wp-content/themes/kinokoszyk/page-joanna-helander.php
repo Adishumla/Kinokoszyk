@@ -36,7 +36,7 @@ $offset = ($paged - 1) * $images_per_page;
 
         <div class="masonry text-center bg-white w-screen px-[8%]">
             <?php
-			$images_per_page = 15;
+			$images_per_page = 12;
 			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			$offset = ($paged - 1) * $images_per_page;
 

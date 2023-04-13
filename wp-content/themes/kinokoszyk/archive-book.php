@@ -14,7 +14,7 @@
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $query = new WP_Query(array(
         'post_type' => 'book',
-        'posts_per_page' => 1,
+        'posts_per_page' => 2,
         'paged' => $paged,
     ));
 
