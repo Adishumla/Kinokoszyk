@@ -23,11 +23,26 @@
 
         <p class="text-[#858585]">© <?= date('Y') ?> Kino Koszyk. All rights reserved.</p>
         <a class="social" href="https://www.facebook.com/joanna.helander.169" target="_blank">
-            <img src="<?= get_template_directory_uri() ?>/assets/Icon facebook.svg" alt="Facebook icon">
+            <img id="fbIconWhite" class="hover:bg-light-wine" src="<?= get_template_directory_uri() ?>/assets/Icon facebook.svg" alt="Facebook icon">
+            <img id="fbIconWine" class="hidden" src="<?= get_template_directory_uri() ?>/assets/facebookWine.svg" alt="Facebook icon">
         </a>
     </div>
 </footer>
 
+<script>
+    const fbIcon1 = document.getElementById('fbIconWhite');
+    const fbIcon2 = document.getElementById('fbIconWine');
+
+    fbIcon1.addEventListener('mouseover', () => {
+        fbIcon1.classList.add('hidden');
+        fbIcon2.classList.remove('hidden');
+    });
+
+    fbIcon2.addEventListener('mouseout', () => {
+        fbIcon2.classList.add('hidden');
+        fbIcon1.classList.remove('hidden');
+    });
+</script>
 </body>
 
 </html>
