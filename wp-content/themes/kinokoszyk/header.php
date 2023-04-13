@@ -45,9 +45,9 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <?php  ?>
 
 
-    <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between pb-1 lg:pr-8">
-        <div class="flex justify-between w-full px-6 pt-6 pb-4 z-50 md:pt-8 lg:w-auto lg:pl-8">
-            <div class="w-12">
+    <header class="sticky flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between lg:pr-8 h-[100px] lg:h-[89px]">
+        <div class="flex justify-between lg:justify-center lg:flex-col w-full px-6 pt-[31px] pb-[37px] z-50 lg:w-auto lg:pl-8 md:pt-[52px] md:pb-[16px] lg:pt-0 lg:pb-0">
+            <div class="w-[61px] lg:w-[95px] my-auto">
                 <?= get_custom_logo() ?>
             </div>
             <button class="uppercase text-2xl lg:hidden">Menu</button>
