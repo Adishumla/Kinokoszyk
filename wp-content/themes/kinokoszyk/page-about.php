@@ -49,15 +49,15 @@
         <form class="flex flex-col gap-6 w-full text-off-black lg:w-1/3">
             <div class="flex flex-col gap-2">
                 <label for="mail">E-mail:</label>
-                <input class="placeholder-footer p-4 ring ring-1 ring-black" type="email" id="mail" required placeholder="example@mail.com">
+                <input class="placeholder-footer p-4 ring ring-1 ring-black focus-within:outline-light-wine" type="email" id="mail" required placeholder="example@mail.com">
             </div>
             <div class="flex flex-col gap-2">
                 <label for="name">Name:</label>
-                <input class="placeholder-footer p-4 ring ring-1 ring-black" type="text" id="name" required placeholder="Jane Doe">
+                <input class="placeholder-footer p-4 ring ring-1 ring-black focus-within:outline-light-wine" type="text" id="name" required placeholder="Jane Doe">
             </div>
             <div class="flex flex-col gap-2">
                 <label for="message">Message:</label>
-                <textarea class="placeholder-footer p-4 h-48 ring ring-1 ring-wine resize-none focus-visible:ring-wine focus-within:outline-light-wine" required id="message" placeholder="Type your message here."></textarea>
+                <textarea class="placeholder-footer p-4 h-48 ring ring-1 ring-wine resize-none focus-within:outline-light-wine" required id="message" placeholder="Type your message here."></textarea>
             </div>
 
             <button class="btn-wine self-center text-center" type="submit">Send message</button>
