@@ -19,7 +19,7 @@
     <div id=aboutTextbox class="flex flex-col justify-center w-[380px] sm:w-[319px] lg:w-[673px]">
       <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Kino Koszyk</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">With a passion for storytelling and a commitment to authenticity, Kino Koszyk produces thought-provoking documentaries that provide insight into the complex and fascinating history, culture, and people of Poland. Through their work, they aim to promote greater understanding and appreciation of this beautiful country and its people.</p>
-      <a class="btn-wine flex items-center mt-[60px]" href="<?php echo get_permalink(get_page_by_path("about")) ?>">
+      <a class="btn-wine flex items-center mt-[60px]" href="<?php echo get_site_url(); ?>/about ">
         <div class="arrow ml-[178.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt="arrow right"></div>
         <div class="ml-[69.5px]">
           Read more
@@ -37,7 +37,7 @@
       <!-- För att få Joanna Helander att lägga sig på rad så måste fonten vara en annan storlek samt leadingen. -->
       <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Joanna Helander</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">Discover the beauty captured through the lens of our talented artist Joanna. Explore her stunning photography and allow yourself to be transported to new worlds of wonder and awe.</p>
-      <a class="btn-wine flex items-center mt-[60px]" href="<?php echo get_permalink(get_page_by_path("photos")) ?>">
+      <a class="btn-wine flex items-center mt-[60px]" href="<?php echo get_site_url(); ?>/photo ">
         <div class="arrow ml-[179px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-white.svg" alt="arrow right"></div>
         <div class="ml-[69px]">
           See photos
@@ -68,7 +68,7 @@
     <div id=filmTextbox class="w-[380px] h-[370px] lg:w-[673px] sm:w-[319px] lg:h-[268px] absolute mt-[580px] sm:mt-0 sm:right-0 lg:mr-[180px] sm:mr-[15%] gap-[32px] text-off-white">
       <h2 class="font-prata text-[52px] leading-[60px]  ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Film</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">Experience the magic of cinema with Kino Kozsyks. Our films take you on a journey beyond the screen, with captivating stories and stunning visuals that will leave you inspired. Don't miss out on the opportunity to immerse yourself in the world of Kino Kozsyks. </p>
-      <a class="btn-white flex items-center mt-[50px]" href="<?php echo get_permalink(get_page_by_path("film")) ?>">
+      <a class="btn-white flex items-center mt-[50px]" href="<?php echo get_site_url(); ?>/film ">
         <div class="arrow ml-[170px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
         <div class="ml-[78px] ">
           See films
@@ -87,7 +87,7 @@
       <h2 class="font-prata text-[52px] leading-[60px] ls:text-[60px] ls:leading-[68px] lg:text-[80px] lg:leading-[86px] mb-[26px]">Event</h2>
       <p class="poppins text-[18px] leading-[28px] sm:text-[20px] sm:leading-[28px]">Discover the latest movie screenings and events at Kino Koszyk's event page! Immerse yourself in a world of cinema and entertainment with our diverse range of films, from classics to new releases. Join us for a unique cinematic experience in the heart of the city. Book your tickets now and be a part of the excitement!</p>
       <div id="btnContainer" class="flex flex-row flex-wrap gap-[24px] mt-[50px]">
-        <a class="btn-white flex items-center" href="<?php echo get_permalink(get_page_by_path("event")) ?>">
+        <a class="btn-white flex items-center" href="<?php echo get_site_url(); ?>/event">
           <div class="arrow ml-[177.5px]"><img src="<?= get_template_directory_uri() ?>/assets/arrow-black.svg" alt="arrow right"></div>
           <div class="ml-[70.5px]">
 
