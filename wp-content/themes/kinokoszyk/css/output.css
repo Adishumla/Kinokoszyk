@@ -443,7 +443,7 @@ blockquote p::after {
 }
 
 .vh-hero {
-  --margin: 96px;
+  --margin: 90px;
   min-height: calc(100vh - var(--margin));
   margin-top: var(--margin);
 }
@@ -1187,6 +1187,10 @@ footer .wrapper .social {
   margin-top: 10px;
 }
 
+.mt-\[16px\] {
+  margin-top: 16px;
+}
+
 .mt-\[26px\] {
   margin-top: 26px;
 }
@@ -1203,28 +1207,16 @@ footer .wrapper .social {
   margin-top: 50px;
 }
 
-.mt-\[60px\] {
-  margin-top: 60px;
-}
-
-.mt-\[636px\] {
-  margin-top: 636px;
-}
-
-.mt-\[72px\] {
-  margin-top: 72px;
-}
-
-.mt-\[600px\] {
-  margin-top: 600px;
-}
-
 .mt-\[580px\] {
   margin-top: 580px;
 }
 
-.mt-\[16px\] {
-  margin-top: 16px;
+.mt-\[60px\] {
+  margin-top: 60px;
+}
+
+.mt-\[72px\] {
+  margin-top: 72px;
 }
 
 .box-border {
@@ -1404,8 +1396,48 @@ footer .wrapper .social {
   height: 100%;
 }
 
+.h-\[6vw\] {
+  height: 6vw;
+}
+
+.h-\[155px\] {
+  height: 155px;
+}
+
+.h-\[5vw\] {
+  height: 5vw;
+}
+
+.h-\[7vw\] {
+  height: 7vw;
+}
+
+.h-\[10vw\] {
+  height: 10vw;
+}
+
+.h-\[15vw\] {
+  height: 15vw;
+}
+
+.h-\[18vw\] {
+  height: 18vw;
+}
+
 .min-h-\[760px\] {
   min-height: 760px;
+}
+
+.min-h-\[80px\] {
+  min-height: 80px;
+}
+
+.min-h-\[60px\] {
+  min-height: 60px;
+}
+
+.min-h-\[40px\] {
+  min-height: 40px;
 }
 
 .w-10\/12 {
@@ -1477,8 +1509,32 @@ footer .wrapper .social {
   width: 100vw;
 }
 
+.w-\[16vw\] {
+  width: 16vw;
+}
+
+.w-\[8vw\] {
+  width: 8vw;
+}
+
+.w-\[14vw\] {
+  width: 14vw;
+}
+
+.w-\[17vw\] {
+  width: 17vw;
+}
+
+.w-\[18vw\] {
+  width: 18vw;
+}
+
 .min-w-\[32\%\] {
   min-width: 32%;
+}
+
+.min-w-\[60px\] {
+  min-width: 60px;
 }
 
 .max-w-\[280px\] {
@@ -2069,10 +2125,6 @@ footer .wrapper .social {
 
 .gap-\[48px\] {
   gap: 48px;
-}
-
-.gap-\[16px\] {
-  gap: 16px;
 }
 
 .gap-x-4 {
@@ -2757,9 +2809,8 @@ footer .wrapper .social {
   padding-bottom: 102px;
 }
 
-.py-\[48px\] {
-  padding-top: 48px;
-  padding-bottom: 48px;
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .pb-10 {
@@ -2792,6 +2843,10 @@ footer .wrapper .social {
 
 .pb-\[60px\] {
   padding-bottom: 60px;
+}
+
+.pb-\[64px\] {
+  padding-bottom: 64px;
 }
 
 .pl-6 {
@@ -3086,6 +3141,10 @@ footer .wrapper .social {
   line-height: 28px;
 }
 
+.leading-\[34px\] {
+  line-height: 34px;
+}
+
 .leading-\[37px\] {
   line-height: 37px;
 }
@@ -3104,10 +3163,6 @@ footer .wrapper .social {
 
 .leading-\[64px\] {
   line-height: 64px;
-}
-
-.leading-\[34px\] {
-  line-height: 34px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3657,6 +3712,14 @@ footer .wrapper .social {
     height: 649px;
   }
 
+  .sm\:h-\[3vw\] {
+    height: 3vw;
+  }
+
+  .sm\:h-\[6vw\] {
+    height: 6vw;
+  }
+
   .sm\:max-h-\[341px\] {
     max-height: 341px;
   }
@@ -3671,6 +3734,14 @@ footer .wrapper .social {
 
   .sm\:w-\[319px\] {
     width: 319px;
+  }
+
+  .sm\:w-\[11vw\] {
+    width: 11vw;
+  }
+
+  .sm\:w-\[14vw\] {
+    width: 14vw;
   }
 
   .sm\:max-w-\[243px\] {
@@ -3724,6 +3795,10 @@ footer .wrapper .social {
     padding-bottom: 108px;
   }
 
+  .sm\:pb-\[48px\] {
+    padding-bottom: 48px;
+  }
+
   .sm\:pb-\[80px\] {
     padding-bottom: 80px;
   }
@@ -3755,10 +3830,6 @@ footer .wrapper .social {
 
   .sm\:text-\[24px\] {
     font-size: 24px;
-  }
-
-  .sm\:text-\[34px\] {
-    font-size: 34px;
   }
 
   .sm\:text-\[60px\] {
@@ -4026,6 +4097,10 @@ footer .wrapper .social {
     height: auto;
   }
 
+  .lg\:h-\[3vw\] {
+    height: 3vw;
+  }
+
   .lg\:max-h-\[443px\] {
     max-height: 443px;
   }
@@ -4092,6 +4167,10 @@ footer .wrapper .social {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[11vw\] {
+    width: 11vw;
   }
 
   .lg\:min-w-\[400px\] {
@@ -4229,6 +4308,10 @@ footer .wrapper .social {
     padding-bottom: 160px;
   }
 
+  .lg\:pb-\[165px\] {
+    padding-bottom: 165px;
+  }
+
   .lg\:pl-44 {
     padding-left: 11rem;
   }
@@ -4251,6 +4334,10 @@ footer .wrapper .social {
 
   .lg\:pt-28 {
     padding-top: 7rem;
+  }
+
+  .lg\:pt-40 {
+    padding-top: 10rem;
   }
 
   .lg\:text-3xl {
@@ -4313,16 +4400,16 @@ footer .wrapper .social {
     line-height: 37px;
   }
 
+  .lg\:leading-\[40px\] {
+    line-height: 40px;
+  }
+
   .lg\:leading-\[46px\] {
     line-height: 46px;
   }
 
   .lg\:leading-\[86px\] {
     line-height: 86px;
-  }
-
-  .lg\:leading-\[40px\] {
-    line-height: 40px;
   }
 
   .lg\:shadow-none {
