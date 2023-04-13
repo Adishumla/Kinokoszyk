@@ -15,7 +15,7 @@
       <server host="kinokoszyk.local" port="80" id="a59047a9-ad4f-47f2-afeb-e8496373358a" name="Local" />
     </servers>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">

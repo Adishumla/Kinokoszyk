@@ -14,7 +14,12 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <meta name="author" content="Kino Koszyk">
     <meta name="robots" content="index, follow">
 
+    <!-- To check meta tag use this website -->
+    <!-- https://socialsharepreview.com/ -->
+
     <!-- Facebook -->
+    <!-- https://ogp.me/#types -->
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="<?php bloginfo('url'); ?>">
     <meta property="og:title" content="Kino Koszyk">
     <meta property="og:locale" content="<?php language_attributes(); ?>">
