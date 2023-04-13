@@ -36,9 +36,11 @@ get_header();
         <div class="shadow-2xl max-w-min min-h-[760px]">
             <?php
             if( $image ): ?>
-                <a class="hover:bg-off-white hover:opacity-30 transition-opacity duration-200" href="<?= the_permalink();?>">
-                    <img class="w-96 h-1/2 object-cover" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
-                </a>
+                <div class="h-1/2 overflow-hidden  transition-opacity duration-400">
+                    <a href="<?= the_permalink(); ?>">
+                        <img class="w-96 h-full object-cover transform transition-transform hover:scale-125 duration-300" src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
+                    </a>
+                </div>
             <?php endif ?>
 
 

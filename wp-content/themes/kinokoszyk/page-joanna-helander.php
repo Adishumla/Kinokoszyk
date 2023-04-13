@@ -171,9 +171,9 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 <section id="interview" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
-    <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
-        <div class="top-0 right-0 lg:right-52 lg:top-12 p-10 cursor-pointer absolute close-interview">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+    <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins max-w-[1151px] mx-auto">
+        <div class="float-right  lg:mr-[-150px] lg:mt-[-50px] h-auto top-0 right-0 lg:top-12 p-10 cursor-pointer close-interview">
+            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
         </div>
         <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
             REALITY MIS EN SCENE
@@ -217,18 +217,18 @@ $offset = ($paged - 1) * $images_per_page;
                     From a conversation published in the Polish journal Naglos, October 1994
                 </span>
             </p>
-            <div class="bottom-0 right-0 lg:right-60 pb-10 cursor-pointer absolute close-interview">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+            <div class="float-right  lg:mr-[-100px] h-auto top-0 right-0 lg:top-12 cursor-pointer close-interview">
+                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
             </div>
         </div>
 
     </div>
 </section>
 
-    <section id="biography" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50 ">
-        <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
-            <div class="top-0 right-0  lg:right-52 lg:top-12 p-10 cursor-pointer absolute close-biography">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+    <section id="biography" class=" bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50 ">
+        <div class="max-w-[1151px] bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins lg:mx-auto">
+            <div class="float-right lg:mr-[-150px] lg:mt-[-50px] h-auto top-0 right-0 lg:top-12 p-10 cursor-pointer close-biography">
+                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
             </div>
             <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
                 BIOGRAPHY
@@ -258,8 +258,8 @@ A feature about Joanna Helander, titled "The Silesian Woman from Göteborg" was 
 In addition to her artistic work in Sweden and Poland, Joanna Helander writes for and publishes her photographs in newspapers and journals in several other countries, including Germany and the U.S.A.                </span>
 
                 </p>
-                <div class="bottom-0 right-0 lg:right-60 pb-10 cursor-pointer absolute close-biography">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+                <div class="float-right lg:mr-[-100px] h-auto top-0 right-0 lg:top-12 cursor-pointer close-biography">
+                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
                 </div>
             </div>
 
