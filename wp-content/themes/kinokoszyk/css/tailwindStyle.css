@@ -160,7 +160,7 @@
   }
 
   .vh-hero {
-    --margin: 96px;
+    --margin: 90px;
     min-height: calc(100vh - var(--margin));
     margin-top: var(--margin);
   }
