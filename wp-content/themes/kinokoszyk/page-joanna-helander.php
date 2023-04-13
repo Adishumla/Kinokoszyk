@@ -28,7 +28,7 @@ $offset = ($paged - 1) * $images_per_page;
 ?>
 <section class="bg-white imgas">
     <div class="py-12 px-[8%] pr-8 justify-start md:pl-[8%] md:pb-2">
-        <h2 class="font-prata text-4xl lg:text-6xl">
+        <h2 class="font-prata text-4xl lg:text-6xl pb-4">
             Photography by Joanna Helander
         </h2>
     </div>
@@ -36,7 +36,7 @@ $offset = ($paged - 1) * $images_per_page;
 
         <div class="masonry text-center bg-white w-screen px-[8%]">
             <?php
-			$images_per_page = 15;
+			$images_per_page = 12;
 			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 			$offset = ($paged - 1) * $images_per_page;
 
@@ -81,8 +81,8 @@ $offset = ($paged - 1) * $images_per_page;
 </section>
 <section class="flex flex-col items-center bg-white pt-12 md:pt-20 lg:pt-12 imgas gap-12">
     <div class="w-10/12 md:w-11/12  md:max-h-[400px] lg:max-h-[443px] md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
-            <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/film-joanna.jpg" alt="">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center group-hover:bg-off-white overflow-hidden">
+            <img class="w-full object-cover hover:scale-110 duration-200" src="<?php echo get_template_directory_uri(); ?>/assets/film-joanna.jpg" alt="">
         </div>
         <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 lg:p-10 md:px-6">
             <div>
@@ -99,9 +99,10 @@ $offset = ($paged - 1) * $images_per_page;
         </div>
     </div>
     <div class="w-10/12 md:w-11/12  md:max-h-[400px] lg:max-h-[443px] md:w-|762px] lg:w-4/5 flex flex-col md:flex-row lg:flex-row justify-center h-fit shadow-2xl">
-        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center group-hover:bg-off-white hover:opacity-30 transition duration-200 ease-in-out">
-            <img class="w-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/book-joanna.jpg" alt="">
+        <div class="w-full md:w-1/3 lg:w-1/3 flex justify-center group-hover:bg-off-white overflow-hidden">
+            <img class="w-full object-cover hover:scale-110 duration-200" src="<?php echo get_template_directory_uri(); ?>/assets/book-joanna.jpg" alt="">
         </div>
+
         <div class="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-between p-6 md:p-10 md:px-6 lg:p-10">
             <div>
                 <h3 class=" text-3xl md:text-4xl lg:text-4xl leading-[38px] font-bold hover:underline hover:cursor-pointer transition duration-200 ease-in-out">
@@ -171,9 +172,9 @@ $offset = ($paged - 1) * $images_per_page;
     </div>
 </section>
 <section id="interview" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50">
-    <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
-        <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-interview">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+    <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins max-w-[1151px] mx-auto">
+        <div class="float-right  lg:mr-[-150px] lg:mt-[-50px] h-auto top-0 right-0 lg:top-12 p-10 cursor-pointer close-interview">
+            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
         </div>
         <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
             REALITY MIS EN SCENE
@@ -217,18 +218,18 @@ $offset = ($paged - 1) * $images_per_page;
                     From a conversation published in the Polish journal Naglos, October 1994
                 </span>
             </p>
-            <div class="bottom-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-interview">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+            <div class="float-right  lg:mr-[-100px] h-auto top-0 right-0 lg:top-12 cursor-pointer close-interview">
+                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
             </div>
         </div>
 
     </div>
 </section>
 
-    <section id="biography" class="bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50 ">
-        <div class="bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins">
-            <div class="top-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+    <section id="biography" class=" bg-black lg:px-44 absolute top-0 left-0 w-full h-fit hidden z-50 ">
+        <div class="max-w-[1151px] bg-off-white py-[102px] px-6 md:px-20 lg:px-44 font-poppins lg:mx-auto">
+            <div class="float-right lg:mr-[-150px] lg:mt-[-50px] h-auto top-0 right-0 lg:top-12 p-10 cursor-pointer close-biography">
+                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
             </div>
             <h1 class="text-5xl md:text-7xl font-bold text-start pt-20 font-prata">
                 BIOGRAPHY
@@ -258,8 +259,8 @@ A feature about Joanna Helander, titled "The Silesian Woman from Göteborg" was 
 In addition to her artistic work in Sweden and Poland, Joanna Helander writes for and publishes her photographs in newspapers and journals in several other countries, including Germany and the U.S.A.                </span>
 
                 </p>
-                <div class="bottom-0 right-0 lg:right-60 p-10 cursor-pointer absolute close-biography">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
+                <div class="float-right lg:mr-[-100px] h-auto top-0 right-0 lg:top-12 cursor-pointer close-biography">
+                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/icon-exit.svg" alt="">
                 </div>
             </div>
 
