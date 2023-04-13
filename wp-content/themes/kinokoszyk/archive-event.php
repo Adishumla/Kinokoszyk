@@ -51,7 +51,7 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex flex-col mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:h-[443px] lg:w-11/12 mx-4">
+            <div class="flex flex-col mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:h-[443px] lg:max-w-[1380px] lg:w-10/12 mx-4">
                 <div class="w-full lg:h-full lg:w-fit lg:aspect-square mb-10 lg:mb-0">
                     <div class="relative h-[380px] lg:h-auto lg:aspect-square overflow-hidden">
                         <img class="absolute top-0 left-0 h-full w-full object-cover transform transition-transform hover:scale-110 lg:static lg:w-full lg:h-full" src=<?= $image['url'] ?> alt="">

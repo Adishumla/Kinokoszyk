@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section>
+<section class="mt-24">
     <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Koszyk books</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Books</h2>
@@ -14,7 +14,7 @@
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $query = new WP_Query(array(
         'post_type' => 'book',
-        'posts_per_page' => 2,
+        'posts_per_page' => 6,
         'paged' => $paged,
     ));
 
@@ -32,7 +32,7 @@
             $image = get_field("image");
             $size = 'full'; // (thumbnail, medium, large, full or custom size)
     ?>
-            <div class="max-w-[380px] lg:min-w-full md:max-w-none lg:w-10/12 flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl md:shadow-none lg:shadow-none p-5 md:p-14">
+            <div class="max-w-[380px] lg:min-w-[1000px] lg:max-w-[1300px] md:max-w-none lg:w-10/12 flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl md:shadow-none lg:shadow-none p-5 md:p-14">
                 <?php
                 if ($image) {
                 ?>
