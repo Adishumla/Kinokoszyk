@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<section class="w-full h-4/4 flex flex-col-reverse lg:flex-row  justify-center items-center bg-white-red font-poppins text-off-black mt-[37px] mb-20 imgas lg:align-center lg:px-40">
-    <div class="flex flex-col w-3/4 md:w-4/4">
-        <h1 class="text-5xl md:text-[60px] lg:text-[88px] font-prata p-0 md:leading-[86px] align-center mt-12">Joanna Helander</h1>
+<section class="w-full h-4/4 flex flex-col-reverse lg:flex-row  justify-center items-center bg-white-red font-poppins text-off-black mt-[80px] mb-20 imgas lg:align-center lg:px-[10.4%]">
+    <div class="flex flex-col w-3/4 md:w-4/4 justify-between lg:min-h-[560px]">
+        <h1 class="text-5xl md:text-[60px] lg:text-[88px] font-prata p-0 md:leading-[86px] align-center">Joanna Helander</h1>
         <div class="w-2/6 mt-4 w-full mr-4 lg:w-auto lg:mr-[5%] max-w-[700px]">
             <p class="text-xl flex flex-col gap-4 w-full">
                 <span class="w-full">Learn about Joanna Helander, a photographer, writer, and filmmaker born in Ruda Slaska in 1948. Arrested for protesting the invasion of Czechoslovakia, she emigrated to Sweden in 1971 and became an accomplished photographer, receiving the Swedish "Photographer of the Year" award in 1983.
@@ -17,7 +17,7 @@
             <a href="#interview" id="interview-button" class="btn-wine py-2.5 px-5 text-center flex items-center justify-center m-0">Read her interview</a>
         </div>
     </div>
-    <div class="flex justify-center md:justify-start justify-center md:w-3/4 lg:w-2/4 lg:mt-16 lg:min-w-[400px] lg:max-w-[600px]">
+    <div class="flex  md:justify-start justify-center md:w-3/4 lg:w-2/4  lg:min-w-[400px] lg:max-w-[600px]">
         <img class="h-full w-3/4 md:w-3/4 lg:w-full object-fill shadow-2xl" src="<?php echo get_template_directory_uri(); ?>/assets/Joanna-interview.jpg" alt="">
     </div>
 </section>
