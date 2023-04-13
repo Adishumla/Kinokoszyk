@@ -51,7 +51,7 @@ get_header(); ?>
 
 
 <main class=" bg-off-white">
-    <section class=" mt-[10%] lg:px-[10.4%] mb-[10%]">
+    <section class=" mt-[4.2%] lg:px-[10.4%] mb-[10%]">
         <div class="  w-full aspect-video  [&>iframe]:w-full [&>iframe]:h-full [&>iframe]:z-1 [&>iframe]:relative "> 
             <div class="bg-white-red w-[100%] h-[60vw] lg:h-[28vw] left-0 absolute "></div>
             <?php  if($trailer){
