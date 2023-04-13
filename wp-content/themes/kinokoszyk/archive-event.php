@@ -11,7 +11,7 @@ $events = new WP_Query($args);
 get_header();
 ?>
 
-<section class="mt-24">
+<section>
     <!-- <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 sm:pl-[88px] sm:py-[108px] overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20"> -->
 
 

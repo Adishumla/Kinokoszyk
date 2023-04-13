@@ -3,7 +3,7 @@
 </head>
 
 <body>
-    <section class="mt-24">
+    <section>
         <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-[10.4%] lg:pt-28 lg:pb-20">
             <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk historys</h1>
             <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">About us</h2>

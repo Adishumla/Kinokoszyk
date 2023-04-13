@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="w-full h-4/4 flex flex-col-reverse lg:flex-row  justify-center items-center bg-white-red font-poppins text-off-black mt-[72px] mb-20 imgas lg:align-center lg:px-40">
+<section class="w-full h-4/4 flex flex-col-reverse lg:flex-row  justify-center items-center bg-white-red font-poppins text-off-black mt-[37px] mb-20 imgas lg:align-center lg:px-40">
     <div class="flex flex-col w-3/4 md:w-4/4">
         <h1 class="text-5xl md:text-[60px] lg:text-[88px] font-prata p-0 md:leading-[86px] align-center mt-12">Joanna Helander</h1>
         <div class="w-2/6 mt-4 w-full mr-4 lg:w-auto lg:mr-[5%] max-w-[700px]">

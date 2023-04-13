@@ -13,7 +13,7 @@ $films = new WP_Query( $args );
 get_header();
 ?>
 
-<section class="mt-16">
+<section class="">
     <div class="grid grid-cols-3 gap-y-2 pl-6 overflow-x-hidden md:pl-20 md:py-0 lg:gap-y-0 lg:pl-44 lg:pr-12">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine md:pt-28 lg:text-3xl lg:pt-28">Kino Koszyk film</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Film</h2>
