@@ -18,7 +18,7 @@ get_header();
     <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 sm:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Exhibitions by Joanna Helander and Kino Koszyk</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Events</h2>
-        <img class="  row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
+        <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
         <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Here you'll find information on upcoming shows and exhibitions featuring the innovative work of this Kino Koszyk and Joanna Helander. They are visionary filmmakers and authors whose work has been widely recognized and celebrated for its creativity and originality. Stay tuned for updates on upcoming events and be sure to join us for an unforgettable experience.</p>
     </div>
 </section>
@@ -51,18 +51,22 @@ get_header();
             echo wp_get_attachment_image( $image, $size );
             echo "<br>";
         }*/ ?>
-            <div class="flex mx-auto flex-col max-w-[380px] mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:w-3/4">
-                <img class="w-[380px] h-[380px] lg:w-96 lg:h-auto object-cover aspect-square" src=<?= $image['url'] ?> alt="">
-                <div class="flex flex-col justify-center items-start p-10 ">
+            <div class="flex flex-col mb-[48px] lg:gap-10 text-[20px] lg:mb-20 shadow-2xl lg:flex-row lg:mx-auto lg:max-w-none lg:w-[1000px] mx-6">
+                <div class="w-full lg:h-full lg:w-1/2 mb-10 lg:mb-0">
+                    <div class="relative h-[380px] lg:h-auto overflow-hidden">
+                        <img class="absolute top-0 left-0 h-full w-full object-cover transform transition-transform hover:scale-110 lg:static lg:w-full lg:h-full" src=<?= $image['url'] ?> alt="">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-10">
                     <h2 class="text-4xl font-bold"><?= the_title() ?></h2>
                     <p class="text-2xl font-poppins pt-2">Year: <?= $year ?> </p>
-                    <!-- just nu kan det bli en bugg när man skriver ett väldigt lång ord men detta går att fixa med  break-words men man behöver en satt width då vilket blev jobbigt -->
                     <div class="w-full h-auto">
                         <p class="text-xl font-poppins pt-8 break-words h-full"><?= the_content() ?></p>
                     </div>
                 </div>
             </div>
-    <?php endwhile;
+
+	    <?php endwhile;
     endif;
     wp_reset_query();
     // Pagination
