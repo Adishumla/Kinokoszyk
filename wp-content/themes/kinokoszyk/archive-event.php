@@ -15,7 +15,7 @@ get_header();
     <!-- <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 sm:pl-[88px] sm:py-[108px] overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20"> -->
 
 
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 sm:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
+    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 sm:pl-20 lg:gap-y-0 lg:pl-[10.4%] lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Exhibitions by Joanna Helander and Kino Koszyk</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Events</h2>
         <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
@@ -23,7 +23,7 @@ get_header();
     </div>
 </section>
 
-<section class="bg-off-white flex flex-col lg:flex-row lg:justify-between lg:items-center py-12 lg:px-44 w-full lg:gap-[3%]">
+<section class="bg-off-white flex flex-col lg:flex-row lg:justify-between lg:items-center py-20 lg:px-[10.4%] w-full lg:gap-[3%]">
     <div class="px-[24px] sm:px-[80px] lg:px-0">
         <h4 class="text-[28px] leading-[34px] lg:text-[38px] lg:leading-[40px] sm:mb-[20px] font-bold lg:pb-2">
             Looking for our latest events and exhibitions?
@@ -38,7 +38,7 @@ get_header();
 </section>
 
 
-<section class=" sm:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:pt-40 lg:gap-0 pt-[48px] sm:pb-[48px] w-full">
+<section class=" sm:pt-0 grid grid-cols-1 sm:gap-[10px] sm:grid sm:grid-cols-2  lg:flex lg:flex-col lg:justify-center lg:items-center bg-off-white lg:pt-20 lg:gap-0 pt-[48px] sm:pb-[48px] w-full">
     <?php if ($events->have_posts()) : ?>
         <?php while ($events->have_posts()) : $events->the_post(); ?>
             <?php

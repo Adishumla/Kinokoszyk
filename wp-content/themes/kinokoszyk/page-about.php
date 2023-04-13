@@ -3,16 +3,16 @@
 </head>
 
 <body>
-<section class="mt-24">
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20">
-        <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk historys</h1>
-        <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">About us</h2>
-        <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/about.png" alt="">
-        <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
-    </div>
-</section>
+    <section class="mt-24">
+        <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 md:pl-20 lg:gap-y-0 lg:pl-[10.4%] lg:pt-28 lg:pb-20">
+            <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Kino Kosyk historys</h1>
+            <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">About us</h2>
+            <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/about.png" alt="">
+            <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Kino Koszyk HB is an independent production company founded in 1987 by Joanna Helander and Bo Persson. Based in Gothenburg, Sweden, they create captivating documentaries for cinema and TV, as well as visually stunning exhibitions and books. Their creative approach to storytelling pushes the boundaries of traditional media, producing thought-provoking content that inspires audiences.</p>
+        </div>
+    </section>
 
-    <section class="grid grid-cols-1 gap-y-6 bg-off-white px-6 pt-16 pb-6 md:gap-y-12 md:px-20 md:py-12 xl:px-48 xl:py-36 lg:grid-cols-2">
+    <section class="grid grid-cols-1 gap-y-6 bg-off-white px-6 pt-16 pb-6 md:gap-y-12 md:px-20 md:py-12 lg:px-[10.4%] lg:py-36 lg:grid-cols-2 ">
 
         <!-- Image on Bo Persson and Joanna Helander -->
         <img class="max-w-sm -m-7 justify-self-center 2xl:max-w-none lg:col-start-2 lg:justify-self-end" src="<?= get_template_directory_uri() ?>/assets/about profile.png" alt="">

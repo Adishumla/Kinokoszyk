@@ -108,24 +108,24 @@ get_header(); ?>
                 
             </div>
             <div class="flex  flex-col justify-between h-[132px] text-[16px] leading-[18px]">
-                    <?php if($trailer):?><button onclick="window.location.href='<?=$trailerSrc?>'" class="btn-wine text-center w-full lg:w-[280px] max-w-[280px]">
+                    <?php if($trailer):?><a href="#top" class="btn-wine text-center w-full lg:w-[280px] max-w-[280px] flex flex-col justify-center">
                         <p>Watch trailer</p>
-                    </button><?php endif?>
+                    </a><?php endif?>
                    
+                    
                    
-
 
                     <?php if( $directorOfPhotography || $editor || $sound || $music):?> <button onclick="toggleMoreInfo()" class="btn-white  text-center w-full lg:w-[280px] max-w-[280px]">
-                        <p class="  ">More information</p>
+                        <p class=" ">More information</p>
                     </button> <?php endif ?>
 
                     
             </div>
         </div> 
     </section>
-    <?php if(array_key_exists(0, $awards)): ?>  
+   
     <section class="flex flex-col-reverse lg:flex-col px-[5.6%] lg:px-[10.4%]">      
-        <div id="Awards" class="mb-[48px] lg:mt-[-80px] lg:mb-[160px]">
+    <?php if(array_key_exists(0, $awards)): ?>  <div id="Awards" class="mb-[48px] lg:mt-[-80px] lg:mb-[160px]">
             <h2 class="font-poppins text-[28px] leading-[37px]">Awards</h2>
             <div class="flex flex-wrap lg:flex-nowrap justify-between gap-x-[3.6%] lg:gap-x-[2%] gap-y-[14px]">
                 <?php foreach($awards as $award):?>
@@ -140,6 +140,7 @@ get_header(); ?>
         </div>
 
     <?php endif; ?>
+    
 
     <?php if(array_key_exists(1, $quotes)):?>
         <div>
