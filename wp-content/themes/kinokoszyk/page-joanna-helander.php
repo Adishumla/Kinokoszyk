@@ -28,7 +28,7 @@ $offset = ($paged - 1) * $images_per_page;
 ?>
 <section class="bg-white imgas">
     <div class="py-12 px-[8%] pr-8 justify-start md:pl-[8%] md:pb-2">
-        <h2 class="font-prata text-4xl lg:text-6xl pb-4">
+        <h2 class="font-prata text-4xl lg:text-6xl pb-4 pt-20">
             Photography by Joanna Helander
         </h2>
     </div>

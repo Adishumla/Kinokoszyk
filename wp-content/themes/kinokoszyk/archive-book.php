@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section class="lg:w-4/4 lg:mt-[48px] lg:px-20 flex justify-center items-center bg-white flex-col">
+<section class="lg:w-4/4 lg:mt-[48px] lg:pt-20 lg:px-20 flex justify-center items-center bg-white flex-col">
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $query = new WP_Query(array(
