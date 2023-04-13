@@ -15,11 +15,11 @@ get_header();
     <!-- <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 sm:pl-[88px] sm:py-[108px] overflow-x-hidden sm:gap-x-14 lg:gap-y-0 lg:pl-44 lg:pt-28 lg:pb-20"> -->
 
 
-    <div class="grid grid-cols-3 gap-y-2 gap-x-4 py-6 pl-6 overflow-x-hidden sm:gap-x-14 sm:pl-20 lg:gap-y-0 lg:pl-[10.4%] lg:pt-28 lg:pb-20">
+    <div class="grid grid-cols-3 gap-y-2  py-6 pl-6 sm:py-28 overflow-x-hidden sm:gap-x-14 sm:pl-20 lg:gap-y-0 lg:pl-[10.4%] lg:pt-28 lg:pb-20">
         <h1 class="col-span-2 col-start-1 text-2xl font-light text-wine lg:text-3xl">Exhibitions by Joanna Helander and Kino Koszyk</h1>
         <h2 class="col-span-2 col-start-1 text-5xl mb-4 font-prata p-0 sm:text-6xl lg:text-[148px]  lg:leading-[148px]">Events</h2>
-        <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
-        <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl">Here you'll find information on upcoming shows and exhibitions featuring the innovative work of this Kino Koszyk and Joanna Helander. They are visionary filmmakers and authors whose work has been widely recognized and celebrated for its creativity and originality. Stay tuned for updates on upcoming events and be sure to join us for an unforgettable experience.</p>
+        <img class="row-start-2 justify-self-end h-28 sm:h-60 sm:row-start-1 col-start-3 row-span-3 object-fill translate-x-1/2 sm:translate-x-1/4 lg:translate-x-0" src="<?= get_template_directory_uri(); ?>/assets/events.svg" alt="">
+        <p class="col-span-3 col-start-1 text-lg font-poppins sm:col-span-2 sm:text-xl pr-24 sm:pr-0 lg:pr-0">Here you'll find information on upcoming shows and exhibitions featuring the innovative work of this Kino Koszyk and Joanna Helander. They are visionary filmmakers and authors whose work has been widely recognized and celebrated for its creativity and originality. Stay tuned for updates on upcoming events and be sure to join us for an unforgettable experience.</p>
     </div>
 </section>
 
@@ -66,7 +66,7 @@ get_header();
                 </div>
             </div>
 
-	    <?php endwhile;
+    <?php endwhile;
     endif;
     wp_reset_query();
     // Pagination
