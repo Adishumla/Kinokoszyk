@@ -9,7 +9,7 @@
     </div>
 </section>
 
-<section class="lg:w-4/4 lg:mt-[48px] flex justify-center">
+<section class="lg:w-4/4 lg:mt-[48px] lg:px-20 flex justify-center items-center bg-white flex-col">
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $query = new WP_Query(array(
@@ -32,7 +32,7 @@
             $image = get_field("image");
             $size = 'full'; // (thumbnail, medium, large, full or custom size)
     ?>
-            <div class="max-w-[380px] md:max-w-none flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl md:shadow-none lg:shadow-none p-5 md:p-14">
+            <div class="max-w-[380px] lg:min-w-full md:max-w-none lg:w-10/12 flex flex-col lg:flex-row gap-10 text-lg lg:text-xl mx-4 mb-20 shadow-2xl md:shadow-none lg:shadow-none p-5 md:p-14">
                 <?php
                 if ($image) {
                 ?>

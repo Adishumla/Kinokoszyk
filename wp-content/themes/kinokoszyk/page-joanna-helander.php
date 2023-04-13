@@ -120,8 +120,8 @@ $offset = ($paged - 1) * $images_per_page;
 <section class="py-12 lg:py-40 md:py-20 imgas bg-white">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 flex-row justify-center items-start bg-off-white py-8 px-[8%] md:px-28 lg:px-44 bg-white-red">
     <div class="">
-        <h3 class="text-[38px] leading-[38px] font-bold mb-4 text-wine">Scholarship</h3>
-        <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
+        <h3 class="text-[28px] md:text-[38px] leading-[38px] font-bold mb-4 text-wine">Scholarship</h3>
+        <p class="text-[18px] md:text-[20px] flex justify-between align-self-start pt-1 flex-col gap-4">
             <span>
                 Sveriges Författarfond: Multiple times.
             </span>
@@ -146,8 +146,8 @@ $offset = ($paged - 1) * $images_per_page;
         </p>
     </div>
     <div>
-        <h3 class="text-[38px] leading-[38px] font-bold imgas text-wine mb-4">Awards</h3>
-        <p class="text-[26px] flex justify-between align-self-start pt-1 flex-col gap-4">
+        <h3 class="text-[28px] md:text-[38px] leading-[38px] font-bold imgas text-wine mb-4">Awards</h3>
+        <p class="text-[18px] md:text-[20px] flex justify-between align-self-start pt-1 flex-col gap-4">
             <span>
                 John Cassavetes Prize from the publishing house Korpen (together with Tommy Berggren) 1995.
             </span>
