@@ -73,7 +73,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="flex gap-x-[5.8%] px-[10.4%]">
+    <section class="flex gap-x-[5.8%] px-[5.6%] lg:px-[10.4%]">
         <div class="flex flex-col min-w-[32%] w-[32%]">
             <span class="font-poppins text-[20px] leading-[28px]  mb-[12px]" ><?= $year ?> </span>
             <img class="w-full object-cover row-span-2 drop-shadow-[10px_14px_14px_rgba(0,0,0,0.25)]"  src="<?= $image['url'] ?>" alt="<?= $image["alt"] ?>">
@@ -87,7 +87,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="pb-[48px] lg:pb-[160px] px-[10.4%]">
+    <section class="pb-[48px] lg:pb-[160px] px-[5.6%] lg:px-[10.4%]">
         <div class="flex flex-col-reverse lg:flex-row justify-between px-[6.2%] lg:px-[2.3%] bg-white-red mt-[42px] lg:mt-[80px]  pt-[40px] pb-[60px] font-poppins text-[20px] leading-[28px] gap-x-[6%] gap-y-[24px]">
             <div>
                 <?php if($language):?>  <p class="text-[20px] leading-[28px]"><b>Language:</b> <?= $language ?></li><?php endif ?>
@@ -124,24 +124,25 @@ get_header(); ?>
         </div> 
     </section>
     <?php if(array_key_exists(0, $awards)): ?>  
-          
-        <section id="Awards" class="mt-[-80px] mb-[160px] px-[10.4%]">
+    <section class="flex flex-col-reverse lg:flex-col px-[5.6%] lg:px-[10.4%]">      
+        <div id="Awards" class="mb-[48px] lg:mt-[-80px] lg:mb-[160px]">
             <h2 class="font-poppins text-[28px] leading-[37px]">Awards</h2>
-            <div class="flex justify-center gap-x-[2%]">
-            <?php foreach($awards as $award):?>
-                <div class="w-[18.6vw] h-[18.6vw] flex object-contain " >
-            
-                    <img class="object-contain w-full" src=<?=$award["url"]?> alt="<?=$award["alt"]?>"  srcset="<?= wp_get_attachment_image_srcset($award["id"])?>" sizes="15vw">
-                </div>
-            
-            <?php endforeach; ?>
+            <div class="flex flex-wrap lg:flex-nowrap justify-between gap-x-[3.6%] lg:gap-x-[2%] gap-y-[14px]">
+                <?php foreach($awards as $award):?>
+                    <div class="w-[48%] lg:w-[24%] flex object-contain " >
+                    <!-- <div class="w-[39.2vw] h-[39.2vw] lg:w-[18.6vw] lg:h-[18.6vw] flex object-contain " > -->
+                
+                        <img class="object-contain w-full" src=<?=$award["url"]?> alt="<?=$award["alt"]?>"  srcset="<?= wp_get_attachment_image_srcset($award["id"])?>" sizes="15vw">
+                    </div>
+                
+                <?php endforeach; ?>
             </div>
-        </section>
+        </div>
 
     <?php endif; ?>
 
     <?php if(array_key_exists(1, $quotes)):?>
-        <section id="Quotes" class="px-[10.4%]">
+        <div>
             <?php foreach($quotes as $quote): ?>
                 <div class="pb-[48px] lg:pb-[160px]">
                     <p class=" font-prata text-[18px] leading-[28px] sm:text-[24px] sm:leading-[32px] lg:text-[38px] lg:leading-[46px]"><?=$quote["quote"]?></p>
@@ -150,9 +151,9 @@ get_header(); ?>
 
 
             <?php endforeach ?>
-        </section>
+        </div>
     <?php endif; ?>
-   
+    </section>
 
 </main>
 
