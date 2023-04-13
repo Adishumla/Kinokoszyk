@@ -45,14 +45,14 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <?php  ?>
 
 
-    <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between lg:pr-8">
+    <header class="fixed flex flex-col justify-center items-center top-0 z-40 bg-off-white w-full lg:flex-row lg:justify-between pb-1 lg:pr-8">
         <div class="flex justify-between w-full px-6 pt-6 pb-4 z-50 md:pt-8 lg:w-auto lg:pl-8">
             <div class="w-12">
                 <?= get_custom_logo() ?>
             </div>
             <button class="uppercase text-2xl lg:hidden">Menu</button>
         </div>
-        <nav class="fixed top-0 left-full w-full vh-hero bg-white-red duration-500 lg:left-0 lg:mt-0 lg:min-h-0 lg:w-auto lg:static lg:bg-transparent">
+        <nav class="fixed top-0 left-full w-full vh-hero bg-white-red duration-500 mt-22 lg:left-0 lg:mt-0 lg:min-h-0 lg:w-auto lg:static lg:bg-transparent">
             <ul class="flex flex-col items-center gap-y-10 px-0 list-none lg:gap-x-7 lg:flex-row">
                 <?php if ($menuItems) foreach ($menuItems as $item) : ?>
                     <li>
