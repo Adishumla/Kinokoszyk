@@ -23,7 +23,7 @@ get_header();
 </section>
 
 <?php if (have_posts()) : ?>
-    <section class="flex flex-wrap justify-center gap-y-12 px-[3%] sm:px-[4%] gap-x-[5%] py-12 lg:py-40 bg-off-white w-full">
+    <section class="flex flex-wrap justify-center gap-y-[48px] lg:gap-y-[80px] px-[1%] gap-x-[2%] lg:px-[4%] lg:gap-x-[5%] py-12 lg:py-40 bg-off-white w-full">
     <?php while ( $films->have_posts() ) : $films->the_post();
 
 
